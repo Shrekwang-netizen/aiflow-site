@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OpenAI 人事动态 · AIFLOW</title>
+<meta name="description" content="OpenAI 的人事变动记录：ChatGPT、GPT 系列与前沿研究。">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#13191c">
+<meta property="og:site_name" content="AIFLOW">
+<meta property="og:type" content="website">
+<meta property="og:title" content="OpenAI 人事动态 · AIFLOW">
+<meta property="og:description" content="OpenAI 的人事变动记录：ChatGPT、GPT 系列与前沿研究。">
+<meta property="og:locale" content="zh_CN">
+<link rel="alternate" type="application/rss+xml" title="AIFLOW" href="../feed.xml">
+<link rel="stylesheet" href="../assets/style.css?v=1793340905">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 24'><circle cx='5' cy='18' r='3.4' fill='%23176b75'/><circle cx='23' cy='6' r='3.4' fill='%23176b75'/><path d='M7.9 16.1C12.2 10.4 15.8 13.6 20.1 7.9' fill='none' stroke='%23176b75' stroke-width='2.3' stroke-linecap='round'/></svg>">
+</head>
+<body>
+<a class="sr-only" href="#main">跳到正文</a>
+<div class="shell">
+<aside class="sidebar">
+  <a class="brand" href="../index.html" aria-label="AIFLOW 首页"><svg class="brand-mark" viewBox="0 0 28 24" aria-hidden="true"><circle cx="5" cy="18" r="3.4" fill="currentColor"/><circle cx="23" cy="6" r="3.4" fill="currentColor"/><path d="M7.9 16.1C12.2 10.4 15.8 13.6 20.1 7.9" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></svg><span class="brand-word">aiflow</span></a>
+  <div class="side-scroll">
+    <div class="side-group"><div class="side-label">内容</div><div class="side-nav"><a class="side-item" href="../index.html"><span class="side-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.09 12.97a1 1 0 0 0 .77 1.64H11l-1 7.39 8.91-10.97a1 1 0 0 0-.77-1.64H12l1-7.39Z"/></svg></span><span class="side-txt">精选</span></a><a class="side-item" href="../all.html"><span class="side-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></span><span class="side-txt">全部动态</span></a><a class="side-item" href="../rumors.html"><span class="side-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-8 8H7l-4 3v-7a8 8 0 0 1 8-8h2a8 8 0 0 1 8 4Z"/><path d="M8 11h.01M12 11h.01M16 11h.01"/></svg></span><span class="side-txt">小道消息</span></a><a class="side-item" href="../random.html"><span class="side-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="9" r="1"/><circle cx="9" cy="15" r="1"/><circle cx="15" cy="15" r="1"/><circle cx="12" cy="12" r="1"/></svg></span><span class="side-txt">随机周报</span></a></div></div>
+    
+    <div class="side-group"><div class="side-label">更多</div><div class="side-nav"><a class="side-item" href="../about.html"><span class="side-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></span><span class="side-txt">数据源与方法</span></a></div></div>
+  </div>
+  <div class="side-foot">
+    <a class="gh-pill" href="../about.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg> 数据源说明</a>
+    <div class="theme-switch" role="group" aria-label="主题">
+      <button data-set-theme="light" aria-pressed="false" title="浅色"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button data-set-theme="auto" aria-pressed="true" title="跟随系统"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></button>
+      <button data-set-theme="dark" aria-pressed="false" title="深色"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg></button>
+    </div>
+    <div class="legal">个人站点 · 非经营性<br>内容仅供研究参考</div>
+  </div>
+</aside>
+<div class="content">
+<header class="mobile-bar">
+  <a class="brand" href="../index.html" aria-label="AIFLOW 首页"><svg class="brand-mark" viewBox="0 0 28 24" aria-hidden="true"><circle cx="5" cy="18" r="3.4" fill="currentColor"/><circle cx="23" cy="6" r="3.4" fill="currentColor"/><path d="M7.9 16.1C12.2 10.4 15.8 13.6 20.1 7.9" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></svg><span class="brand-word">aiflow</span></a>
+  <div class="mobile-tabs"><a href="../index.html" class="">精选</a><a href="../all.html" class="">全部</a><a href="../rumors.html" class="">爆料</a></div>
+  <div class="mobile-actions">
+    <a class="icon-btn" href="../random.html" aria-label="随机周报"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="9" r="1"/><circle cx="9" cy="15" r="1"/><circle cx="15" cy="15" r="1"/><circle cx="12" cy="12" r="1"/></svg></a>
+    <a class="icon-btn" href="../all.html" aria-label="搜索"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></a>
+    <a class="icon-btn" href="../index.html#archive" aria-label="往期"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01"/></svg></a>
+  </div>
+</header>
+<main class="main" id="main"><a class="back" href="../companies.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg> 全部公司</a>
+<div class="co-head">
+  <div class="co-mark" style="background:#e6eeea;color:#1f4d3c">O</div>
+  <div>
+    <h1>OpenAI</h1>
+    <p class="co-desc">ChatGPT、GPT 系列与前沿研究。</p>
+    <div class="tag-row" style="margin-top:10px">
+      <span class="tag">GPT</span><span class="tag">Sora</span>
+      <span class="tag">记录 17</span>
+      <span class="tag">净流入 +4</span>
+    </div>
+  </div>
+</div><div style="margin-top:20px"><section class="day-group" data-day-group>
+  <div class="daybar"><h2>10月29日</h2><span class="dow">星期四</span>
+    <span class="count">1 条</span></div>
+  <div class="feed" data-feed><div class="feed-item is-selected" data-id="openai-20261029-annie-liang" data-type="join">
+  <div class="feed-rail"><time>昨天</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:14px;height:14px;font-size:9px">O</span>OpenAI</span><span class="badge join">入职</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>67</b></span><button class="icon-btn" data-fav="openai-20261029-annie-liang" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/openai-20261029-annie-liang.html">Annie Liang 加入 OpenAI</a></h3>
+  <p class="card-sum">Annie Liang（经济理论与人工智能/机器学习）此前在 Northwestern 任 Associate Professor of Economics and Computer Science，现加入 OpenAI。信息来源为本人公开更新（Economist in Residence）。</p>
+  <div class="move"><span class="who">Annie Liang</span><span class=dot></span><span class="path"><span class="org"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:12px;height:12px;font-size:8px">O</span>OpenAI</span></span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>DINQ 收录的公开履历变动：Annie Liang 加入 OpenAI。属于海外实验室之间的人员流动，先记下来观察后续。</p></div>
+</article></div>
+</div></div>
+</section><section class="day-group" data-day-group>
+  <div class="daybar"><h2>10月28日</h2><span class="dow">星期三</span>
+    <span class="count">4 条</span></div>
+  <div class="feed" data-feed><div class="feed-item is-selected" data-id="openai-20261028-will-stickney" data-type="join">
+  <div class="feed-rail"><time>2 天前</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:14px;height:14px;font-size:9px">O</span>OpenAI</span><span class="badge join">入职</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>67</b></span><button class="icon-btn" data-fav="openai-20261028-will-stickney" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/openai-20261028-will-stickney.html">Will Stickney 加入 OpenAI</a></h3>
+  <p class="card-sum">Will Stickney（产品与企业传播（B2B / 企业AI））此前在 Okta 任 Senior Director of External Communications，现加入 OpenAI。信息来源为本人公开更新（B2B product communications）。</p>
+  <div class="move"><span class="who">Will Stickney</span><span class=dot></span><span class="path"><span class="org"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:12px;height:12px;font-size:8px">O</span>OpenAI</span></span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>DINQ 收录的公开履历变动：Will Stickney 加入 OpenAI。属于海外实验室之间的人员流动，先记下来观察后续。</p></div>
+</article></div>
+</div><div class="feed-item is-selected" data-id="anthropic-20261028-christina-hendrickson" data-type="departure">
+  <div class="feed-rail"><time>2 天前</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#f4eadf;color:#7a4a24;width:14px;height:14px;font-size:9px">A</span>Anthropic</span><span class="chip"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:14px;height:14px;font-size:9px">O</span>OpenAI</span><span class="badge departure">离职</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>67</b></span><button class="icon-btn" data-fav="anthropic-20261028-christina-hendrickson" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/anthropic-20261028-christina-hendrickson.html">Christina Hendrickson 离开 Anthropic 加入 The OpenAI Foundation</a></h3>
+  <p class="card-sum">Christina Hendrickson（技术招聘、人才战略、气候/硬科技人才）此前在 Anthropic 任 ，现加入 The OpenAI Foundation。信息来源为本人公开更新（Joining (role undisclosed; reported tip ✅ — likely talent/recruiting given background)）。</p>
+  <div class="move"><span class="who">Christina Hendrickson</span><span class=dot></span><span class="path"><span class="org"><span class="mark" style="background:#f4eadf;color:#7a4a24;width:12px;height:12px;font-size:8px">A</span>Anthropic</span><span class="arrow">→</span><span class="org to"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:12px;height:12px;font-size:8px">O</span>OpenAI</span></span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>DINQ 收录的公开履历变动：Christina Hendrickson 离开 Anthropic 加入 The OpenAI Foundation。属于海外实验室之间的人员流动，先记下来观察后续。</p></div>
+</article></div>
+</div><div class="feed-item is-selected" data-id="openai-20261028-tao-burga" data-type="join">
+  <div class="feed-rail"><time>2 天前</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:14px;height:14px;font-size:9px">O</span>OpenAI</span><span class="badge join">入职</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>67</b></span><button class="icon-btn" data-fav="openai-20261028-tao-burga" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/openai-20261028-tao-burga.html">Tao Burga 加入 The OpenAI Foundation</a></h3>
+  <p class="card-sum">Tao Burga（AI政策、算力/出口管制、AI韧性与安全、AI for Science）此前在 Institute for Progress 任 Senior Technology Fellow (AI policy, compute/export controls, Launch Sequence lead)，现加入 The OpenAI Foundation。信息来源为本人公开更新（Joining (role undisclosed; reported tip ✅)）。</p>
+  <div class="move"><span class="who">Tao Burga</span><span class=dot></span><span class="path"><span class="org"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:12px;height:12px;font-size:8px">O</span>OpenAI</span></span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>DINQ 收录的公开履历变动：Tao Burga 加入 The OpenAI Foundation。属于海外实验室之间的人员流动，先记下来观察后续。</p></div>
+</article></div>
+</div><div class="feed-item is-selected" data-id="openai-20261028-arthur-tellis" data-type="join">
+  <div class="feed-rail"><time>2 天前</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:14px;height:14px;font-size:9px">O</span>OpenAI</span><span class="badge join">入职</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>67</b></span><button class="icon-btn" data-fav="openai-20261028-arthur-tellis" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/openai-20261028-arthur-tellis.html">Arthur Tellis 加入 The OpenAI Foundation</a></h3>
+  <p class="card-sum">Arthur Tellis（网络安全政策、AI国家安全、自动化AI研发治理）此前在 Institute for Progress 任 Senior Technology Fellow (cybersecurity policy / national-security AI risks)，现加入 The OpenAI Foundation。信息来源为本人公开更新（Joining (role undisclosed; reported tip ✅)）。</p>
+  <div class="move"><span class="who">Arthur Tellis</span><span class=dot></span><span class="path"><span class="org"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:12px;height:12px;font-size:8px">O</span>OpenAI</span></span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>DINQ 收录的公开履历变动：Arthur Tellis 加入 The OpenAI Foundation。属于海外实验室之间的人员流动，先记下来观察后续。</p></div>
+</article></div>
+</div></div>
+</section><section class="day-group" data-day-group>
+  <div class="daybar"><h2>10月27日</h2><span class="dow">星期二</span>
+    <span class="count">2 条</span></div>
+  <div class="feed" data-feed><div class="feed-item is-selected" data-id="amazon-20261027-james-argiriou" data-type="departure">
+  <div class="feed-rail"><time>3 天前</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#f2eadf;color:#7a5220;width:14px;height:14px;font-size:9px">亚</span>亚马逊</span><span class="chip"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:14px;height:14px;font-size:9px">O</span>OpenAI</span><span class="badge departure">离职</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>63</b></span><button class="icon-btn" data-fav="amazon-20261027-james-argiriou" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/amazon-20261027-james-argiriou.html">James Argiriou 离开 Amazon 加入 OpenAI</a></h3>
+  <p class="card-sum">James Argiriou（算力战略 / 战略合作）此前在 Amazon 任 Business Development &amp; Strategic Partnerships (Sports)，现加入 OpenAI。信息来源为本人公开更新（Compute Strategy）。</p>
+  <div class="move"><span class="who">James Argiriou</span><span class=dot></span><span class="path"><span class="org"><span class="mark" style="background:#f2eadf;color:#7a5220;width:12px;height:12px;font-size:8px">亚</span>亚马逊</span><span class="arrow">→</span><span class="org to"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:12px;height:12px;font-size:8px">O</span>OpenAI</span></span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>DINQ 收录的公开履历变动：James Argiriou 离开 Amazon 加入 OpenAI。属于海外实验室之间的人员流动，先记下来观察后续。</p></div>
+</article></div>
+</div><div class="feed-item is-selected" data-id="amazon-20261027-dan-shallenberger" data-type="departure">
+  <div class="feed-rail"><time>3 天前</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#f2eadf;color:#7a5220;width:14px;height:14px;font-size:9px">亚</span>亚马逊</span><span class="chip"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:14px;height:14px;font-size:9px">O</span>OpenAI</span><span class="badge departure">离职</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>63</b></span><button class="icon-btn" data-fav="amazon-20261027-dan-shallenberger" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/amazon-20261027-dan-shallenberger.html">Dan Shallenberger 离开 AWS 加入 OpenAI</a></h3>
+  <p class="card-sum">Dan Shallenberger（@danshall）此前在 AWS 任 Senior Solutions Architect，现加入 OpenAI。信息来源为本人公开更新（Applied AI (EDU)）。</p>
+  <div class="move"><span class="who">Dan Shallenberger</span><span class=dot></span><span class="path"><span class="org"><span class="mark" style="background:#f2eadf;color:#7a5220;width:12px;height:12px;font-size:8px">亚</span>亚马逊</span><span class="arrow">→</span><span class="org to"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:12px;height:12px;font-size:8px">O</span>OpenAI</span></span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>DINQ 收录的公开履历变动：Dan Shallenberger 离开 AWS 加入 OpenAI。属于海外实验室之间的人员流动，先记下来观察后续。</p></div>
+</article></div>
+</div></div>
+</section><section class="day-group" data-day-group>
+  <div class="daybar"><h2>10月14日</h2><span class="dow">星期三</span>
+    <span class="count">1 条</span></div>
+  <div class="feed" data-feed><div class="feed-item is-selected" data-id="openai-20261014-sachin-katti" data-type="departure">
+  <div class="feed-rail"><time>2 周前</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:14px;height:14px;font-size:9px">O</span>OpenAI</span><span class="badge departure">离职</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>87</b></span><button class="icon-btn" data-fav="openai-20261014-sachin-katti" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/openai-20261014-sachin-katti.html">OpenAI 算力负责人 Katti 离职</a></h3>
+  <p class="card-sum">OpenAI 基础设施与算力负责人 Sachin Katti 离职，11 月 15 日为最后工作日，之后留任顾问。CTO of compute Uday Ruddarraju（原 xAI 基础设施负责人）接管算力组织。</p>
+  <div class="move"><span class="who">Sachin Katti</span><span class=dot></span><span class="path"><span class="org"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:12px;height:12px;font-size:8px">O</span>OpenAI</span><span class="arrow">→</span><span class="org to">未披露</span></span><span class=dot></span><span class="person">OpenAI 基础设施与算力负责人</span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>算力一号位离职、留任顾问，原 xAI 基础设施负责人接管算力组织。OpenAI 的「算力大跃进」进入交接期。</p></div>
+</article></div>
+</div></div>
+</section><section class="day-group" data-day-group>
+  <div class="daybar"><h2>10月9日</h2><span class="dow">星期五</span>
+    <span class="count">1 条</span></div>
+  <div class="feed" data-feed><div class="feed-item is-selected" data-id="openai-20261009-thomas-lind" data-type="join">
+  <div class="feed-rail"><time>3 周前</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:14px;height:14px;font-size:9px">O</span>OpenAI</span><span class="badge join">入职</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>69</b></span><button class="icon-btn" data-fav="openai-20261009-thomas-lind" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/openai-20261009-thomas-lind.html">OpenAI、Anthropic 招前特朗普政府官员</a></h3>
+  <p class="card-sum">据 CNBC，OpenAI 聘前国家网络总监办公室 AI 政策负责人 Thomas Lind 负责网络与战略风险。Anthropic 则请前白宫 OSTP 顾问 Sihao Huang 9 月出任前沿算力战略负责人。</p>
+  <div class="move"><span class="who">Thomas Lind</span><span class=dot></span><span class="path"><span class="org"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:12px;height:12px;font-size:8px">O</span>OpenAI</span></span><span class=dot></span><span class="person">OpenAI 国家安全政策团队</span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>OpenAI 与 Anthropic 同月招前特朗普政府官员——华盛顿成了新的招聘战场。</p></div>
+</article></div>
+</div></div>
+</section><section class="day-group" data-day-group>
+  <div class="daybar"><h2>10月8日</h2><span class="dow">星期四</span>
+    <span class="count">2 条</span></div>
+  <div class="feed" data-feed><div class="feed-item is-selected" data-id="openai-20261008-mikita-balesni" data-type="layoff">
+  <div class="feed-rail"><time>3 周前</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:14px;height:14px;font-size:9px">O</span>OpenAI</span><span class="badge layoff">裁员</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>89</b></span><button class="icon-btn" data-fav="openai-20261008-mikita-balesni" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/openai-20261008-mikita-balesni.html">OpenAI 解雇三名安全研究员</a></h3>
+  <p class="card-sum">OpenAI 以违反敏感信息处理政策为由解雇安全研究员 Mikita Balesni、Tomek Korbak 与项目经理 Jasmine Wang。三人称 Korbak 因跟 METR 沟通太多被口头告知解雇，并联名发表公开信。</p>
+  <div class="move"><span class="who">Mikita Balesni</span><span class=dot></span><span class="person">OpenAI 安全研究员</span><span class=dot></span><span class="person">约 3 人</span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>解雇三名安全研究员的官方理由是「违反敏感信息政策」，而当事人称起因是「跟外部审计方沟通太多」。寒蝉效应比事件本身更值得记。</p></div>
+</article></div>
+</div><div class="feed-item is-selected" data-id="openai-20261008-ismail-elmas" data-type="join">
+  <div class="feed-rail"><time>3 周前</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:14px;height:14px;font-size:9px">O</span>OpenAI</span><span class="badge join">入职</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>78</b></span><button class="icon-btn" data-fav="openai-20261008-ismail-elmas" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/openai-20261008-ismail-elmas.html">OpenAI 再挖 SpaceX 系销售高管</a></h3>
+  <p class="card-sum">OpenAI 任命驻慕尼黑的 Ismail Elmas 为 EMEA 销售副总裁。他今年 4 月加入 Cursor，8 月 Cursor 随 SpaceX 收购易主，这是 OpenAI 一个月内第二位 SpaceX 系销售高管。</p>
+  <div class="move"><span class="who">Ismail Elmas</span><span class=dot></span><span class="path"><span class="org"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:12px;height:12px;font-size:8px">O</span>OpenAI</span></span><span class=dot></span><span class="person">OpenAI EMEA 销售副总裁</span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>一个月内第二位 SpaceX 系销售高管。OpenAI 的 EMEA 渠道在整体换血。</p></div>
+</article></div>
+</div></div>
+</section><section class="day-group" data-day-group>
+  <div class="daybar"><h2>10月3日</h2><span class="dow">星期六</span>
+    <span class="count">1 条</span></div>
+  <div class="feed" data-feed><div class="feed-item is-selected" data-id="openai-20261003-david-robinson" data-type="departure">
+  <div class="feed-rail"><time>3 周前</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:14px;height:14px;font-size:9px">O</span>OpenAI</span><span class="badge departure">离职</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>78</b></span><button class="icon-btn" data-fav="openai-20261003-david-robinson" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/openai-20261003-david-robinson.html">OpenAI 安全员工 Robinson 辞职：文化已坏</a></h3>
+  <p class="card-sum">在 OpenAI 三年半的 David Robinson 在《大西洋月刊》撰文宣布离职，称公司文化已经坏了，靠迭代部署边试边错必然周期性失败，并以 OpenAI 智能体入侵 Hugging Face 为例。</p>
+  <div class="move"><span class="who">David Robinson</span><span class=dot></span><span class="path"><span class="org"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:12px;height:12px;font-size:8px">O</span>OpenAI</span><span class="arrow">→</span><span class="org to">未披露</span></span><span class=dot></span><span class="person">OpenAI 安全透明度负责人</span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>在《大西洋月刊》发文「公司文化已经坏了」，把内部矛盾直接摆到公共领域。</p></div>
+</article></div>
+</div></div>
+</section><section class="day-group" data-day-group>
+  <div class="daybar"><h2>9月17日</h2><span class="dow">星期四</span>
+    <span class="count">1 条</span></div>
+  <div class="feed" data-feed><div class="feed-item is-selected" data-id="openai-20260917-brian-mccarthy" data-type="join">
+  <div class="feed-rail"><time>1 个月前</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:14px;height:14px;font-size:9px">O</span>OpenAI</span><span class="badge join">入职</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>83</b></span><button class="icon-btn" data-fav="openai-20260917-brian-mccarthy" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/openai-20260917-brian-mccarthy.html">OpenAI 从 SpaceX 挖来全球销售副总裁</a></h3>
+  <p class="card-sum">OpenAI 聘请 SpaceX 全球营收与现场运营总裁 Brian McCarthy 出任全球销售副总裁，这是 8 月 24 日上任的 CRO Dali Rajic 的首位重要招募，职位为新设。</p>
+  <div class="move"><span class="who">Brian McCarthy</span><span class=dot></span><span class="path"><span class="org"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:12px;height:12px;font-size:8px">O</span>OpenAI</span></span><span class=dot></span><span class="person">OpenAI 全球销售副总裁</span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>从 SpaceX 挖全球销售一号位，OpenAI 的 To B 渠道开始照抄马斯克那套「火箭式销售」。</p></div>
+</article></div>
+</div></div>
+</section><section class="day-group" data-day-group>
+  <div class="daybar"><h2>9月9日</h2><span class="dow">星期三</span>
+    <span class="count">1 条</span></div>
+  <div class="feed" data-feed><div class="feed-item is-selected" data-id="tencent-20260909-yonglong-tian" data-type="join">
+  <div class="feed-rail"><time>1 个月前</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#e4ecf3;color:#2f506b;width:14px;height:14px;font-size:9px">腾</span>腾讯</span><span class="badge join">入职</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>76</b></span><button class="icon-btn" data-fav="tencent-20260909-yonglong-tian" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/tencent-20260909-yonglong-tian.html">OpenAI前研究员田永龙出任腾讯混元多模态负责人</a></h3>
+  <p class="card-sum">9月9日，多家媒体报道，原OpenAI研究员田永龙已进入腾讯CEO/总裁办公室，出任混元多模态负责人，向首席AI科学家姚顺雨汇报。田永龙曾任Google Research与DeepMind研究员，2026年7月加入腾讯。</p>
+  <div class="move"><span class="who">田永龙</span><span class=dot></span><span class="path"><span class="org"><span class="mark" style="background:#e4ecf3;color:#2f506b;width:12px;height:12px;font-size:8px">腾</span>腾讯</span></span><span class=dot></span><span class="person">腾讯混元多模态负责人</span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>OpenAI 研究员回国进腾讯、向姚顺雨汇报，混元多模态补上关键一块。</p></div>
+</article></div>
+</div></div>
+</section><section class="day-group" data-day-group>
+  <div class="daybar"><h2>8月25日</h2><span class="dow">星期二</span>
+    <span class="count">1 条</span></div>
+  <div class="feed" data-feed><div class="feed-item is-selected" data-id="openai-20260825-luke-metz" data-type="departure">
+  <div class="feed-rail"><time>2 个月前</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:14px;height:14px;font-size:9px">O</span>OpenAI</span><span class="chip"><span class="mark" style="background:#e7eaf1;color:#2a3a63;width:14px;height:14px;font-size:9px">M</span>Meta</span><span class="badge departure">离职</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>69</b></span><button class="icon-btn" data-fav="openai-20260825-luke-metz" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/openai-20260825-luke-metz.html">Luke Metz 离开 OpenAI 加入 Meta</a></h3>
+  <p class="card-sum">据 Axios，Luke Metz 加入 Meta 超智能实验室、向 Alexandr Wang 汇报。他 2024 年从 OpenAI 去 Thinking Machines，今年 1 月回流，8 月再走，八个月辗转三家前沿实验室。</p>
+  <div class="move"><span class="who">Luke Metz</span><span class=dot></span><span class="path"><span class="org"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:12px;height:12px;font-size:8px">O</span>OpenAI</span><span class="arrow">→</span><span class="org to"><span class="mark" style="background:#e7eaf1;color:#2a3a63;width:12px;height:12px;font-size:8px">M</span>Meta</span></span><span class=dot></span><span class="person">OpenAI 研究员</span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>八个月辗转三家前沿实验室（OpenAI → Thinking Machines → Meta）。研究员用脚投票的周期，正在变短。</p></div>
+</article></div>
+</div></div>
+</section><section class="day-group" data-day-group>
+  <div class="daybar"><h2>8月13日</h2><span class="dow">星期四</span>
+    <span class="count">1 条</span></div>
+  <div class="feed" data-feed><div class="feed-item is-selected" data-id="openai-20260813-dali-rajic" data-type="reorg">
+  <div class="feed-rail"><time>2 个月前</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:14px;height:14px;font-size:9px">O</span>OpenAI</span><span class="badge reorg">组织调整</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>87</b></span><button class="icon-btn" data-fav="openai-20260813-dali-rajic" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/openai-20260813-dali-rajic.html">OpenAI 换掉上任九个月的 CRO，Wiz 总裁接任</a></h3>
+  <p class="card-sum">OpenAI 宣布 CRO Denise Dresser 离职，由 Wiz 总裁兼 COO Dali Rajic 接任。Dresser 去年 12 月才从 Slack 加入、任职仅九个月；这是 OpenAI 一年内第五次 C 级调整。</p>
+  <div class="move"><span class="who">Dali Rajic</span><span class=dot></span><span class="person">OpenAI 首席营收官</span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>九个月就换 CRO，一年内第五次 C 级调整。OpenAI 的商业化组织还在找形状。</p></div>
+</article></div>
+</div></div>
+</section><section class="day-group" data-day-group>
+  <div class="daybar"><h2>8月11日</h2><span class="dow">星期二</span>
+    <span class="count">1 条</span></div>
+  <div class="feed" data-feed><div class="feed-item is-selected" data-id="openai-20260811-brad-lightcap" data-type="departure">
+  <div class="feed-rail"><time>2 个月前</time><span class="feed-dot"></span></div>
+  <div class="feed-body"><article class="card">
+  <div class="card-top">
+    <div class="chips"><span class="chip"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:14px;height:14px;font-size:9px">O</span>OpenAI</span><span class="badge departure">离职</span></div>
+    <div class="card-tools"><span class="score"><span class="lbl">AI 评分</span><span class="sep"></span><b>85</b></span><button class="icon-btn" data-fav="openai-20260811-brad-lightcap" aria-label="收藏" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3Z"/></svg></button></div>
+  </div>
+  <h3><a href="../item/openai-20260811-brad-lightcap.html">OpenAI 前 COO Brad Lightcap 离职创业</a></h3>
+  <p class="card-sum">在 OpenAI 八年的 Brad Lightcap 宣布离职去创业。他 2018 年加入、做了四年 COO，今年 4 月被调去负责特别项目，职责交给 CRO Dresser，是 OpenAI 今年高管流失的最新一例。</p>
+  <div class="move"><span class="who">Brad Lightcap</span><span class=dot></span><span class="path"><span class="org"><span class="mark" style="background:#e6eeea;color:#1f4d3c;width:12px;height:12px;font-size:8px">O</span>OpenAI</span><span class="arrow">→</span><span class="org to">创业</span></span><span class=dot></span><span class="person">OpenAI 前首席运营官</span></div>
+  <div class="card-foot"><p class="reason"><b>推荐理由</b>八年老兵、前 COO 创业。OpenAI 今年高管流失名单上，又加了一个最懂商业化的名字。</p></div>
+</article></div>
+</div></div>
+</section></div><footer class="footer"><span>AIFLOW · AI 人才流动 · 人事变动聚合</span><a href="../about.html">数据源与方法</a><a href="../feed.xml">RSS</a><a href="../random.html">随机周报</a><span class="foot-stamp">数据截至 10月30日</span><span style="margin-left:auto">© 2026 AIFLOW</span></footer></main>
+</div>
+</div>
+<nav class="tabbar"><a class="" href="../index.html"><span class="tab-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.09 12.97a1 1 0 0 0 .77 1.64H11l-1 7.39 8.91-10.97a1 1 0 0 0-.77-1.64H12l1-7.39Z"/></svg></span><span>精选</span></a><a class="" href="../all.html"><span class="tab-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></span><span>动态</span></a><a class="" href="../rumors.html"><span class="tab-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-8 8H7l-4 3v-7a8 8 0 0 1 8-8h2a8 8 0 0 1 8 4Z"/><path d="M8 11h.01M12 11h.01M16 11h.01"/></svg></span><span>小道</span></a><a class="" href="../random.html"><span class="tab-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="9" r="1"/><circle cx="9" cy="15" r="1"/><circle cx="15" cy="15" r="1"/><circle cx="12" cy="12" r="1"/></svg></span><span>随机</span></a></nav>
+<script src="../assets/app.js?v=1793340905"></script>
+</body>
+</html>
