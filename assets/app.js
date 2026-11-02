@@ -1,151 +1,134 @@
-// AIFLOW — 交互：主题、搜索、标记已读、收藏
+// AIFLOW — shared reader controls. Keep storage keys compatible with existing readers.
 (function () {
-  const root = document.documentElement;
-  const THEME_KEY = 'aiflow-theme';
-
-  /* ---------- 主题 ---------- */
-  function applyTheme(mode) {
-    const dark = mode === 'dark' || (mode === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches);
-    root.dataset.theme = dark ? 'dark' : 'light';
-    document.querySelectorAll('[data-set-theme]').forEach(function (b) {
-      b.setAttribute('aria-pressed', String(b.dataset.setTheme === mode));
-    });
+  const store = {
+    get(key, fallback) { try { return localStorage.getItem(key) || fallback; } catch (_) { return fallback; } },
+    set(key, value) { try { localStorage.setItem(key, value); } catch (_) { /* Session controls still work. */ } },
+    setOf(key) { try { const a = JSON.parse(this.get(key, '[]')); return new Set(Array.isArray(a) ? a.filter(x => typeof x === 'string') : []); } catch (_) { return new Set(); } }
+  };
+  const media = matchMedia('(prefers-color-scheme: dark)');
+  let mode = store.get('aiflow-theme', 'auto');
+  function applyTheme() {
+    document.documentElement.dataset.theme = mode === 'dark' || (mode === 'auto' && media.matches) ? 'dark' : 'light';
+    document.querySelectorAll('[data-set-theme]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.setTheme === mode)));
   }
-  const saved = localStorage.getItem(THEME_KEY) || 'auto';
-  applyTheme(saved);
-  document.addEventListener('click', function (e) {
+  document.addEventListener('click', e => {
     const b = e.target.closest('[data-set-theme]');
     if (!b) return;
-    localStorage.setItem(THEME_KEY, b.dataset.setTheme);
-    applyTheme(b.dataset.setTheme);
+    mode = b.dataset.setTheme; store.set('aiflow-theme', mode); applyTheme();
   });
-  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
-    if ((localStorage.getItem(THEME_KEY) || 'auto') === 'auto') applyTheme('auto');
-  });
-
-  /* ---------- 搜索 ---------- */
+  media.addEventListener('change', applyTheme); applyTheme();
+  const favs = store.setOf('aiflow-favs');
+  const read = store.setOf('aiflow-read');
   const input = document.querySelector('[data-search]');
-  const hasFeed = !!document.querySelector('[data-feed]');
-  function filterFeed(q) {
-    if (!hasFeed) return;
-    q = q.trim().toLowerCase();
-    let shown = 0;
-    document.querySelectorAll('[data-feed] .feed-item').forEach(function (el) {
-      const hit = !q || el.textContent.toLowerCase().includes(q);
-      el.hidden = !hit;
-      if (hit) shown++;
-    });
-    document.querySelectorAll('[data-day-group]').forEach(function (g) {
-      const any = [...g.querySelectorAll('.feed-item')].some(function (el) { return !el.hidden; });
-      g.hidden = !any;
-    });
-    const empty = document.querySelector('[data-empty]');
-    if (empty) empty.hidden = shown > 0;
+  const items = [...document.querySelectorAll('[data-feed] .feed-item')];
+  const groups = [...document.querySelectorAll('[data-day-group]')];
+  const types = new Set(['all', ...items.map(el => el.dataset.type)]);
+  let state, limit = 24;
+  const texts = new Map(items.map(el => [el, el.textContent.toLocaleLowerCase()]));
+  function fromURL() {
+    const p = new URLSearchParams(location.search);
+    const type = p.get('type') || location.hash.slice(1);
+    state = { q: p.get('q') || '', type: types.has(type) ? type : 'all', saved: p.get('saved') === '1', unread: p.get('unread') === '1' };
+    if (input) input.value = state.q;
   }
-  if (input) {
-    input.addEventListener('input', function () { filterFeed(input.value); });
-    document.addEventListener('keydown', function (e) {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
-        e.preventDefault(); input.focus();
-      } else if (e.key === '/' && document.activeElement !== input) {
-        e.preventDefault(); input.focus();
-      }
+  fromURL();
+  let controls, status, more, clear, savedButton, unreadButton, empty;
+  if (items.length) {
+    document.querySelectorAll('[data-unread-toggle]').forEach(el => el.remove());
+    controls = document.createElement('div'); controls.className = 'reader-controls';
+    controls.innerHTML = '<div class="reader-toggles"><button type="button" data-saved-toggle aria-pressed="false">只看收藏</button><button type="button" data-unread-toggle aria-pressed="false">只看未读</button><button type="button" data-reset-filters>重置筛选</button></div><p class="reader-status" role="status" aria-live="polite"></p>';
+    const first = groups[0] || document.querySelector('[data-feed]'); first.before(controls);
+    status = controls.querySelector('.reader-status'); clear = controls.querySelector('[data-reset-filters]');
+    savedButton = controls.querySelector('[data-saved-toggle]'); unreadButton = controls.querySelector('[data-unread-toggle]');
+    empty = document.querySelector('[data-empty]');
+    if (!empty) { empty = document.createElement('p'); empty.className = 'empty'; empty.dataset.empty = ''; (groups.at(-1) || document.querySelector('[data-feed]')).after(empty); }
+    empty.textContent = '没有符合条件的记录。试试更换关键词，或重置筛选。';
+    more = document.createElement('button'); more.type = 'button'; more.className = 'load-more'; more.textContent = '加载更多'; empty.after(more);
+    more.addEventListener('click', () => {
+      const old = new Set(items.filter(el => !el.hidden)); limit += 24; render(false);
+      const next = items.find(el => !el.hidden && !old.has(el));
+      if (next) next.querySelector('h3 a')?.focus({ preventScroll: true });
+    });
+    savedButton.addEventListener('click', () => { state.saved = !state.saved; refresh(); });
+    unreadButton.addEventListener('click', () => { state.unread = !state.unread; refresh(); });
+    clear.addEventListener('click', () => { state = { q: '', type: 'all', saved: false, unread: false }; if (input) input.value = ''; refresh(); });
+    items.forEach(el => {
+      const card = el.querySelector('.card'); if (!card) return;
+      const extras = [...card.querySelectorAll(':scope > .quote-box, :scope > .card-foot')];
+      if (!extras.length) return;
+      const details = document.createElement('details'); details.className = 'card-extra';
+      const summary = document.createElement('summary'); summary.textContent = '摘录与推荐理由'; details.append(summary);
+      extras.forEach(extra => details.append(extra)); card.append(details);
     });
   }
-
-  /* ---------- 类型筛选（全部动态） ---------- */
-  document.addEventListener('click', function (e) {
-    const t = e.target.closest('[data-filter-type]');
-    if (!t) return;
-    e.preventDefault();
-    const type = t.dataset.filterType;
-    document.querySelectorAll('[data-filter-type]').forEach(function (a) {
-      a.classList.toggle('is-active', a === t);
-    });
-    let firstShown = null;
-    document.querySelectorAll('[data-feed] .feed-item').forEach(function (el) {
-      const show = type === 'all' || el.dataset.type === type;
-      el.hidden = !show;
-      if (show) {
-        el.classList.remove('is-fade');
-        void el.offsetWidth;
-        el.classList.add('is-fade');
-        if (!firstShown) firstShown = el;
-      }
-    });
-    document.querySelectorAll('[data-day-group]').forEach(function (g) {
-      const n = [...g.querySelectorAll('.feed-item')].filter(function (el) { return !el.hidden; }).length;
-      g.hidden = n === 0;
-      const c = g.querySelector('.daybar .count');
-      if (c) c.textContent = n + ' 条';
-    });
-    const total = document.querySelectorAll('[data-feed] .feed-item:not([hidden])').length;
-    const empty = document.querySelector('[data-empty]');
-    if (empty) empty.hidden = total > 0;
-    history.replaceState(null, '', type === 'all' ? location.pathname : '#' + type);
-    if (firstShown) {
-      const y = firstShown.getBoundingClientRect().top + window.scrollY - 96;
-      window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+  function syncURL() {
+    const url = new URL(location.href);
+    for (const [key, value] of Object.entries(state)) {
+      const active = value && value !== 'all';
+      if (active) url.searchParams.set(key, value === true ? '1' : value); else url.searchParams.delete(key);
     }
-  });
-
-  /* ---------- 收藏 ---------- */
-  const FAV_KEY = 'aiflow-favs';
-  const favs = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || '[]'));
-  document.querySelectorAll('[data-fav]').forEach(function (btn) {
-    const id = btn.dataset.fav;
-    if (favs.has(id)) { btn.classList.add('on'); btn.setAttribute('aria-pressed', 'true'); }
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (favs.has(id)) { favs.delete(id); btn.classList.remove('on'); btn.setAttribute('aria-pressed', 'false'); }
-      else { favs.add(id); btn.classList.add('on'); btn.setAttribute('aria-pressed', 'true'); }
-      localStorage.setItem(FAV_KEY, JSON.stringify([...favs]));
-      document.dispatchEvent(new CustomEvent('aiflow:favs'));
+    if (types.has(url.hash.slice(1))) url.hash = '';
+    history.replaceState(null, '', url);
+  }
+  function paintFavorites() {
+    document.querySelectorAll('[data-fav]').forEach(btn => {
+      const on = favs.has(btn.dataset.fav); btn.classList.toggle('on', on);
+      btn.setAttribute('aria-pressed', String(on)); btn.setAttribute('aria-label', on ? '取消收藏' : '收藏');
     });
-  });
-
-  /* ---------- 只看未读 ---------- */
-  const READ_KEY = 'aiflow-read';
-  const read = new Set(JSON.parse(localStorage.getItem(READ_KEY) || '[]'));
-  let unreadOnly = false;
-  function paintUnread() {
-    if (!hasFeed) return;
-    document.querySelectorAll('[data-feed] .feed-item').forEach(function (el) {
+  }
+  function render(updateURL = true) {
+    paintFavorites(); if (!items.length) return;
+    const q = state.q.trim().toLocaleLowerCase(); let matches = 0;
+    items.forEach(el => {
       const id = el.dataset.id;
+      const hit = (!q || texts.get(el).includes(q)) && (state.type === 'all' || el.dataset.type === state.type) && (!state.saved || favs.has(id)) && (!state.unread || !read.has(id));
       el.classList.toggle('is-unread', !read.has(id));
-      if (unreadOnly) el.hidden = read.has(id);
+      el.hidden = !hit || ++matches > limit;
     });
-    if (unreadOnly) {
-      document.querySelectorAll('[data-day-group]').forEach(function (g) {
-        g.hidden = ![...g.querySelectorAll('.feed-item')].some(function (el) { return !el.hidden; });
-      });
+    groups.forEach(g => {
+      const visible = [...g.querySelectorAll('.feed-item')].filter(el => !el.hidden).length;
+      g.hidden = !visible; const count = g.querySelector('.daybar .count'); if (count) count.textContent = visible + ' 条';
+    });
+    empty.hidden = matches > 0; more.hidden = matches <= limit;
+    more.textContent = '加载更多 · 还有 ' + Math.max(0, matches - limit) + ' 条';
+    status.textContent = matches > limit ? '已显示 ' + limit + ' / ' + matches + ' 条' : '共 ' + matches + ' 条记录';
+    savedButton.setAttribute('aria-pressed', String(state.saved)); unreadButton.setAttribute('aria-pressed', String(state.unread));
+    const filtered = !!(q || state.saved || state.unread || state.type !== 'all');
+    clear.hidden = !filtered;
+    document.querySelectorAll('.hot-card').forEach(el => el.hidden = filtered);
+    document.querySelectorAll('[data-filter-type]').forEach(b => {
+      const active = b.dataset.filterType === state.type;
+      b.classList.toggle('is-active', active); b.setAttribute('aria-pressed', String(active));
+    });
+    if (updateURL) syncURL();
+  }
+  function refresh() { limit = 24; render(); }
+  input?.addEventListener('input', () => { state.q = input.value; refresh(); });
+  document.addEventListener('keydown', e => {
+    if (!input || e.isComposing) return;
+    const editing = e.target.closest('input, textarea, select, [contenteditable="true"]');
+    if (((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') || (e.key === '/' && !editing && !e.metaKey && !e.ctrlKey && !e.altKey)) {
+      e.preventDefault(); input.focus();
     }
-  }
-  document.querySelectorAll('[data-unread-toggle]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      unreadOnly = !unreadOnly;
-      btn.setAttribute('aria-pressed', String(unreadOnly));
-      paintUnread();
-    });
   });
-  if (hasFeed) {
-    paintUnread();
-    document.addEventListener('click', function (e) {
-      const a = e.target.closest('a[href]');
-      if (!a) return;
-      const el = a.closest('.feed-item');
-      if (!el) return;
-      read.add(el.dataset.id);
-      localStorage.setItem(READ_KEY, JSON.stringify([...read]));
-      paintUnread();
-    });
-  }
-
-  /* ---------- 初始 hash 筛选 ---------- */
-  const h = location.hash.replace('#', '');
-  if (h && document.querySelector('[data-filter-type="' + h + '"]')) {
-    document.querySelector('[data-filter-type="' + h + '"]').click();
-  }
+  document.addEventListener('click', e => {
+    const type = e.target.closest('[data-filter-type]');
+    if (type) { state.type = type.dataset.filterType; refresh(); }
+    const fav = e.target.closest('[data-fav]');
+    if (fav) {
+      e.preventDefault(); const id = fav.dataset.fav;
+      favs.has(id) ? favs.delete(id) : favs.add(id);
+      store.set('aiflow-favs', JSON.stringify([...favs])); render(false);
+      document.dispatchEvent(new CustomEvent('aiflow:favs'));
+    }
+    const link = e.target.closest('.feed-item h3 a');
+    if (link) { read.add(link.closest('.feed-item').dataset.id); store.set('aiflow-read', JSON.stringify([...read])); }
+  });
+  window.addEventListener('popstate', () => { fromURL(); refresh(); });
+  window.addEventListener('pageshow', () => {
+    store.setOf('aiflow-read').forEach(id => read.add(id)); render(false);
+  });
+  render(false);
 })();
 
 /* ---------- 随机周报（一次一条） ---------- */
@@ -181,7 +164,9 @@
   }
 
   function start(ALL) {
-    var now = new Date();
+    var parts = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Shanghai', year: 'numeric', month: 'numeric', day: 'numeric' }).formatToParts(new Date());
+    var date = Object.fromEntries(parts.map(p => [p.type, p.value]));
+    var now = new Date(Number(date.year), Number(date.month) - 1, Number(date.day));
     var range = weekRange(now);
     var mon = range[0], sun = range[1];
     var pool = ALL.filter(function (x) {
@@ -196,10 +181,13 @@
 
     if (!pool.length) {
       labelEl.textContent = '本周暂无';
+      out.innerHTML = '<p class="empty">本周还没有记录。<a href="weekly.html">浏览往期周报 →</a></p>';
       document.querySelector('[data-rr-roll]').disabled = true;
       return;
     }
 
+    document.querySelector('[data-rr-roll]').disabled = false;
+    labelEl.textContent = '随机一条';
     function pick() {
       var c = pool.filter(function (x) { return x.id !== lastId; });
       if (!c.length) c = pool;
@@ -209,6 +197,7 @@
     function render(x) {
       lastId = x.id;
       var week = isoWeek(mon);
+      var thursday = new Date(mon); thursday.setDate(mon.getDate() + 3);
       out.innerHTML = '<article class="rr-card is-pop">' +
         '<div class="rr-card-meta"><span class="rr-type">' + esc(x.type) + '</span>' +
         '<span class="rr-co">' + esc(x.company) + '</span>' +
@@ -218,7 +207,7 @@
         (x.rumor ? '<div class="rr-rumor-note">⚠ 小道消息 · ' + esc(x.rst) + ' · 来自 ' + esc(x.rs) + '，未经证实，请当线索看</div>' : '') +
         (x.reason ? '<p class="rr-card-reason">' + esc(x.reason) + '</p>' : '') +
         '<div class="rr-card-foot"><span class="muted">本周共 ' + pool.length + ' 条 · 再按一次换一条</span>' +
-        '<a class="rr-link" href="weekly/' + mon.getFullYear() + '-W' + String(week).padStart(2, '0') + '.html">看本周全貌 →</a></div>' +
+        '<a class="rr-link" href="weekly/' + thursday.getFullYear() + '-W' + String(week).padStart(2, '0') + '.html">看本周全貌 →</a></div>' +
         '</article>';
       labelEl.textContent = '再抽一条';
     }
@@ -229,9 +218,9 @@
   }
 
   fetch('assets/data/random.json')
-    .then(function (r) { return r.json(); })
+    .then(function (r) { if (!r.ok) throw new Error('Unavailable'); return r.json(); })
     .then(start)
-    .catch(function () { if (countEl) countEl.textContent = '数据加载失败，刷新试试'; });
+    .catch(function () { if (countEl) countEl.textContent = '数据暂时无法加载，请刷新重试。'; labelEl.textContent = '暂不可用'; out.innerHTML = '<p class="empty"><a href="weekly.html">先浏览往期周报 →</a></p>'; });
 })();
 
 /* ---------- 日历 ---------- */

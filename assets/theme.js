@@ -1,0 +1,1 @@
+(function () { let mode = 'auto'; try { mode = localStorage.getItem('aiflow-theme') || 'auto'; } catch (_) {} document.documentElement.dataset.theme = mode === 'dark' || (mode === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'; })();
