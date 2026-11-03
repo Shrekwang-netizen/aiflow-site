@@ -3656,5 +3656,35 @@
   "scope": "talent",
   "reviewed_at": "2026-11-03",
   "review_note": "已阅读 Sam Altman 的具体原帖与其中引用的 Madry 发言；不推断未披露的职级或汇报关系。"
+ },
+ {
+  "id": "bytedance-20261103-cai-tianle",
+  "date": "2026-11-03",
+  "title": "字节 Seed 研究员蔡天乐离职",
+  "summary": "据「申妈的朋友圈」11 月 3 日报道，字节 Seed 前沿 AI 研究员、普林斯顿大学博士蔡天乐已于近期离职。他 2025 年 4 月加入字节，研究方向为持续学习与大模型推理加速，曾参与 Medusa 多头解码方案；字节官方未回应，去向未披露。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "字节跳动",
+    "slug": "bytedance"
+   }
+  ],
+  "person": "蔡天乐",
+  "tags": [
+   "字节跳动",
+   "Seed",
+   "研究员",
+   "离职"
+  ],
+  "sources": [
+   {
+    "name": "申妈的朋友圈（微信公众号）",
+    "url": "https://mp.weixin.qq.com/s/GvUjVcl_k0RunNQToe2GNw"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-03",
+  "review_note": "已读微信公众号「申妈的朋友圈」原文（11 月 3 日 09:59 发布）：文章称据知情人士，字节 Seed 研究员蔡天乐近期离职，字节未回应，去向未披露。单一信源，按已读报道收录，不推断更多细节。"
  }
 ]
