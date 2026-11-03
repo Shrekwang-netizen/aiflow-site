@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.aiflow.site</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/wz/Desktop/超级周报服务器/aiflow-site/scripts/daily.sh</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/wz/Desktop/超级周报服务器/aiflow-site</string>
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>10</integer><key>Minute</key><integer>0</integer></dict>
+  <key>RunAtLoad</key><false/>
+  <key>StandardOutPath</key><string>/Users/wz/Desktop/超级周报服务器/aiflow-site/logs/launchd.out</string>
+  <key>StandardErrorPath</key><string>/Users/wz/Desktop/超级周报服务器/aiflow-site/logs/launchd.err</string>
+</dict>
+</plist>
