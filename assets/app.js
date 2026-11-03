@@ -24,12 +24,15 @@
   const groups = [...document.querySelectorAll('[data-day-group]')];
   const types = new Set(['all', ...items.map(el => el.dataset.type)]);
   const qualityInput = document.querySelector('[data-quality-filter]');
+  const defaultQuality = qualityInput?.dataset.defaultQuality || 'all';
+  const QUALITIES = ['primary', 'reported', 'unreviewed', 'lead', 'checked'];
   let state, limit = 24;
   const texts = new Map(items.map(el => [el, el.textContent.toLocaleLowerCase()]));
   function fromURL() {
     const p = new URLSearchParams(location.search);
     const type = p.get('type') || location.hash.slice(1);
-    state = { quality: ['primary','reported','unreviewed','lead'].includes(p.get('quality')) ? p.get('quality') : 'all', q: p.get('q') || '', type: types.has(type) ? type : 'all', saved: p.get('saved') === '1', unread: p.get('unread') === '1' };
+    const saved = p.get('saved') === '1';
+    state = { quality: QUALITIES.includes(p.get('quality')) ? p.get('quality') : (saved ? 'all' : defaultQuality), q: p.get('q') || '', type: types.has(type) ? type : 'all', saved, unread: p.get('unread') === '1' };
     if (input) input.value = state.q; if (qualityInput) qualityInput.value = state.quality;
   }
   fromURL();
@@ -52,7 +55,7 @@
     });
     savedButton.addEventListener('click', () => { state.saved = !state.saved; refresh(); });
     unreadButton.addEventListener('click', () => { state.unread = !state.unread; refresh(); });
-    clear.addEventListener('click', () => { state = { quality: 'all', q: '', type: 'all', saved: false, unread: false }; if (qualityInput) qualityInput.value = 'all'; if (input) input.value = ''; refresh(); });
+    clear.addEventListener('click', () => { state = { quality: defaultQuality, q: '', type: 'all', saved: false, unread: false }; if (qualityInput) qualityInput.value = defaultQuality; if (input) input.value = ''; refresh(); });
     items.forEach(el => {
       const card = el.querySelector('.card'); if (!card) return;
       const extras = [...card.querySelectorAll(':scope > .quote-box, :scope > .card-foot')];
@@ -65,7 +68,7 @@
   function syncURL() {
     const url = new URL(location.href);
     for (const [key, value] of Object.entries(state)) {
-      const active = value && value !== 'all';
+      const active = value && value !== 'all' && !(key === 'quality' && value === defaultQuality);
       if (active) url.searchParams.set(key, value === true ? '1' : value); else url.searchParams.delete(key);
     }
     if (types.has(url.hash.slice(1))) url.hash = '';
@@ -82,7 +85,8 @@
     const q = state.q.trim().toLocaleLowerCase(); let matches = 0;
     items.forEach(el => {
       const id = el.dataset.id;
-      const hit = (state.quality === 'all' || el.dataset.quality === state.quality) && (!q || texts.get(el).includes(q)) && (state.type === 'all' || el.dataset.type === state.type) && (!state.saved || favs.has(id)) && (!state.unread || !read.has(id));
+      const qOk = state.quality === 'all' || (state.quality === 'checked' ? (el.dataset.quality === 'primary' || el.dataset.quality === 'reported') : el.dataset.quality === state.quality);
+      const hit = qOk && (!q || texts.get(el).includes(q)) && (state.type === 'all' || el.dataset.type === state.type) && (!state.saved || favs.has(id)) && (!state.unread || !read.has(id));
       el.classList.toggle('is-unread', !read.has(id));
       el.hidden = !hit || ++matches > limit;
     });
@@ -94,7 +98,7 @@
     more.textContent = '加载更多 · 还有 ' + Math.max(0, matches - limit) + ' 条';
     status.textContent = matches > limit ? '已显示 ' + limit + ' / ' + matches + ' 条' : '共 ' + matches + ' 条记录';
     savedButton.setAttribute('aria-pressed', String(state.saved)); unreadButton.setAttribute('aria-pressed', String(state.unread));
-    const filtered = !!(q || state.saved || state.unread || state.type !== 'all' || state.quality !== 'all');
+    const filtered = !!(q || state.saved || state.unread || state.type !== 'all' || (state.quality !== 'all' && state.quality !== defaultQuality));
     clear.hidden = !filtered;
     document.querySelectorAll('.hot-card').forEach(el => el.hidden = filtered);
     document.querySelectorAll('[data-filter-type]').forEach(b => {
