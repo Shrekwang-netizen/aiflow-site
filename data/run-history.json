@@ -1,0 +1,35 @@
+[
+  {
+    "checked_at": "2026-11-03T08:15:00+08:00",
+    "mode": "initial-review",
+    "coverage": "visible-window",
+    "accounts_checked": [
+      "OpenAI",
+      "AnthropicAI",
+      "GoogleDeepMind",
+      "deepseek_ai",
+      "MistralAI",
+      "cohere",
+      "cursor_ai",
+      "tianyi",
+      "sama",
+      "gdb",
+      "demishassabis",
+      "karpathy",
+      "jackclarkSF",
+      "ylecun",
+      "amir",
+      "steph_palazzolo",
+      "kyliebytes",
+      "shiringhaffary"
+    ],
+    "accounts_failed": [],
+    "posts_read": 90,
+    "new_records": 1,
+    "reviewed_records": 3,
+    "summary": "首次核对 18 个账号的近期可见帖子，每个账号 5 条；不代表完整抓取。另核对一篇 InfoQ 报道。完成 3 条人才记录及 1 条技术观察的来源整理。",
+    "schedule": "每天 10:00 · 北京时间",
+    "automation_enabled": true,
+    "automation_id": "aiflow"
+  }
+]

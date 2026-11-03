@@ -23,13 +23,14 @@
   const items = [...document.querySelectorAll('[data-feed] .feed-item')];
   const groups = [...document.querySelectorAll('[data-day-group]')];
   const types = new Set(['all', ...items.map(el => el.dataset.type)]);
+  const qualityInput = document.querySelector('[data-quality-filter]');
   let state, limit = 24;
   const texts = new Map(items.map(el => [el, el.textContent.toLocaleLowerCase()]));
   function fromURL() {
     const p = new URLSearchParams(location.search);
     const type = p.get('type') || location.hash.slice(1);
-    state = { q: p.get('q') || '', type: types.has(type) ? type : 'all', saved: p.get('saved') === '1', unread: p.get('unread') === '1' };
-    if (input) input.value = state.q;
+    state = { quality: ['primary','reported','unreviewed','lead'].includes(p.get('quality')) ? p.get('quality') : 'all', q: p.get('q') || '', type: types.has(type) ? type : 'all', saved: p.get('saved') === '1', unread: p.get('unread') === '1' };
+    if (input) input.value = state.q; if (qualityInput) qualityInput.value = state.quality;
   }
   fromURL();
   let controls, status, more, clear, savedButton, unreadButton, empty;
@@ -51,7 +52,7 @@
     });
     savedButton.addEventListener('click', () => { state.saved = !state.saved; refresh(); });
     unreadButton.addEventListener('click', () => { state.unread = !state.unread; refresh(); });
-    clear.addEventListener('click', () => { state = { q: '', type: 'all', saved: false, unread: false }; if (input) input.value = ''; refresh(); });
+    clear.addEventListener('click', () => { state = { quality: 'all', q: '', type: 'all', saved: false, unread: false }; if (qualityInput) qualityInput.value = 'all'; if (input) input.value = ''; refresh(); });
     items.forEach(el => {
       const card = el.querySelector('.card'); if (!card) return;
       const extras = [...card.querySelectorAll(':scope > .quote-box, :scope > .card-foot')];
@@ -73,7 +74,7 @@
   function paintFavorites() {
     document.querySelectorAll('[data-fav]').forEach(btn => {
       const on = favs.has(btn.dataset.fav); btn.classList.toggle('on', on);
-      btn.setAttribute('aria-pressed', String(on)); btn.setAttribute('aria-label', on ? '取消收藏' : '收藏');
+      btn.setAttribute('aria-pressed', String(on)); btn.setAttribute('aria-label', on ? '取消收藏' : '收藏'); if (btn.classList.contains('save-text')) btn.textContent = on ? '已收藏 · 点击取消' : '收藏这条记录';
     });
   }
   function render(updateURL = true) {
@@ -81,7 +82,7 @@
     const q = state.q.trim().toLocaleLowerCase(); let matches = 0;
     items.forEach(el => {
       const id = el.dataset.id;
-      const hit = (!q || texts.get(el).includes(q)) && (state.type === 'all' || el.dataset.type === state.type) && (!state.saved || favs.has(id)) && (!state.unread || !read.has(id));
+      const hit = (state.quality === 'all' || el.dataset.quality === state.quality) && (!q || texts.get(el).includes(q)) && (state.type === 'all' || el.dataset.type === state.type) && (!state.saved || favs.has(id)) && (!state.unread || !read.has(id));
       el.classList.toggle('is-unread', !read.has(id));
       el.hidden = !hit || ++matches > limit;
     });
@@ -93,7 +94,7 @@
     more.textContent = '加载更多 · 还有 ' + Math.max(0, matches - limit) + ' 条';
     status.textContent = matches > limit ? '已显示 ' + limit + ' / ' + matches + ' 条' : '共 ' + matches + ' 条记录';
     savedButton.setAttribute('aria-pressed', String(state.saved)); unreadButton.setAttribute('aria-pressed', String(state.unread));
-    const filtered = !!(q || state.saved || state.unread || state.type !== 'all');
+    const filtered = !!(q || state.saved || state.unread || state.type !== 'all' || state.quality !== 'all');
     clear.hidden = !filtered;
     document.querySelectorAll('.hot-card').forEach(el => el.hidden = filtered);
     document.querySelectorAll('[data-filter-type]').forEach(b => {
@@ -103,6 +104,7 @@
     if (updateURL) syncURL();
   }
   function refresh() { limit = 24; render(); }
+  qualityInput?.addEventListener('change', () => { state.quality = qualityInput.value; refresh(); });
   input?.addEventListener('input', () => { state.q = input.value; refresh(); });
   document.addEventListener('keydown', e => {
     if (!input || e.isComposing) return;
@@ -125,243 +127,35 @@
     if (link) { read.add(link.closest('.feed-item').dataset.id); store.set('aiflow-read', JSON.stringify([...read])); }
   });
   window.addEventListener('popstate', () => { fromURL(); refresh(); });
-  window.addEventListener('pageshow', () => {
-    store.setOf('aiflow-read').forEach(id => read.add(id)); render(false);
-  });
+  function syncStoredLists() {
+    for (const [key, set] of [['aiflow-read', read], ['aiflow-favs', favs]]) {
+      try { const data = JSON.parse(store.get(key, 'null')); if (Array.isArray(data)) { set.clear(); data.filter(x => typeof x === 'string').forEach(x => set.add(x)); } } catch (_) {}
+    }
+    render(false);
+  }
+  window.addEventListener('pageshow', syncStoredLists);
+  window.addEventListener('storage', e => { if (e.key === 'aiflow-read' || e.key === 'aiflow-favs') syncStoredLists(); });
   render(false);
 })();
 
-/* ---------- 随机周报（一次一条） ---------- */
+/* Random archive: reviewed talent stories only, with original publication dates. */
 (function () {
-  var out = document.getElementById('rr-out');
-  if (!out) return;
-  var rangeEl = document.querySelector('[data-week-range]');
-  var countEl = document.querySelector('[data-rr-count]');
-  var labelEl = document.querySelector('[data-rr-label]');
-  var lastId = null;
-
-  function weekRange(now) {
-    var d = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    var dow = (d.getDay() + 6) % 7;
-    var mon = new Date(d); mon.setDate(d.getDate() - dow);
-    var sun = new Date(mon); sun.setDate(mon.getDate() + 6); sun.setHours(23, 59, 59, 999);
-    return [mon, sun];
-  }
-  function fmt(d) { return (d.getMonth() + 1) + '月' + d.getDate() + '日'; }
-  function esc(s) {
-    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
-    });
-  }
-  function isoWeek(d) {
-    var t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
-    var dn = (t.getUTCDay() + 6) % 7;
-    t.setUTCDate(t.getUTCDate() - dn + 3);
-    var ft = new Date(Date.UTC(t.getUTCFullYear(), 0, 4));
-    var fn = (ft.getUTCDay() + 6) % 7;
-    ft.setUTCDate(ft.getUTCDate() - fn + 3);
-    return 1 + Math.round((t - ft) / (7 * 24 * 3600 * 1000));
-  }
-
-  function start(ALL) {
-    var parts = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Shanghai', year: 'numeric', month: 'numeric', day: 'numeric' }).formatToParts(new Date());
-    var date = Object.fromEntries(parts.map(p => [p.type, p.value]));
-    var now = new Date(Number(date.year), Number(date.month) - 1, Number(date.day));
-    var range = weekRange(now);
-    var mon = range[0], sun = range[1];
-    var pool = ALL.filter(function (x) {
-      var t = new Date(x.date + 'T12:00:00');
-      return t >= mon && t <= sun;
-    });
-    if (rangeEl) rangeEl.textContent = fmt(mon) + ' – ' + fmt(sun);
-    var rumorCount = pool.filter(function (x) { return x.rumor; }).length;
-    if (countEl) countEl.textContent = pool.length
-      ? '本周共 ' + pool.length + ' 条记录' + (rumorCount ? '（含 ' + rumorCount + ' 条小道消息）' : '') + '，闭眼按一下'
-      : '本周窗口（' + fmt(mon) + ' – ' + fmt(sun) + '）还没有记录';
-
-    if (!pool.length) {
-      labelEl.textContent = '本周暂无';
-      out.innerHTML = '<p class="empty">本周还没有记录。<a href="weekly.html">浏览往期周报 →</a></p>';
-      document.querySelector('[data-rr-roll]').disabled = true;
-      return;
-    }
-
-    document.querySelector('[data-rr-roll]').disabled = false;
-    labelEl.textContent = '随机一条';
-    function pick() {
-      var c = pool.filter(function (x) { return x.id !== lastId; });
-      if (!c.length) c = pool;
-      return c[Math.floor(Math.random() * c.length)];
-    }
-
-    function render(x) {
-      lastId = x.id;
-      var week = isoWeek(mon);
-      var thursday = new Date(mon); thursday.setDate(mon.getDate() + 3);
-      out.innerHTML = '<article class="rr-card is-pop">' +
-        '<div class="rr-card-meta"><span class="rr-type">' + esc(x.type) + '</span>' +
-        '<span class="rr-co">' + esc(x.company) + '</span>' +
-        '<span class="mono">' + esc(x.date.slice(5).replace('-', '/')) + '</span>' +
-        '<span class="rr-conf">' + esc(x.conf) + '</span></div>' +
-        '<h2 class="rr-card-title"><a href="' + esc(x.url) + '">' + esc(x.title) + '</a></h2>' +
-        (x.rumor ? '<div class="rr-rumor-note">⚠ 小道消息 · ' + esc(x.rst) + ' · 来自 ' + esc(x.rs) + '，未经证实，请当线索看</div>' : '') +
-        (x.reason ? '<p class="rr-card-reason">' + esc(x.reason) + '</p>' : '') +
-        '<div class="rr-card-foot"><span class="muted">本周共 ' + pool.length + ' 条 · 再按一次换一条</span>' +
-        '<a class="rr-link" href="weekly/' + thursday.getFullYear() + '-W' + String(week).padStart(2, '0') + '.html">看本周全貌 →</a></div>' +
-        '</article>';
-      labelEl.textContent = '再抽一条';
-    }
-
-    document.addEventListener('click', function (e) {
-      if (e.target.closest('[data-rr-roll]')) render(pick());
-    });
-  }
-
-  fetch('assets/data/random.json')
-    .then(function (r) { if (!r.ok) throw new Error('Unavailable'); return r.json(); })
-    .then(start)
-    .catch(function () { if (countEl) countEl.textContent = '数据暂时无法加载，请刷新重试。'; labelEl.textContent = '暂不可用'; out.innerHTML = '<p class="empty"><a href="weekly.html">先浏览往期周报 →</a></p>'; });
-})();
-
-/* ---------- 日历 ---------- */
-(function () {
-  var el = document.getElementById('cal-data');
-  if (!el) return;
-  var DATA = JSON.parse(el.textContent);
-  var grid = document.querySelector('[data-cal-grid]');
-  var title = document.querySelector('[data-cal-title]');
-  var list = document.querySelector('[data-cal-list]');
-  var dates = Object.keys(DATA).sort();
-  var today = new Date();
-  var todayIso = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
-  var view = dates.length ? new Date(dates[dates.length - 1] + 'T12:00:00') : new Date();
-  view = new Date(view.getFullYear(), view.getMonth(), 1);
-
-  function weekStart(d) {
-    var x = new Date(d.getFullYear(), d.getMonth(), d.getDate());
-    var dow = (x.getDay() + 6) % 7;
-    x.setDate(x.getDate() - dow);
-    return x;
-  }
-  function fmt(d) { return (d.getMonth() + 1) + '月' + d.getDate() + '日'; }
-
-  function render() {
-    var y = view.getFullYear(), m = view.getMonth();
-    title.textContent = y + ' 年 ' + (m + 1) + ' 月';
-    var first = new Date(y, m, 1);
-    var offset = (first.getDay() + 6) % 7;
-    var days = new Date(y, m + 1, 0).getDate();
-    var ws = weekStart(today), we = new Date(ws); we.setDate(ws.getDate() + 6);
-    var html = '';
-    for (var i = 0; i < offset; i++) html += '<span class="cal-cell is-empty"></span>';
-    for (var d = 1; d <= days; d++) {
-      var dt = new Date(y, m, d);
-      var key = y + '-' + String(m + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0');
-      var rec = DATA[key];
-      var cls = 'cal-cell';
-      if (rec) cls += ' has';
-      if (dt >= ws && dt <= we) cls += ' is-week';
-      if (key === todayIso) cls += ' is-today';
-      html += '<button class="' + cls + '" type="button" data-date="' + key + '"' + (rec ? '' : ' disabled') + '>' +
-        '<span class="cal-d">' + d + '</span>' +
-        (rec ? '<i class="cal-dot"></i>' : '') + '</button>';
-    }
-    grid.innerHTML = html;
-    // 当月有记录的日期列表
-    var rows = dates.filter(function (k) { return k.indexOf(y + '-' + String(m + 1).padStart(2, '0')) === 0; });
-    list.innerHTML = rows.length ? '<h3>' + (m + 1) + ' 月记录</h3>' + rows.map(function (k) {
-      var r = DATA[k];
-      return '<a class="cal-row" href="daily/' + k + '.html"><span class="mono">' + k.slice(5).replace('-', '/') + '</span>' +
-        '<span class="cal-row-n">' + r.n + ' 条</span><span class="cal-row-t">' + r.top.replace(/[&<>"]/g, '') + '</span></a>';
-    }).join('') : '<p class="muted" style="text-align:center">这个月没有记录</p>';
-  }
-
-  document.addEventListener('click', function (e) {
-    var b = e.target.closest('[data-date]');
-    if (b && !b.disabled) { location.href = 'daily/' + b.dataset.date + '.html'; return; }
-    if (e.target.closest('[data-cal-prev]')) { view = new Date(view.getFullYear(), view.getMonth() - 1, 1); render(); }
-    if (e.target.closest('[data-cal-next]')) { view = new Date(view.getFullYear(), view.getMonth() + 1, 1); render(); }
-    if (e.target.closest('[data-cal-today]')) {
-      view = new Date(today.getFullYear(), today.getMonth(), 1); render();
-    }
+  const out = document.getElementById('rr-out'); if (!out) return;
+  const button = document.querySelector('[data-rr-roll]');
+  const label = document.querySelector('[data-rr-label]');
+  const count = document.querySelector('[data-rr-count]');
+  let lastId, pool = [];
+  const esc = s => String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  button.addEventListener('click', () => {
+    const candidates = pool.filter(x => x.id !== lastId); const choices = candidates.length ? candidates : pool;
+    if (!choices.length) return;
+    const x = choices[Math.floor(Math.random() * choices.length)]; lastId = x.id;
+    out.innerHTML = '<article class="rr-card"><div class="rr-card-meta"><span>'+esc(x.type)+'</span><span>'+esc(x.company)+'</span><time>'+esc(x.date)+'</time><span>'+esc(x.conf)+'</span></div><h2 class="rr-card-title"><a href="'+esc(x.url)+'">'+esc(x.title)+'</a></h2><p class="rr-card-reason">'+esc(x.summary)+'</p><div class="rr-card-foot"><a href="'+esc(x.url)+'">查看原始来源 →</a></div></article>';
+    label.textContent = '再回顾一条';
   });
-  render();
-})();
-
-/* ---------- 右上角迷你日历 ---------- */
-(function () {
-  var dataEl = document.getElementById('cal-days');
-  var pop = document.querySelector('[data-cal-pop]');
-  var trigger = document.querySelector('[data-cal-toggle]');
-  if (!dataEl || !pop || !trigger) return;
-  var DATA = JSON.parse(dataEl.textContent);
-  var grid = pop.querySelector('[data-cal-grid]');
-  var title = pop.querySelector('[data-cal-title]');
-  var detail = pop.querySelector('[data-cal-detail]');
-  var today = new Date();
-  var todayIso = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
-  var view = new Date(today.getFullYear(), today.getMonth(), 1);
-  var selected = todayIso;
-
-  function fmt(d) { return (d.getMonth() + 1) + '月' + d.getDate() + '日'; }
-  function esc(s) {
-    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
-    });
-  }
-  function renderDetail(iso) {
-    var list = DATA[iso] || [];
-    if (!list.length) {
-      detail.innerHTML = '<p class="muted">' + fmt(new Date(iso + 'T12:00:00')) + ' 没有记录</p>';
-      return;
-    }
-    detail.innerHTML = '<div class="cal-pop-dt">' + fmt(new Date(iso + 'T12:00:00')) + ' · ' + list.length + ' 条</div>' +
-      list.slice(0, 4).map(function (x) {
-        return '<a class="cal-pop-item" href="' + esc(x.u) + '"><span class="t">' + esc(x.t) + '</span><span class="c">' + esc(x.c) + '</span></a>';
-      }).join('') +
-      '<a class="cal-pop-more" href="daily/' + iso + '.html">查看当日快照 →</a>';
-  }
-  function render() {
-    var y = view.getFullYear(), m = view.getMonth();
-    title.textContent = y + ' 年 ' + (m + 1) + ' 月';
-    var first = new Date(y, m, 1);
-    var offset = (first.getDay() + 6) % 7;
-    var days = new Date(y, m + 1, 0).getDate();
-    var html = '';
-    for (var i = 0; i < offset; i++) html += '<span class="cal-pop-cell is-empty"></span>';
-    for (var d = 1; d <= days; d++) {
-      var iso = y + '-' + String(m + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0');
-      var has = !!DATA[iso];
-      var cls = 'cal-pop-cell';
-      if (has) cls += ' has';
-      if (iso === todayIso) cls += ' is-today';
-      if (iso === selected) cls += ' is-sel';
-      html += '<button class="' + cls + '" type="button" data-cd="' + iso + '">' + d + '</button>';
-    }
-    grid.innerHTML = html;
-    renderDetail(selected);
-    // 如果选中日不在当前视图，详情仍显示
-  }
-  function toggle(open) {
-    var show = open == null ? pop.hidden : open;
-    pop.hidden = !show;
-    trigger.setAttribute('aria-expanded', String(show));
-    if (show) render();
-  }
-  trigger.addEventListener('click', function (e) { e.stopPropagation(); toggle(); });
-  pop.addEventListener('click', function (e) {
-    e.stopPropagation();
-    var cell = e.target.closest('[data-cd]');
-    if (cell) { selected = cell.dataset.cd; render(); return; }
-    if (e.target.closest('[data-cal-prev]')) { view = new Date(view.getFullYear(), view.getMonth() - 1, 1); render(); }
-    if (e.target.closest('[data-cal-next]')) { view = new Date(view.getFullYear(), view.getMonth() + 1, 1); render(); }
-  });
-  document.addEventListener('click', function () { toggle(false); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') toggle(false); });
-  var jump = document.querySelector('[data-cal-jump]');
-  if (jump) jump.addEventListener('click', function (e) {
-    e.preventDefault();
-    if (location.pathname.endsWith('index.html') || location.pathname === '/') toggle(true);
-    else location.href = 'index.html';
-  });
+  fetch('assets/data/random.json').then(r => { if (!r.ok) throw Error('Unavailable'); return r.json(); }).then(data => {
+    pool = Array.isArray(data) ? data : [];
+    count.textContent = pool.length + ' 条已核对人才记录'; button.disabled = !pool.length;
+    label.textContent = pool.length ? '随机回顾一条' : '暂无已核对记录';
+  }).catch(() => { label.textContent = '加载未完成'; count.textContent = '请刷新重试，或从资料库继续阅读。'; });
 })();

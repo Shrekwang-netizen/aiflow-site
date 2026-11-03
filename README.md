@@ -1,24 +1,39 @@
-# AIFLOW
+# AIFLOW · AI talent observatory
 
-Live site: https://shrekwang-netizen.github.io/aiflow-site/
+**Live:** https://shrekwang-netizen.github.io/aiflow-site/
 
-GitHub Pages serves this `gh-pages` branch directly. It contains the published HTML, shared CSS/JavaScript, and the random-week data; there is no build step or package dependency.
+An editorial site for AI talent moves, hiring and organization changes. GitHub Pages publishes the `gh-pages` branch. The repository now contains both the content source and a reproducible static generator; no framework, package install, paid API or separate application server is required.
 
-## Preview
+## Source of truth
 
-Run `python3 -m http.server 8766 --bind 127.0.0.1` from this directory, then open http://127.0.0.1:8766/.
+- `data/records.json`: all historical and reviewed records, explicit evidence state and review notes.
+- `data/x-watchlist.json`: 18 verified public X profiles and their monitoring focus.
+- `data/monitor.json`, `data/run-history.json`: actual inspection coverage and run outcomes.
+- `scripts/build.py`: produces every HTML page, RSS, and random archive. Preserve existing record IDs.
+- `assets/style.css`, `assets/app.js`, `assets/theme.js`: design and accessible reader controls.
+- [X watchlist](docs/x-watchlist.md) and [daily publishing procedure](docs/daily-update.md).
 
-Reader controls combine keyword, event type, saved and unread filters. Lists reveal 24 records at a time. Existing `aiflow-theme`, `aiflow-favs` and `aiflow-read` browser storage keys are preserved. No account or server-side tracking is used for these controls.
+## Build and test
 
-## Updating content
+```sh
+python3 scripts/build.py
+python3 -m unittest discover -s tests
+node --check assets/app.js
+node --check assets/theme.js
+git diff --check
+python3 -m http.server 8766 --bind 127.0.0.1
+```
 
-Keep `assets/app.js`, `assets/style.css`, and the early `assets/theme.js` include when regenerating pages. HTML uses relative asset paths and an asset version query string; update the version when shared assets change.
+The site works at the GitHub Pages project prefix and in a local root. Asset versions are derived from source hashes. Tests check source eligibility, duplicate IDs, legacy article preservation, relative links and random-archive exclusions. Browser QA covers combined search/type/evidence/saved/unread filters, pagination, mobile layout, both themes and accessible controls.
 
-The original content generator is not in this repository. A full replacement deployment from that generator must incorporate these reader and template changes first, or it will overwrite them. The 2026-11-02 reader update is tracked in this branch for comparison and recovery.
+## Scheduled publishing
 
-## Verification
+The local Codex heartbeat **AIFLOW 每日人才巡检** (`aiflow`) is active daily at **10:00 Asia/Shanghai**, attached to the owner’s existing task. It reads `docs/daily-update.md`, checks public X profiles and concrete sources, updates reviewed records, rebuilds/tests, pushes `gh-pages`, and verifies the deployment. Keep the computer on and Codex running. Access failures must be reported as incomplete coverage, not silently counted as successful checks.
 
-- `node --check assets/app.js` and `node --check assets/theme.js`
-- Check local links across root pages and `item/`, `daily/`, `weekly/`, `company/`, `tags/`.
-- Exercise combined filters, favorites, unread on/off, empty states, disclosure controls and loading more records.
-- Check narrow mobile screens, both themes, and random-week links.
+Only `primary` / `reported` records with `scope: talent` enter the homepage, weekly report, RSS and random archive. Historical data remain discoverable with clear status. There is no synthetic AI score or unmeasured popularity ranking. Dates reflect the original public source, not the day a record was fetched.
+
+Do not deploy an older external generator over this branch: it would replace the design and publication rules. All routine updates should now edit the data and run this repository’s generator.
+
+## Design references
+
+The source hierarchy of [Techmeme](https://www.techmeme.com/) and the person-first organization of [AI Scout](https://talent.dinq.me/) informed the layout. AIFLOW uses its own warm paper / forest green visual system, typography, templates and copy; no third-party logos, article bodies or screenshots are copied into the site.
