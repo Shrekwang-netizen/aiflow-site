@@ -115,7 +115,7 @@ def build():
     shell('weekly.html','往期周报',heading('每一周，留一个切片。','按 ISO 周归档，只展示已核对的人才记录。','THE WEEKLY ARCHIVE')+'<div class="week-archive">'+weeklinks+'</div>','weekly')
     shell('companies.html','团队索引',heading('团队索引','按公司与研究团队查阅历史记录。')+'<div class="index-grid">'+''.join(link('company/'+k+'.html',h(v)+' ↗') for k,v in sorted(company_map.items()))+'</div>','all')
     shell('tags.html','主题索引',heading('主题索引','从一个关键词开始。')+'<div class="tag-row">'+''.join(link('tags/'+quote(t)+'.html',h(t)) for t in sorted(all_tags))+'</div>','all')
-    random_body = heading('抽一条，看看谁在动。','从最近 7 天的人才记录里随机抽一条。点按钮或按空格，再抽一签。','A MOMENT IN THE ARCHIVE')
+    random_body = heading('抽一条','从最近 7 天的人才记录里随机抽一条。点按钮或按空格，再抽一签。','A MOMENT IN THE ARCHIVE')
     random_body += ('<div class="lottery" data-rr>'
                     '<p class="lottery-kicker"><span data-rr-count>正在装签</span><span class="lottery-tally" data-rr-tally hidden></span></p>'
                     '<p class="lottery-line" id="rr-line" aria-live="polite">正在抽…</p>'
