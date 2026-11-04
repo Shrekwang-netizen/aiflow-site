@@ -115,7 +115,14 @@ def build():
     shell('weekly.html','往期周报',heading('每一周，留一个切片。','按 ISO 周归档，只展示已核对的人才记录。','THE WEEKLY ARCHIVE')+'<div class="week-archive">'+weeklinks+'</div>','weekly')
     shell('companies.html','团队索引',heading('团队索引','按公司与研究团队查阅历史记录。')+'<div class="index-grid">'+''.join(link('company/'+k+'.html',h(v)+' ↗') for k,v in sorted(company_map.items()))+'</div>','all')
     shell('tags.html','主题索引',heading('主题索引','从一个关键词开始。')+'<div class="tag-row">'+''.join(link('tags/'+quote(t)+'.html',h(t)) for t in sorted(all_tags))+'</div>','all')
-    shell('random.html','随机回顾',heading('换一条，换一个视角。','从最近 7 天的人才记录中随机回顾，含待核实线索；每条都会标注信度，旧闻不会被当成新消息。','A MOMENT IN THE ARCHIVE')+'<div class="random-box"><button class="primary-button" type="button" data-rr-roll disabled><span data-rr-label>正在加载</span> ↗</button><p data-rr-count role="status"></p></div><div id="rr-out" aria-live="polite" aria-atomic="true"></div>','random')
+    random_body = heading('抽一条，看看谁在动。','从最近 7 天的人才记录里随机抽一条。点按钮或按空格，再抽一签。','A MOMENT IN THE ARCHIVE')
+    random_body += ('<div class="lottery" data-rr>'
+                    '<p class="lottery-kicker"><span data-rr-count>正在装签</span><span class="lottery-tally" data-rr-tally hidden></span></p>'
+                    '<p class="lottery-line" id="rr-line" aria-live="polite">正在抽…</p>'
+                    '<p class="lottery-source" id="rr-source"></p>'
+                    '<div class="lottery-actions"><button class="primary-button" type="button" data-rr-roll disabled><span data-rr-label>正在加载</span></button>'
+                    '<span class="lottery-hint">按空格再抽一次</span></div></div>')
+    shell('random.html','随机周报',random_body,'random')
     shell('404.html','页面未找到',heading('这条路暂时没有消息。','<a href="'+BASE+'">返回 AIFLOW 首页 →</a>'),'home')
     (ROOT/'assets/data/random.json').write_text(json.dumps([{'id':r['id'],'date':r['date'],'title':r['title'],'summary':r['summary'],'type':TYPES[r['type']],'company':r['companies'][0]['name'],'url':'item/'+r['id']+'.html','conf':STATUS[r['status']]} for r in records if r['scope']=='talent' and r['date']>=(stamp.date()-timedelta(days=7)).isoformat()],ensure_ascii=False)+'\n')
     rss='<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AIFLOW 人才要闻</title><link>'+BASE+'</link><description>只收录已核对原文的 AI 人才与组织记录。</description>'

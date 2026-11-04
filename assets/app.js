@@ -142,24 +142,59 @@
   render(false);
 })();
 
-/* Random archive: reviewed talent stories only, with original publication dates. */
+/* Random weekly: one-line lottery with a short shuffle. */
 (function () {
-  const out = document.getElementById('rr-out'); if (!out) return;
+  const line = document.getElementById('rr-line'); if (!line) return;
+  const source = document.getElementById('rr-source');
   const button = document.querySelector('[data-rr-roll]');
   const label = document.querySelector('[data-rr-label]');
   const count = document.querySelector('[data-rr-count]');
-  let lastId, pool = [];
+  const tally = document.querySelector('[data-rr-tally]');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const esc = s => String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  button.addEventListener('click', () => {
-    const candidates = pool.filter(x => x.id !== lastId); const choices = candidates.length ? candidates : pool;
-    if (!choices.length) return;
-    const x = choices[Math.floor(Math.random() * choices.length)]; lastId = x.id;
-    out.innerHTML = '<article class="rr-card"><div class="rr-card-meta"><span>'+esc(x.type)+'</span><span>'+esc(x.company)+'</span><time>'+esc(x.date)+'</time><span>'+esc(x.conf)+'</span></div><h2 class="rr-card-title"><a href="'+esc(x.url)+'">'+esc(x.title)+'</a></h2><p class="rr-card-reason">'+esc(x.summary)+'</p><div class="rr-card-foot"><a href="'+esc(x.url)+'">查看原始来源 →</a></div></article>';
-    label.textContent = '再回顾一条';
+  let pool = [], lastId = null, draws = 0, timer = null;
+  function drawOne() {
+    const rest = pool.filter(x => x.id !== lastId);
+    const list = rest.length ? rest : pool;
+    return list[Math.floor(Math.random() * list.length)];
+  }
+  function paint(x) {
+    line.innerHTML = '<time>' + esc(x.date).replace(/-/g, '.') + '</time><span class="lot-company">' + esc(x.company) + '</span><a href="' + esc(x.url) + '">' + esc(x.title) + '</a>';
+    source.innerHTML = '<span>' + esc(x.type) + ' · ' + esc(x.conf) + '</span><a href="' + esc(x.url) + '">来源 ↗</a>';
+  }
+  function settle(x) {
+    lastId = x.id; draws += 1;
+    line.setAttribute('aria-live', 'polite');
+    paint(x);
+    line.classList.remove('is-settled'); void line.offsetWidth; line.classList.add('is-settled');
+    tally.hidden = false; tally.textContent = '第 ' + draws + ' 签';
+    count.textContent = pool.length + ' 条记录，含待核线索';
+    button.disabled = false; label.textContent = '再抽一签';
+  }
+  function roll() {
+    if (!pool.length || timer) return;
+    button.disabled = true; label.textContent = '抽签中…';
+    if (reduce) { settle(drawOne()); return; }
+    line.setAttribute('aria-live', 'off');
+    let steps = 0;
+    timer = setInterval(() => {
+      paint(drawOne());
+      steps += 1;
+      if (steps >= 8) { clearInterval(timer); timer = null; settle(drawOne()); }
+    }, 55);
+  }
+  button.addEventListener('click', roll);
+  document.addEventListener('keydown', e => {
+    if (e.repeat || e.code !== 'Space' || e.metaKey || e.ctrlKey || e.altKey) return;
+    const t = e.target;
+    if (t && t.closest && t.closest('input, textarea, select, button, a, [contenteditable="true"]')) return;
+    e.preventDefault(); roll();
   });
   fetch('assets/data/random.json').then(r => { if (!r.ok) throw Error('Unavailable'); return r.json(); }).then(data => {
     pool = Array.isArray(data) ? data : [];
-    count.textContent = pool.length + ' 条已核对人才记录'; button.disabled = !pool.length;
-    label.textContent = pool.length ? '随机回顾一条' : '暂无已核对记录';
-  }).catch(() => { label.textContent = '加载未完成'; count.textContent = '请刷新重试，或从资料库继续阅读。'; });
+    count.textContent = pool.length + ' 条记录，含待核线索';
+    button.disabled = !pool.length;
+    label.textContent = pool.length ? '抽一签' : '暂无记录';
+    if (pool.length) setTimeout(roll, 200);
+  }).catch(() => { line.textContent = '随机周报加载失败，刷新试试。'; count.textContent = ''; });
 })();
