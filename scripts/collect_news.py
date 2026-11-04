@@ -44,8 +44,6 @@ FEEDS = [
     ("TechCrunch AI", "https://techcrunch.com/category/artificial-intelligence/feed/"),
     ("TechCrunch Layoffs", "https://techcrunch.com/tag/layoffs/feed/"),
     ("The Verge AI", "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"),
-    ("VentureBeat AI", "https://venturebeat.com/category/ai/feed/"),
-    ("Semafor Tech", "https://www.semafor.com/rss/technology.xml"),
 ]
 
 TALENT_TITLE_RE = re.compile(
