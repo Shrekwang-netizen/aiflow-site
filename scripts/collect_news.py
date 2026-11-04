@@ -18,8 +18,10 @@ import argparse
 import html as htmllib
 import json
 import re
+import subprocess
 import sys
 import time
+import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -33,8 +35,6 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
 
 FEEDS = [
     ("OpenAI 官方", "https://openai.com/news/rss.xml"),
-    ("Google DeepMind 官方", "https://deepmind.google/blog/rss.xml"),
-    ("微软官方博客", "https://blogs.microsoft.com/feed/"),
     ("量子位", "https://www.qbitai.com/feed"),
     ("雷峰网", "https://www.leiphone.com/feed"),
     ("IT之家", "https://www.ithome.com/rss/"),
@@ -77,8 +77,18 @@ def warn(msg: str) -> None:
 
 def fetch(url: str) -> bytes:
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
-    with urllib.request.urlopen(req, timeout=25) as resp:
-        return resp.read()
+    try:
+        with urllib.request.urlopen(req, timeout=25) as resp:
+            return resp.read()
+    except urllib.error.HTTPError as exc:
+        if exc.code not in (403, 429):
+            raise
+        # 有些站点挡 Python TLS 指纹，退回 curl
+        proc = subprocess.run(["curl", "-sL", "--compressed", "--max-time", "30",
+                               "-A", UA, url], capture_output=True)
+        if proc.returncode != 0 or not proc.stdout:
+            raise
+        return proc.stdout
 
 
 def strip_html(value: str) -> str:
