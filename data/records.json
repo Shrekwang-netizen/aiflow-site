@@ -3801,5 +3801,185 @@
   "scope": "talent",
   "reviewed_at": "2026-11-04",
   "review_note": "已读 InfoQ 报道全文：Utopai Studios 于 11 月 2 日宣布 Hans Ku 加盟，Hans Ku 此前任迪士尼技术赋能办公室 AI 与工程副总裁；摘要只写报道明确的信息。"
+ },
+ {
+  "id": "google-deepmind-20261103-pierre-colombo",
+  "date": "2026-11-03",
+  "title": "Pierre Colombo 加入 Google DeepMind，负责 Gemini 法律能力",
+  "summary": "Pierre Colombo 11 月 3 日在 X 宣布加入 Google DeepMind，参与 Gemini 的法律能力方向；他的公开简介显示研究方向为法律大模型。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Google DeepMind",
+    "slug": "google-deepmind"
+   }
+  ],
+  "person": "Pierre Colombo",
+  "tags": [
+   "研究人员",
+   "法律 AI",
+   "Gemini",
+   "Google DeepMind"
+  ],
+  "sources": [
+   {
+    "name": "X · @PierreColombo6",
+    "url": "https://x.com/PierreColombo6/status/2117704922343039133"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-04",
+  "review_note": "已读本人 X 原帖（11 月 3 日）与公开简介；原帖只说明加入 Google DeepMind 做 Gemini 法律能力，不推断职级。"
+ },
+ {
+  "id": "huggingface-20261103-khushi-agrawal",
+  "date": "2026-11-03",
+  "title": "Khushi Agrawal 加入 Hugging Face，进入 PyTorch 团队",
+  "summary": "Khushi Agrawal 11 月 3 日在 X 表示，自己约两周前加入 Hugging Face，担任开源机器学习工程师，进入 PyTorch 团队。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Hugging Face",
+    "slug": "huggingface"
+   }
+  ],
+  "person": "Khushi Agrawal",
+  "tags": [
+   "工程师",
+   "PyTorch",
+   "开源",
+   "Hugging Face"
+  ],
+  "sources": [
+   {
+    "name": "X · @khushi__411",
+    "url": "https://x.com/khushi__411/status/2117618104897560918"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-04",
+  "review_note": "已读本人 X 原帖；帖中称两周前入职，记录日期按原帖公开时间。"
+ },
+ {
+  "id": "openai-20261103-bill-chen",
+  "date": "2026-11-03",
+  "title": "OpenAI 后训练/评测研究成员 Bill Chen 离职，加入 a16z",
+  "summary": "Bill Chen 11 月 3 日在 X 确认已离开 OpenAI，加入 a16z 继续做研究与投资；他的公开简介显示此前在 OpenAI 负责智能体后训练与前沿评测。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   }
+  ],
+  "person": "Bill Chen",
+  "tags": [
+   "研究人员",
+   "离职",
+   "a16z",
+   "OpenAI"
+  ],
+  "sources": [
+   {
+    "name": "X · @realchillben",
+    "url": "https://x.com/realchillben/status/2117736763972264441"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-04",
+  "review_note": "已读本人 X 原帖与公开简介（prev agents pt @openai）；原帖只说明加入 a16z，不推断具体项目。"
+ },
+ {
+  "id": "google-deepmind-20261103-jacob-rothschild",
+  "date": "2026-11-03",
+  "title": "Jacob Rothschild 加入 Google DeepMind 机器人团队任 Research Fellow",
+  "summary": "Jacob H. Rothschild 11 月 3 日在 X 宣布加入 DeepMind Robotics（@dm_robots）任 Research Fellow，未来几个月做机器人操作的强化学习；公开简介显示他此前在 QuantCo，拥有 ETH Zurich 统计学硕士。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Google DeepMind",
+    "slug": "google-deepmind"
+   }
+  ],
+  "person": "Jacob H. Rothschild",
+  "tags": [
+   "研究人员",
+   "机器人",
+   "强化学习",
+   "Google DeepMind"
+  ],
+  "sources": [
+   {
+    "name": "X · @ja_rothschild",
+    "url": "https://x.com/ja_rothschild/status/2117640128726216978"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-04",
+  "review_note": "已读本人 X 原帖与公开简介；帖中写的是 @dm_robots（DeepMind Robotics），未推断具体团队归属。"
+ },
+ {
+  "id": "anthropic-20261103-brandon-galang",
+  "date": "2026-11-03",
+  "title": "Brandon Galang 加入 Anthropic，任 Member of Technical Staff",
+  "summary": "Brandon Galang 11 月 3 日在 X 宣布当天入职 Anthropic，担任 Member of Technical Staff，方向为应用 AI；公开简介显示他此前在 Vercel，并长期写作 agent 主题通讯。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Brandon Galang",
+  "tags": [
+   "工程师",
+   "应用 AI",
+   "Vercel",
+   "Anthropic"
+  ],
+  "sources": [
+   {
+    "name": "X · @brandon_galang",
+    "url": "https://x.com/brandon_galang/status/2117647771994075350"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-04",
+  "review_note": "已读本人 X 原帖与公开简介（prev @vercel）；原帖称当天入职，记录日期按原帖公开时间。"
+ },
+ {
+  "id": "microsoft-20261104-helen-chiang",
+  "date": "2026-11-04",
+  "title": "微软 Xbox 首位首席运营官 Helen Chiang 离职，上任仅三个月",
+  "summary": "IT之家 11 月 4 日报道，微软 Xbox 首位首席运营官 Helen Chiang 已确认离职，任职仅三个月；她在微软工作约 21 年，曾领导 Mojang 与《我的世界》系列。她 11 月 3 日在 LinkedIn 否认因违规被解雇，称相关说法不准确。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "微软",
+    "slug": "microsoft"
+   }
+  ],
+  "person": "Helen Chiang",
+  "tags": [
+   "高管",
+   "Xbox",
+   "微软",
+   "离职"
+  ],
+  "sources": [
+   {
+    "name": "IT之家",
+    "url": "https://www.ithome.com/1/021/937.htm"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-04",
+  "review_note": "已读 IT之家报道；报道引述 Helen Chiang 11 月 3 日的 LinkedIn 帖，本文未见 LinkedIn 原文，因此按已读媒体报道收录，不推断离职原因。"
  }
 ]

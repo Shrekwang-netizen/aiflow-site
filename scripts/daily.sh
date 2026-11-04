@@ -15,6 +15,7 @@ LOG="$ROOT/logs/daily-$(date +%F).log"
   fi
   python3 scripts/collect_news.py --days 2 || echo "! collect_news 退出码 $?"
   python3 scripts/collect_links.py || echo "! collect_links 退出码 $?"
+  python3 scripts/collect_legacy.py --sources dinq,rss,rsshub,latepost,zhihu,hn,blind,buzz || echo "! collect_legacy 退出码 $?"
   python3 scripts/build.py || { echo "! build 失败，停止发布"; exit 1; }
   python3 -m unittest discover -s tests >/dev/null 2>&1 && echo "· tests ok" || echo "! tests 未通过（已知 random 池用例，不阻塞发布）"
   python3 scripts/publish.py --message "daily: X 巡检 $(date +%F)" --verify || echo "! publish 失败"
