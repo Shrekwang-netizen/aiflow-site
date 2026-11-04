@@ -1,200 +1,556 @@
 {
-  "version": 1,
-  "timezone": "Asia/Shanghai",
-  "accounts": [
-    {
-      "handle": "OpenAI",
-      "name": "OpenAI",
-      "group": "实验室与产品团队",
-      "focus": "正式任命、团队扩张与招聘",
-      "url": "https://x.com/OpenAI",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "AnthropicAI",
-      "name": "Anthropic",
-      "group": "实验室与产品团队",
-      "focus": "研究团队、负责人和公开岗位",
-      "url": "https://x.com/AnthropicAI",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "GoogleDeepMind",
-      "name": "Google DeepMind",
-      "group": "实验室与产品团队",
-      "focus": "研究人员、实验室组织与招聘",
-      "url": "https://x.com/GoogleDeepMind",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "deepseek_ai",
-      "name": "DeepSeek",
-      "group": "实验室与产品团队",
-      "focus": "中国团队与官方招聘信息",
-      "url": "https://x.com/deepseek_ai",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "MistralAI",
-      "name": "Mistral AI",
-      "group": "实验室与产品团队",
-      "focus": "欧洲实验室与团队扩张",
-      "url": "https://x.com/MistralAI",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "cohere",
-      "name": "Cohere",
-      "group": "实验室与产品团队",
-      "focus": "企业 AI 团队与研究招聘",
-      "url": "https://x.com/cohere",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "cursor_ai",
-      "name": "Cursor",
-      "group": "实验室与产品团队",
-      "focus": "编程 Agent 团队与工程招聘",
-      "url": "https://x.com/cursor_ai",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "tianyi",
-      "name": "Tianyi Cui",
-      "group": "研究者与团队负责人",
-      "focus": "DeepSeek 产品团队与 Agent 岗位",
-      "url": "https://x.com/tianyi",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "sama",
-      "name": "Sam Altman",
-      "group": "研究者与团队负责人",
-      "focus": "OpenAI 人事声明与团队变动",
-      "url": "https://x.com/sama",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "gdb",
-      "name": "Greg Brockman",
-      "group": "研究者与团队负责人",
-      "focus": "研究工程团队与人才招募",
-      "url": "https://x.com/gdb",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "demishassabis",
-      "name": "Demis Hassabis",
-      "group": "研究者与团队负责人",
-      "focus": "研究领导层与实验室动态",
-      "url": "https://x.com/demishassabis",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "karpathy",
-      "name": "Andrej Karpathy",
-      "group": "研究者与团队负责人",
-      "focus": "个人职业动向与研究团队",
-      "url": "https://x.com/karpathy",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "jackclarkSF",
-      "name": "Jack Clark",
-      "group": "研究者与团队负责人",
-      "focus": "研究、安全与政策团队动态",
-      "url": "https://x.com/jackclarkSF",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "ylecun",
-      "name": "Yann LeCun",
-      "group": "研究者与团队负责人",
-      "focus": "研究方向、团队和职业动向",
-      "url": "https://x.com/ylecun",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "amir",
-      "name": "Amir Efrati",
-      "group": "报道与交叉核对",
-      "focus": "实验室人事与组织独家报道",
-      "url": "https://x.com/amir",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "steph_palazzolo",
-      "name": "Stephanie Palazzolo",
-      "group": "报道与交叉核对",
-      "focus": "AI 公司内部组织与人才报道",
-      "url": "https://x.com/steph_palazzolo",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "kyliebytes",
-      "name": "Kylie Robison",
-      "group": "报道与交叉核对",
-      "focus": "AI 从业者与团队报道",
-      "url": "https://x.com/kyliebytes",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    },
-    {
-      "handle": "shiringhaffary",
-      "name": "Shirin Ghaffary",
-      "group": "报道与交叉核对",
-      "focus": "AI 公司、研究人员与人才市场报道",
-      "url": "https://x.com/shiringhaffary",
-      "enabled": true,
-      "verified_at": "2026-11-03",
-      "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
-    }
-  ],
-  "excluded_candidates": [
-    {
-      "handle": "Qwen_ALI",
-      "reason": "未读到官方团队时间线，待从官网核对当前账号。"
-    },
-    {
-      "handle": "erinwoo",
-      "reason": "当前主页显示名称不符，未纳入名单。"
-    },
-    {
-      "handle": "cognition_labs",
-      "reason": "主页提示其他账号，待核对迁移。"
-    }
-  ]
+ "version": 2,
+ "timezone": "Asia/Shanghai",
+ "accounts": [
+  {
+   "handle": "OpenAI",
+   "name": "OpenAI",
+   "group": "实验室与产品团队",
+   "focus": "正式任命、团队扩张与招聘",
+   "url": "https://x.com/OpenAI",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "AnthropicAI",
+   "name": "Anthropic",
+   "group": "实验室与产品团队",
+   "focus": "研究团队、负责人和公开岗位",
+   "url": "https://x.com/AnthropicAI",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "GoogleDeepMind",
+   "name": "Google DeepMind",
+   "group": "实验室与产品团队",
+   "focus": "研究人员、实验室组织与招聘",
+   "url": "https://x.com/GoogleDeepMind",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "deepseek_ai",
+   "name": "DeepSeek",
+   "group": "实验室与产品团队",
+   "focus": "中国团队与官方招聘信息",
+   "url": "https://x.com/deepseek_ai",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "MistralAI",
+   "name": "Mistral AI",
+   "group": "实验室与产品团队",
+   "focus": "欧洲实验室与团队扩张",
+   "url": "https://x.com/MistralAI",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "cohere",
+   "name": "Cohere",
+   "group": "实验室与产品团队",
+   "focus": "企业 AI 团队与研究招聘",
+   "url": "https://x.com/cohere",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "cursor_ai",
+   "name": "Cursor",
+   "group": "实验室与产品团队",
+   "focus": "编程 Agent 团队与工程招聘",
+   "url": "https://x.com/cursor_ai",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "MiniMax_AI",
+   "name": "MiniMax (official)",
+   "group": "实验室与产品团队",
+   "focus": "中国团队、模型发布与招聘",
+   "url": "https://x.com/MiniMax_AI",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "MoonshotAI",
+   "name": "Moonshot AI",
+   "group": "实验室与产品团队",
+   "focus": "Kimi 团队、研究与招聘",
+   "url": "https://x.com/MoonshotAI",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "Kimi_Moonshot",
+   "name": "Kimi.ai",
+   "group": "实验室与产品团队",
+   "focus": "Kimi 产品与团队动态",
+   "url": "https://x.com/Kimi_Moonshot",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "ZhipuAI",
+   "name": "Zhipu AI",
+   "group": "实验室与产品团队",
+   "focus": "GLM 团队与组织动态",
+   "url": "https://x.com/ZhipuAI",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "Zai_org",
+   "name": "Z.ai",
+   "group": "实验室与产品团队",
+   "focus": "GLM 团队、研究与招聘",
+   "url": "https://x.com/Zai_org",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "Alibaba_Qwen",
+   "name": "Qwen",
+   "group": "实验室与产品团队",
+   "focus": "通义千问团队与招聘",
+   "url": "https://x.com/Alibaba_Qwen",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "TencentHunyuan",
+   "name": "Tencent Hy",
+   "group": "实验室与产品团队",
+   "focus": "混元团队与模型动态",
+   "url": "https://x.com/TencentHunyuan",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "StepFun_ai",
+   "name": "StepFun",
+   "group": "实验室与产品团队",
+   "focus": "阶跃星辰团队与招聘",
+   "url": "https://x.com/StepFun_ai",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "SpaceXSI",
+   "name": "SpaceX Super Intelligence",
+   "group": "实验室与产品团队",
+   "focus": "xAI / SpaceXAI 团队与组织",
+   "url": "https://x.com/SpaceXSI",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "tianyi",
+   "name": "Tianyi Cui",
+   "group": "研究者与团队负责人",
+   "focus": "DeepSeek 产品团队与 Agent 岗位",
+   "url": "https://x.com/tianyi",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "sama",
+   "name": "Sam Altman",
+   "group": "研究者与团队负责人",
+   "focus": "OpenAI 人事声明与团队变动",
+   "url": "https://x.com/sama",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "gdb",
+   "name": "Greg Brockman",
+   "group": "研究者与团队负责人",
+   "focus": "研究工程团队与人才招募",
+   "url": "https://x.com/gdb",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "demishassabis",
+   "name": "Demis Hassabis",
+   "group": "研究者与团队负责人",
+   "focus": "研究领导层与实验室动态",
+   "url": "https://x.com/demishassabis",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "karpathy",
+   "name": "Andrej Karpathy",
+   "group": "研究者与团队负责人",
+   "focus": "个人职业动向与研究团队",
+   "url": "https://x.com/karpathy",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "jackclarkSF",
+   "name": "Jack Clark",
+   "group": "研究者与团队负责人",
+   "focus": "研究、安全与政策团队动态",
+   "url": "https://x.com/jackclarkSF",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "ylecun",
+   "name": "Yann LeCun",
+   "group": "研究者与团队负责人",
+   "focus": "研究方向、团队和职业动向",
+   "url": "https://x.com/ylecun",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "DarioAmodei",
+   "name": "Dario Amodei",
+   "group": "研究者与团队负责人",
+   "focus": "Anthropic 领导层与组织动态",
+   "url": "https://x.com/DarioAmodei",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "mustafasuleyman",
+   "name": "Mustafa Suleyman",
+   "group": "研究者与团队负责人",
+   "focus": "Microsoft AI 团队与组织",
+   "url": "https://x.com/mustafasuleyman",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "AravSrinivas",
+   "name": "Aravind Srinivas",
+   "group": "研究者与团队负责人",
+   "focus": "Perplexity 团队与招聘",
+   "url": "https://x.com/AravSrinivas",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "mntruell",
+   "name": "Michael Truell",
+   "group": "研究者与团队负责人",
+   "focus": "Cursor / SpaceXSI 团队与工程招聘",
+   "url": "https://x.com/mntruell",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "soumithchintala",
+   "name": "Soumith Chintala",
+   "group": "研究者与团队负责人",
+   "focus": "Thinking Machines 研究与团队",
+   "url": "https://x.com/soumithchintala",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "Thom_Wolf",
+   "name": "Thomas Wolf",
+   "group": "研究者与团队负责人",
+   "focus": "Hugging Face 研究与开源团队",
+   "url": "https://x.com/Thom_Wolf",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "ClementDelangue",
+   "name": "clem",
+   "group": "研究者与团队负责人",
+   "focus": "Hugging Face 组织与招聘",
+   "url": "https://x.com/ClementDelangue",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "miramurati",
+   "name": "Mira Murati",
+   "group": "研究者与团队负责人",
+   "focus": "Thinking Machines 领导层与招聘",
+   "url": "https://x.com/miramurati",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "JeffDean",
+   "name": "Jeff Dean",
+   "group": "研究者与团队负责人",
+   "focus": "Google DeepMind 研究与组织",
+   "url": "https://x.com/JeffDean",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "sundarpichai",
+   "name": "Sundar Pichai",
+   "group": "研究者与团队负责人",
+   "focus": "Google 组织与 AI 团队",
+   "url": "https://x.com/sundarpichai",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "satyanadella",
+   "name": "Satya Nadella",
+   "group": "研究者与团队负责人",
+   "focus": "微软组织与 AI 团队",
+   "url": "https://x.com/satyanadella",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "elonmusk",
+   "name": "Elon Musk",
+   "group": "研究者与团队负责人",
+   "focus": "xAI / SpaceX 组织与人员",
+   "url": "https://x.com/elonmusk",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "DrJimFan",
+   "name": "Jim Fan",
+   "group": "研究者与团队负责人",
+   "focus": "NVIDIA 研究与团队",
+   "url": "https://x.com/DrJimFan",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "_akhaliq",
+   "name": "AK",
+   "group": "研究者与团队负责人",
+   "focus": "论文与模型团队动态",
+   "url": "https://x.com/_akhaliq",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "_jasonwei",
+   "name": "Jason Wei",
+   "group": "研究者与团队负责人",
+   "focus": "OpenAI 研究与团队",
+   "url": "https://x.com/_jasonwei",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "arankomatsuzaki",
+   "name": "Aran Komatsuzaki",
+   "group": "研究者与团队负责人",
+   "focus": "模型与团队动态",
+   "url": "https://x.com/arankomatsuzaki",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "giffmana",
+   "name": "Lucas Beyer",
+   "group": "研究者与团队负责人",
+   "focus": "DeepMind 研究与团队",
+   "url": "https://x.com/giffmana",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "goodside",
+   "name": "Riley Goodside",
+   "group": "研究者与团队负责人",
+   "focus": "模型能力与团队观察",
+   "url": "https://x.com/goodside",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "AndrewYNg",
+   "name": "Andrew Ng",
+   "group": "研究者与团队负责人",
+   "focus": "AI 教育与团队动向",
+   "url": "https://x.com/AndrewYNg",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "jiayq",
+   "name": "Yangqing Jia",
+   "group": "研究者与团队负责人",
+   "focus": "AI 基础设施与团队",
+   "url": "https://x.com/jiayq",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "badlogicgames",
+   "name": "Mario Zechner",
+   "group": "研究者与团队负责人",
+   "focus": "Agent harness 与团队",
+   "url": "https://x.com/badlogicgames",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "rowancheung",
+   "name": "Rowan Cheung",
+   "group": "研究者与团队负责人",
+   "focus": "AI 行业通讯与人才动态",
+   "url": "https://x.com/rowancheung",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "dotey",
+   "name": "宝玉",
+   "group": "研究者与团队负责人",
+   "focus": "AI 产品与行业观察",
+   "url": "https://x.com/dotey",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "op7418",
+   "name": "歸藏",
+   "group": "研究者与团队负责人",
+   "focus": "AI 产品与行业观察",
+   "url": "https://x.com/op7418",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "huybery",
+   "name": "Binyuan Hui",
+   "group": "研究者与团队负责人",
+   "focus": "研究动向与职业变化",
+   "url": "https://x.com/huybery",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "karminski3",
+   "name": "karminski-牙医",
+   "group": "研究者与团队负责人",
+   "focus": "模型测评与团队观察",
+   "url": "https://x.com/karminski3",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "teortaxesTex",
+   "name": "Teortaxes",
+   "group": "研究者与团队负责人",
+   "focus": "DeepSeek / 中国 AI 观察",
+   "url": "https://x.com/teortaxesTex",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  },
+  {
+   "handle": "amir",
+   "name": "Amir Efrati",
+   "group": "报道与交叉核对",
+   "focus": "实验室人事与组织独家报道",
+   "url": "https://x.com/amir",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "steph_palazzolo",
+   "name": "Stephanie Palazzolo",
+   "group": "报道与交叉核对",
+   "focus": "AI 公司内部组织与人才报道",
+   "url": "https://x.com/steph_palazzolo",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "kyliebytes",
+   "name": "Kylie Robison",
+   "group": "报道与交叉核对",
+   "focus": "AI 从业者与团队报道",
+   "url": "https://x.com/kyliebytes",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "shiringhaffary",
+   "name": "Shirin Ghaffary",
+   "group": "报道与交叉核对",
+   "focus": "AI 公司、研究人员与人才市场报道",
+   "url": "https://x.com/shiringhaffary",
+   "enabled": true,
+   "verified_at": "2026-11-03",
+   "verification": "已打开公开主页，核对显示名称并读取近期可见帖子。"
+  },
+  {
+   "handle": "alexeheath",
+   "name": "Alex Heath",
+   "group": "报道与交叉核对",
+   "focus": "AI 公司与人事报道",
+   "url": "https://x.com/alexeheath",
+   "enabled": true,
+   "verified_at": "2026-11-04",
+   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+  }
+ ]
 }

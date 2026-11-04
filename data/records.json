@@ -3981,5 +3981,39 @@
   "scope": "talent",
   "reviewed_at": "2026-11-04",
   "review_note": "已读 IT之家报道；报道引述 Helen Chiang 11 月 3 日的 LinkedIn 帖，本文未见 LinkedIn 原文，因此按已读媒体报道收录，不推断离职原因。"
+ },
+ {
+  "id": "anthropic-20261103-cat-wu",
+  "date": "2026-11-03",
+  "title": "Claude Code 产品负责人 Cat Wu 离开 Anthropic",
+  "summary": "Anthropic 的 Claude Code / Cowork 产品负责人 Cat Wu 11 月 3 日在 X 表示，周五是她在公司的最后一天；她 2024 年 8 月加入 Anthropic，未说明离职原因和去向。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Cat Wu",
+  "tags": [
+   "产品",
+   "Claude Code",
+   "Anthropic",
+   "离职"
+  ],
+  "sources": [
+   {
+    "name": "X · @_catwu",
+    "url": "https://x.com/_catwu/status/2117731934340337676"
+   },
+   {
+    "name": "X · @dotey",
+    "url": "https://x.com/dotey/status/2117739064455463086"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-04",
+  "review_note": "已读 Cat Wu 本人 X 原帖与宝玉的转述；本人只说明周五是最后一天，未提原因和去向，摘要不推断。"
  }
 ]

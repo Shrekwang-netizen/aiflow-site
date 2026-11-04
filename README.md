@@ -7,7 +7,7 @@ An editorial site for AI talent moves, hiring and organization changes. GitHub P
 ## Source of truth
 
 - `data/records.json`: all historical and reviewed records, explicit evidence state and review notes.
-- `data/x-watchlist.json`: 18 verified public X profiles and their monitoring focus.
+- `data/x-watchlist.json`: 55 verified public X profiles and their monitoring focus.
 - `data/monitor.json`, `data/run-history.json`: actual inspection coverage and run outcomes.
 - `scripts/build.py`: produces every HTML page, RSS, and random archive. Preserve existing record IDs.
 - `scripts/collect_x.py`, `collect_news.py`, `collect_links.py`, `collect_legacy.py`: automated discovery; output only to `.private-inbox/` for review.
