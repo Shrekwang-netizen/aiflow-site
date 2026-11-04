@@ -1,6 +1,10 @@
 # AIFLOW daily editorial run
 
-The owner has requested daily review of the public X accounts in `data/x-watchlist.json` and automatic publication of suitable AI talent news to the existing public GitHub Pages site. Work only in `/Users/shrek/Documents/Codex/aiflow-site`, repository `Shrekwang-netizen/aiflow-site`, branch `gh-pages`. This authorizes normal content updates and deployment; it does not authorize sending messages, following accounts, paying for services, changing account permissions, or publishing private information.
+The owner has requested daily review of the public X accounts in `data/x-watchlist.json` and automatic publication of suitable AI talent news to the existing public GitHub Pages site. Work only in `/Users/wz/aiflow-site`, repository `Shrekwang-netizen/aiflow-site`, branch `gh-pages`. This authorizes normal content updates and deployment; it does not authorize sending messages, following accounts, paying for services, changing account permissions, or publishing private information.
+
+## Automatic collection (10:00)
+
+`scripts/daily.sh` (launchd `com.aiflow.site`) runs `collect_x.py`, `collect_news.py`, `collect_links.py`, and `collect_legacy.py` before building. Their raw and filtered candidates land in `.private-inbox/` (`x-*.json`, `news-*.json`, `links-*.json`, `legacy-*.json`) and must be reviewed against the original source before any record is written. A failed source is a coverage gap, not an empty result.
 
 ## Read and collect
 
