@@ -1085,8 +1085,8 @@
  {
   "id": "microsoft-20261026-13a7fc",
   "date": "2026-10-26",
-  "title": "微软向约 6 万人提供自愿离职补偿",
-  "summary": "微软向美国、加拿大、印度、英国部分团队 70 级及以下员工提供自愿离职方案，涉及约 6 万人、超过全球员工四分之一；AI 体验、Copilot、财务、Xbox 等部门在列，营销与安全部门除外。",
+  "title": "微软向约 6 万员工提供自愿离职方案，覆盖全球约 27%",
+  "summary": "微软 10 月 26 日推出自愿离职方案（VEO），面向美、加、英、印部分团队 70 级及以下员工，约 6 万人、占全球员工约 27%，含部分副总裁；补偿与标准裁员相当、无额外奖励，接受者预计 12 月 31 日离职。",
   "type": "layoff",
   "companies": [
    {
@@ -1097,9 +1097,22 @@
   "person": "约 60,000 人",
   "tags": [
    "裁员",
-   "组织调整"
+   "组织调整",
+   "自愿离职"
   ],
   "sources": [
+   {
+    "name": "GeekWire",
+    "url": "https://www.geekwire.com/2026/microsoft-makes-new-voluntary-exit-offer-to-more-than-a-quarter-of-its-workforce-including-some-execs"
+   },
+   {
+    "name": "InfoQ 中文",
+    "url": "https://www.infoq.cn/article/UNTqkzASI7dJuq65kSNZ"
+   },
+   {
+    "name": "微软官方博客",
+    "url": "https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/"
+   },
    {
     "name": "NBC News",
     "url": "https://nbcnews.com/business/corporations/microsoft-offers-buyouts-60000-employees-rcna605765"
@@ -1137,10 +1150,10 @@
     "url": "https://www.teamblind.com/post/microsoft-to-offer-buyout-to-60000-employees-wtf-5zbveo8f"
    }
   ],
-  "status": "unreviewed",
+  "status": "reported",
   "scope": "talent",
-  "reviewed_at": null,
-  "review_note": "原站历史记录，尚未逐条核对原文。",
+  "reviewed_at": "2026-11-04",
+  "review_note": "已读微软官方博客（10 月 26 日）与 InfoQ 11 月 3 日报道：官方确认面向美、加、英、印 70 级及以下员工的自愿离职方案；6 万人、约 27%、含部分副总裁、12 月 31 日离职等细节来自 InfoQ 引述的 GeekWire / The Verge / 微软内部信等报道。",
   "legacy_confidence": ""
  },
  {
@@ -3686,5 +3699,107 @@
   "scope": "talent",
   "reviewed_at": "2026-11-03",
   "review_note": "已读微信公众号「申妈的朋友圈」原文（11 月 3 日 09:59 发布）：文章称据知情人士，字节 Seed 研究员蔡天乐近期离职，字节未回应，去向未披露。单一信源，按已读报道收录，不推断更多细节。"
+ },
+ {
+  "id": "openai-20261102-dan-driscoll",
+  "date": "2026-11-02",
+  "title": "OpenAI 任命前美国陆军部长 Dan Driscoll 为国家安全现代化高级顾问",
+  "summary": "OpenAI 11 月 2 日宣布，美国第 26 任陆军部长 Dan Driscoll 将加入 OpenAI，出任新设的国家安全现代化高级顾问，与领导层及外部伙伴合作，推动先进 AI 在国家安全与网络安全领域的负责任应用。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   }
+  ],
+  "person": "Dan Driscoll",
+  "tags": [
+   "高管",
+   "国家安全",
+   "公共政策",
+   "OpenAI"
+  ],
+  "sources": [
+   {
+    "name": "OpenAI · 官方公告",
+    "url": "https://openai.com/index/dan-driscoll-joins-openai/"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-04",
+  "review_note": "已读 OpenAI 官方任命公告（11 月 2 日）；公告只说明新设岗位与职责，摘要不推断汇报线或职级。"
+ },
+ {
+  "id": "openai-20261103-jill-hazelbaker",
+  "date": "2026-11-03",
+  "title": "OpenAI 任命 Uber 总裁 Jill Hazelbaker 为首席企业事务官",
+  "summary": "OpenAI 11 月 3 日宣布，Uber 总裁兼首席企业事务官 Jill Hazelbaker 将加入 OpenAI，出任首席企业事务官，负责全球传播与企业定位。她此前在 Uber 任职十余年，曾在 Snap、Google 负责传播与公共政策；该职位此前已空缺约 10 个月。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   }
+  ],
+  "person": "Jill Hazelbaker",
+  "tags": [
+   "高管",
+   "传播",
+   "Uber",
+   "OpenAI"
+  ],
+  "sources": [
+   {
+    "name": "OpenAI · 官方公告",
+    "url": "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer/"
+   },
+   {
+    "name": "Fortune",
+    "url": "https://fortune.com/2026/11/03/openai-hires-uber-jill-hazelbaker-to-to-lead-communications/"
+   },
+   {
+    "name": "X · @gdb",
+    "url": "https://x.com/gdb/status/2117755028211642849"
+   },
+   {
+    "name": "X · @steph_palazzolo",
+    "url": "https://x.com/steph_palazzolo/status/2117706169884041340"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-04",
+  "review_note": "已读 OpenAI 官方任命公告与 Fortune 报道，并核对 Greg Brockman 的欢迎帖；公告未披露汇报线，摘要不推断。"
+ },
+ {
+  "id": "utopai-studios-20261103-hans-ku",
+  "date": "2026-11-03",
+  "title": "前迪士尼 AI 高管 Hans Ku 出任 Utopai Studios 首席产品官",
+  "summary": "据 InfoQ 11 月 3 日报道，Utopai Studios 于 11 月 2 日宣布前迪士尼 AI 与工程副总裁 Hans Ku 加盟，出任首席产品官（CPO），向 CEO Cecilia Shen 汇报，统筹产品、工程、研究与业务拓展，推动长篇影视叙事引擎 PAI 落地。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Utopai Studios",
+    "slug": "utopai-studios"
+   }
+  ],
+  "person": "Hans Ku",
+  "tags": [
+   "高管",
+   "影视",
+   "AI",
+   "Utopai Studios"
+  ],
+  "sources": [
+   {
+    "name": "InfoQ 中文",
+    "url": "https://www.infoq.cn/article/z1ZeGD2FDqi6xLvSJjSl"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-04",
+  "review_note": "已读 InfoQ 报道全文：Utopai Studios 于 11 月 2 日宣布 Hans Ku 加盟，Hans Ku 此前任迪士尼技术赋能办公室 AI 与工程副总裁；摘要只写报道明确的信息。"
  }
 ]

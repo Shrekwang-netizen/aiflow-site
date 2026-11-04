@@ -32,6 +32,9 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
 
 FEEDS = [
+    ("OpenAI 官方", "https://openai.com/news/rss.xml"),
+    ("Google DeepMind 官方", "https://deepmind.google/blog/rss.xml"),
+    ("微软官方博客", "https://blogs.microsoft.com/feed/"),
     ("量子位", "https://www.qbitai.com/feed"),
     ("雷峰网", "https://www.leiphone.com/feed"),
     ("IT之家", "https://www.ithome.com/rss/"),
@@ -48,8 +51,8 @@ FEEDS = [
 TALENT_TITLE_RE = re.compile(
     r"离职|辞职|卸任|出走|加入|加盟|入职|跳槽|转投|挖角|挖来|被挖|裁员|缩编|"
     r"解散|重组|组织调整|内部信|全员信|晋升|任命|接管|接任|出任|招聘|扩招|招人|"
-    r"\b(depart|resign|quit|leav|join|hire|poach|layoff|laid off|reorg|restructur|"
-    r"step(?:ping)? down|appoint|promot|found(?:s|ed|ing)?)\b",
+    r"\b(depart\w*|resign\w*|quit|leav\w*|join\w*|hir(?:e|es|ed|ing)|poach\w*|layoff\w*|"
+    r"laid off|reorg\w*|restructur\w*|step(?:ping)? down|appoint\w*|promot\w*|found\w*)\b",
     re.I,
 )
 
@@ -60,7 +63,7 @@ AI_RE = re.compile(
     r"字节|阿里|腾讯|百度|美团|月之暗面|智谱|商汤|英伟达|NVIDIA|微软|谷歌|Meta|xAI|OpenAI",
     re.I,
 )
-NOISE_RE = re.compile(r"早报|晚报|日报|周报|快讯|盘点|汇总|直播|发布会|评测|上手|优惠|促销", re.I)
+NOISE_RE = re.compile(r"早报|晚报|日报|周报|快讯|盘点|汇总|直播|发布会|评测|上手|优惠|促销|summit|agenda|conference|webinar|podcast|register|ticket|meetup", re.I)
 GENERAL_SOURCES = {"IT之家", "钛媒体"}
 
 

@@ -1,5 +1,38 @@
 [
  {
+  "checked_at": "2026-11-04T09:33:22+08:00",
+  "mode": "daily-scan",
+  "coverage": "visible-window",
+  "accounts_checked": [
+   "OpenAI",
+   "AnthropicAI",
+   "GoogleDeepMind",
+   "deepseek_ai",
+   "MistralAI",
+   "cohere",
+   "cursor_ai",
+   "tianyi",
+   "sama",
+   "gdb",
+   "demishassabis",
+   "karpathy",
+   "jackclarkSF",
+   "ylecun",
+   "amir",
+   "steph_palazzolo",
+   "kyliebytes",
+   "shiringhaffary"
+  ],
+  "accounts_failed": [],
+  "posts_read": 27,
+  "new_records": 0,
+  "reviewed_records": 0,
+  "summary": "自动巡检 18 个账号：成功读取 18 个，失败 0 个；共读到 27 条可见帖子（11-01 10:34 至 11-04 09:33，每号最多 40 条），其中 6 条命中人才/组织关键词，已写入本地候选待复核。公开时间线可能只展示部分帖子，不代表完整抓取。",
+  "schedule": "每天 10:00 · 北京时间",
+  "automation_enabled": true,
+  "automation_id": "aiflow"
+ },
+ {
   "checked_at": "2026-11-03T10:34:53+08:00",
   "mode": "daily-scan",
   "coverage": "visible-window",
