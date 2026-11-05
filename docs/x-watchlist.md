@@ -1,6 +1,6 @@
 # AIFLOW · X 人才要闻观察名单
 
-身份核对：2026-11-04。共 55 个公开账号。按关注方向分组，不是影响力排名。
+名单复核：2026-11-05。共 53 个启用的公开账号，另有 2 个暂停核验。按关注方向分组，不是影响力排名。
 
 每日计划：北京时间 10:00。只收录具体原帖支持的人才与组织消息。
 
@@ -16,9 +16,7 @@
 | [Cohere · @cohere](https://x.com/cohere) | 企业 AI 团队与研究招聘 |
 | [Cursor · @cursor_ai](https://x.com/cursor_ai) | 编程 Agent 团队与工程招聘 |
 | [MiniMax (official) · @MiniMax_AI](https://x.com/MiniMax_AI) | 中国团队、模型发布与招聘 |
-| [Moonshot AI · @MoonshotAI](https://x.com/MoonshotAI) | Kimi 团队、研究与招聘 |
 | [Kimi.ai · @Kimi_Moonshot](https://x.com/Kimi_Moonshot) | Kimi 产品与团队动态 |
-| [Zhipu AI · @ZhipuAI](https://x.com/ZhipuAI) | GLM 团队与组织动态 |
 | [Z.ai · @Zai_org](https://x.com/Zai_org) | GLM 团队、研究与招聘 |
 | [Qwen · @Alibaba_Qwen](https://x.com/Alibaba_Qwen) | 通义千问团队与招聘 |
 | [Tencent Hy · @TencentHunyuan](https://x.com/TencentHunyuan) | 混元团队与模型动态 |
@@ -73,6 +71,11 @@
 | [Kylie Robison · @kyliebytes](https://x.com/kyliebytes) | AI 从业者与团队报道 |
 | [Shirin Ghaffary · @shiringhaffary](https://x.com/shiringhaffary) | AI 公司、研究人员与人才市场报道 |
 | [Alex Heath · @alexeheath](https://x.com/alexeheath) | AI 公司与人事报道 |
+
+## 暂停采集
+
+- `@MoonshotAI`：当前主页身份与 Kimi 实验室不符；保留 `@Kimi_Moonshot`。
+- `@ZhipuAI`：当前公开内容不足以确认官方身份；保留 `@Zai_org`。
 
 ## 查阅与收录规则
 

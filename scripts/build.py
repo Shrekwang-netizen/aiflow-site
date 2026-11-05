@@ -15,6 +15,9 @@ CHECKED={'primary','reported'}
 def load(name): return json.loads((ROOT/'data'/name).read_text())
 def h(s): return escape(str(s),quote=True)
 def eligible(r): return r['status'] in CHECKED and r['scope']=='talent' and r['type'] not in ('rumor','opinion','sentiment')
+def lottery_records(records, as_of):
+    cutoff=(as_of-timedelta(days=7)).isoformat()
+    return [r for r in records if eligible(r) and cutoff<=r['date']<=as_of.isoformat()]
 def validate(records):
     ids=set(); allowed=set(STATUS)
     for r in records:
@@ -68,9 +71,7 @@ def build():
     def monitor_panel():
         enabled=monitor.get('automation_enabled',False)
         return f'''<aside class="monitor-panel"><div class="panel-kicker"><span class="status-dot"></span> X 观察站</div><p class="monitor-count">{len(accounts)}<span> 个公开账号</span></p><p>研究者、实验室、报道者。<br>把信息追溯到具体原帖。</p><dl><div><dt>最近巡检</dt><dd>{checked_label}</dd></div><div><dt>更新安排</dt><dd>{'每天 10:00' if enabled else '正在配置'}</dd></div></dl><a href="watchlist.html">查看名单与覆盖情况 <span>↗</span></a></aside>'''
-    recent_cut=(stamp.date()-timedelta(days=14)).isoformat()
-    quality=[r for r in records if r['status']=='lead' and r['type']=='rumor' and r['scope']=='talent' and r['date']>=recent_cut][:2]
-    home=f'''<section class="hero"><div><p class="eyebrow">THE PEOPLE BEHIND AI <span>独立人才观察</span></p><h1>技术向前，<br>人才流动。</h1><p class="hero-copy">谁加入了新团队，谁选择了下一站。<br>关注 AI 行业里的人，也关注他们正在改变的组织。</p><a class="text-link" href="all.html">查看全部记录 <span>↗</span></a></div>{monitor_panel()}</section><section class="section-intro"><div><p class="eyebrow">EDITOR’S DESK</p><h2>近期要闻</h2></div><p>已核对具体原文的人才记录，另附少量待核实线索，均标注信度。<br>按报道日期排序，不用热度代替事实。</p></section>{feed(sorted(checked[:9]+quality,key=lambda r:r['date'],reverse=True),feature=True)}'''
+    home=f'''<section class="hero"><div><p class="eyebrow">THE PEOPLE BEHIND AI <span>独立人才观察</span></p><h1>技术向前，<br>人才流动。</h1><p class="hero-copy">谁加入了新团队，谁选择了下一站。<br>关注 AI 行业里的人，也关注他们正在改变的组织。</p><a class="text-link" href="all.html">查看全部记录 <span>↗</span></a></div>{monitor_panel()}</section><section class="section-intro"><div><p class="eyebrow">EDITOR’S DESK</p><h2>近期要闻</h2></div><p>只收录已核对具体原文的人才记录。<br>按来源公开日期排序。</p></section>{feed(checked[:9],feature=True)}'''
     history=[r for r in records if r['status']=='unreviewed' and r['scope']=='talent'][:5]
     home+='<section class="archive-preview"><div class="section-intro"><div><p class="eyebrow">FROM THE ARCHIVE</p><h2>历史资料</h2></div><a href="all.html?quality=unreviewed">查看全部 →</a></div><p class="section-note">以下来自原站收录，尚未完成本轮原文复核，不作为已确认要闻。</p>'
     home+=''.join(f'<a class="archive-row" href="item/{r["id"]}.html"><time>{r["date"][5:].replace("-",".")}</time><span>{h(r["title"])}</span><b>待复核 ↗</b></a>' for r in history)+'</section>'
@@ -87,7 +88,7 @@ def build():
             if a['group']!=group:continue
             watch+=f'<a class="watch-card" href="{a["url"]}" target="_blank" rel="noopener noreferrer"><span class="watch-initial">{h(a["name"][0])}</span><div><h3>{h(a["name"])}</h3><p class="handle">@{a["handle"]}</p><p>{h(a["focus"])}</p></div><span class="out-arrow">↗</span></a>'
         watch+='</div></section>'
-    watch+=f'<section class="coverage"><p class="eyebrow">LAST CHECK · {date_label}</p><h2>最近一次查阅</h2><p>{h(monitor["summary"])}</p><p>成功读取 {len(monitor["accounts_checked"])} 个账号，未能读取 {len(monitor["accounts_failed"])} 个。公开时间线可能只展示部分帖子；访问受限时会保留缺口，不把“没读到”写成“没有消息”。</p><p>新内容须附具体原帖或报道、公开日期、人物与团队，并经过来源核对。没有合格新消息时，全部记录保持不变，只更新巡检记录。</p><a href="about.html">了解编辑标准 →</a></section>'
+    watch+=f'<section class="coverage"><p class="eyebrow">LAST CHECK · {date_label}</p><h2>最近一次查阅</h2><p>{h(monitor["summary"])}</p><p>成功读取 {len(monitor["accounts_checked"])} 个账号，未纳入有效覆盖 {len(monitor["accounts_failed"])} 个。公开时间线可能只展示部分帖子；访问受限或身份未核实时会保留缺口，不把“没读到”写成“没有消息”。</p><p>新内容须附具体原帖或报道、公开日期、人物与团队，并经过来源核对。没有合格新消息时，全部记录保持不变，只更新巡检记录。</p><a href="about.html">了解编辑标准 →</a></section>'
     shell('watchlist.html','X 观察名单',watch,'watch')
     about=heading('把来源，放在结论前面。','AIFLOW 是个人维护的 AI 人才与组织观察站。','OUR EDITORIAL NOTES')+'''<div class="prose"><h2>我们收录什么</h2><p>研究人员与管理者的加入、离开、创业，团队招聘、裁员与组织调整。纯模型发布、融资数字、跑分和产品观点不进入人才要闻；有保留价值的观察留在全部记录。</p><h2>四种来源状态</h2><dl class="standards"><div><dt>本人／官方公开</dt><dd>已阅读当事人或机构的具体原文。只概括原文明确说明的信息，不推断薪酬、离职原因或未披露职务。</dd></div><div><dt>媒体报道 · 原文已读</dt><dd>已阅读相关报道，摘要注明报道方。报道不等同于公司或本人确认；单一媒体不会被标成“多家报道”。</dd></div><div><dt>历史记录 · 待复核</dt><dd>保留原站历史收录，尚未逐条重新核对。原来的 AI 分数、无依据热度与确认标签不再展示。</dd></div><div><dt>线索 · 未证实</dt><dd>匿名帖、传闻、搜索页、聚合首页或缺少具体原文的条目。不会进入要闻、RSS 和随机回顾。</dd></div></dl><h2>日期与更正</h2><p>列表日期是来源公开或报道的日期，不一定是实际入职、离职的日期。巡检时间与报道时间分别记录，旧闻不会因为重新抓取而变成今天的新消息。</p><h2>每日查阅怎么进行</h2><p>按 X 观察名单读取近期公开帖子，优先覆盖距离上次查阅以来的内容，并回看至少 48 小时。新线索核对原文、去重后才发布。无法读取、无法确定日期或只找到搜索摘要时，保留为待核线索，不自动升级为要闻。</p><p>任务运行于维护者的本地 Codex 环境，需要电脑与应用保持运行。公开页面、网络和登录状态会影响覆盖度；观察名单页记录最近一次实际查阅情况，不承诺全量实时覆盖。</p><h2>关于收藏和阅读记录</h2><p>这些偏好仅保存于当前浏览器，不需要账号，也不会跨设备同步。清理浏览器数据会重置记录。</p><h2>补充或纠正信息</h2><p>发现错误，请<a href="https://github.com/Shrekwang-netizen/aiflow-site/issues">提交更正</a>，附记录链接与公开依据。我们会保留更正说明，更新或撤下不再成立的表述。</p></div>'''
     shell('about.html','关于与编辑方法',about,'about')
@@ -115,7 +116,7 @@ def build():
     shell('weekly.html','往期周报',heading('每一周，留一个切片。','按 ISO 周归档，只展示已核对的人才记录。','THE WEEKLY ARCHIVE')+'<div class="week-archive">'+weeklinks+'</div>','weekly')
     shell('companies.html','团队索引',heading('团队索引','按公司与研究团队查阅历史记录。')+'<div class="index-grid">'+''.join(link('company/'+k+'.html',h(v)+' ↗') for k,v in sorted(company_map.items()))+'</div>','all')
     shell('tags.html','主题索引',heading('主题索引','从一个关键词开始。')+'<div class="tag-row">'+''.join(link('tags/'+quote(t)+'.html',h(t)) for t in sorted(all_tags))+'</div>','all')
-    random_body = heading('抽一条','从最近 7 天的人才记录里随机抽一条。点按钮或按空格，再抽一签。','A MOMENT IN THE ARCHIVE')
+    random_body = heading('抽一条','从最近 7 天已核对的人才记录里随机抽一条。点按钮或按空格，再抽一签。','A MOMENT IN THE ARCHIVE')
     random_body += ('<div class="lottery" data-rr>'
                     '<p class="lottery-kicker"><span data-rr-count>正在装签</span><span class="lottery-tally" data-rr-tally hidden></span></p>'
                     '<p class="lottery-line" id="rr-line" aria-live="polite">正在抽…</p>'
@@ -124,7 +125,7 @@ def build():
                     '<span class="lottery-hint">按空格再抽一次</span></div></div>')
     shell('random.html','随机周报',random_body,'random')
     shell('404.html','页面未找到',heading('这条路暂时没有消息。','<a href="'+BASE+'">返回 AIFLOW 首页 →</a>'),'home')
-    (ROOT/'assets/data/random.json').write_text(json.dumps([{'id':r['id'],'date':r['date'],'title':r['title'],'summary':r['summary'],'type':TYPES[r['type']],'company':r['companies'][0]['name'],'url':'item/'+r['id']+'.html','conf':STATUS[r['status']]} for r in records if r['scope']=='talent' and r['date']>=(stamp.date()-timedelta(days=7)).isoformat()],ensure_ascii=False)+'\n')
+    (ROOT/'assets/data/random.json').write_text(json.dumps([{'id':r['id'],'date':r['date'],'title':r['title'],'summary':r['summary'],'type':TYPES[r['type']],'company':r['companies'][0]['name'],'url':'item/'+r['id']+'.html','conf':STATUS[r['status']]} for r in lottery_records(records,stamp.date())],ensure_ascii=False)+'\n')
     rss='<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AIFLOW 人才要闻</title><link>'+BASE+'</link><description>只收录已核对原文的 AI 人才与组织记录。</description>'
     for r in checked[:30]:rss+=f'<item><title>{h(r["title"])}</title><link>{BASE}item/{r["id"]}.html</link><guid>{BASE}item/{r["id"]}.html</guid><description>{h(r["summary"])}</description><pubDate>{datetime.fromisoformat(r["date"]).strftime("%a, %d %b %Y 00:00:00 +0800")}</pubDate></item>'
     (ROOT/'feed.xml').write_text(rss+'</channel></rss>\n')
