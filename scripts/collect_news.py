@@ -149,11 +149,13 @@ def main() -> int:
     cutoff = datetime.now(timezone.utc) - timedelta(days=args.days)
     found = []
     failures = []
+    coverage = []
     for name, url in FEEDS:
         try:
             items = parse_feed(fetch(url))
         except Exception as exc:  # noqa: BLE001
             failures.append({"source": name, "url": url, "reason": str(exc)[:120]})
+            coverage.append({"source": name, "count": 0, "error": str(exc)[:120]})
             log(f"✗ {name}: {exc}")
             continue
         picked = 0
@@ -178,6 +180,7 @@ def main() -> int:
                 "matched": sorted({m.group(0).lower() for m in TALENT_TITLE_RE.finditer(title)})[:5],
             })
             picked += 1
+        coverage.append({"source": name, "read": len(items), "count": picked, "error": None})
         log(f"✓ {name}: {len(items)} 条，命中 {picked}")
         time.sleep(0.4)
 
@@ -201,7 +204,7 @@ def main() -> int:
     PRIVATE.mkdir(exist_ok=True)
     payload = {"generated_at": datetime.now(TZ_CN).isoformat(timespec="seconds"),
                "days": args.days, "feeds": len(FEEDS), "failures": failures,
-               "items": unique}
+               "items": unique, "coverage": coverage}
     (PRIVATE / f"news-{stamp}.json").write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
     lines = [f"# 媒体候选 · {stamp}", "", f"{args.days} 天窗口，命中 {len(unique)} 条；失败源 {len(failures)} 个。", ""]
     for row in unique:

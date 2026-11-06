@@ -3,8 +3,8 @@
 """
 把当前目录发布到 GitHub Pages（gh-pages 分支）。
 
-本机到 github.com 的 git 端口不通，但 api.github.com 可用，所以用 GitHub API
-直接建 tree/commit 并移动 gh-pages ref。发布内容 = 仓库根目录下的站点与源码，
+使用已登录的 gh，通过 GitHub API 建 tree/commit 并快进 gh-pages ref。
+保留远端其他文件；远端在发布期间变化时停止。发布内容 = 站点与源码，
 跳过 .git / .private-inbox / logs / __pycache__ / 浏览器临时文件。
 
     python3 scripts/publish.py --dry-run
@@ -62,6 +62,28 @@ def collect_files() -> list[Path]:
     return files
 
 
+def verify_live(repo: str, commit: str) -> int:
+    url = 'https://shrekwang-netizen.github.io/aiflow-site/'
+    expected = {name: (ROOT / name).read_bytes() for name in ('index.html', 'watchlist.html')}
+    log(f'→ 核验 Pages 构建 {commit[:8]} 及线上页面内容')
+    for _ in range(20):
+        try:
+            build = gh('GET', f'repos/{repo}/pages/builds/latest')
+            if build.get('commit') == commit and build.get('status') == 'built':
+                matching = True
+                for name, content in expected.items():
+                    with urllib.request.urlopen(url + name + '?deployment=' + commit, timeout=15) as response:
+                        matching = matching and response.read() == content
+                if matching:
+                    log(f'✓ Pages {commit[:8]} 已构建，首页与观察名单内容一致')
+                    return 0
+        except (Exception, SystemExit) as exc:
+            log(f'  …核验重试：{exc}')
+        time.sleep(10)
+    log('! Pages 核验超时，不能确认线上已更新')
+    return 1
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo", default=REPO)
@@ -70,6 +92,7 @@ def main() -> int:
     parser.add_argument("--force", action="store_true", help="即使与远端一致也提交")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--verify", action="store_true")
+    parser.add_argument("--expected-head", help="Stop if gh-pages changed since the run started")
     args = parser.parse_args()
 
     files = collect_files()
@@ -102,47 +125,35 @@ def main() -> int:
 
     ref = gh("GET", f"repos/{args.repo}/git/ref/heads/{args.branch}")
     parent = ref["object"]["sha"]
+    if args.expected_head and parent != args.expected_head:
+        raise SystemExit('远端在本轮工作期间有更新，停止发布，先同步并核对。')
     log(f"  当前 {args.branch}: {parent[:8]}")
 
-    remote = {}
-    try:
-        head_commit = gh("GET", f"repos/{args.repo}/git/commits/{parent}")
-        tree = gh("GET", f"repos/{args.repo}/git/trees/{head_commit['tree']['sha']}?recursive=1")
-        remote = {item["path"]: item["sha"] for item in tree.get("tree", [])
-                  if item.get("type") == "blob"}
-    except SystemExit:
-        remote = {}
+    head_commit = gh("GET", f"repos/{args.repo}/git/commits/{parent}")
+    tree = gh("GET", f"repos/{args.repo}/git/trees/{head_commit['tree']['sha']}?recursive=1")
+    if tree.get('truncated'):
+        raise SystemExit('远端目录列表不完整，停止发布。')
+    remote = {item["path"]: item["sha"] for item in tree.get("tree", []) if item.get("type") == "blob"}
     changed = sorted(path for path, sha in local_sha.items() if remote.get(path) != sha)
-    removed = sorted(path for path in remote if path not in local_sha)
-    if not args.force and not changed and not removed:
+    if not args.force and not changed:
         log("· 与远端一致，跳过发布")
-        return 0
-    log(f"  变更 {len(changed)} 个文件，" + (f"删除 {len(removed)} 个" if removed else "无删除"))
+        return verify_live(args.repo, parent) if args.verify else 0
+    log(f"  变更 {len(changed)} 个文件，保留远端其他文件")
 
-    tree = gh("POST", f"repos/{args.repo}/git/trees", {"tree": entries})
+    tree = gh("POST", f"repos/{args.repo}/git/trees", {
+        "base_tree": head_commit['tree']['sha'],
+        "tree": [entry for entry in entries if entry['path'] in changed]})
     message = args.message or f"publish: {time.strftime('%Y-%m-%d %H:%M')}"
     commit = gh("POST", f"repos/{args.repo}/git/commits", {
         "message": message, "tree": tree["sha"], "parents": [parent]})
     gh("PATCH", f"repos/{args.repo}/git/refs/heads/{args.branch}",
-       {"sha": commit["sha"], "force": True})
+       {"sha": commit["sha"], "force": False})
+    (ROOT / '.private-inbox').mkdir(exist_ok=True)
+    (ROOT / '.private-inbox/published-head').write_text(commit['sha'] + '\n')
     log(f"✓ 已推送 {args.branch}（{commit['sha'][:8]}）")
 
     if args.verify:
-        url = "https://shrekwang-netizen.github.io/aiflow-site/watchlist.html"
-        expected = time.strftime("%Y.%m.%d")
-        log(f"→ 等待 Pages 生效并核验 {url}")
-        for _ in range(10):
-            time.sleep(12)
-            try:
-                with urllib.request.urlopen(url, timeout=15) as resp:
-                    html = resp.read().decode("utf-8", "replace")
-                if expected in html or "最近一次查阅" in html:
-                    log(f"✓ 线上页面可访问（含 {expected} 标记）")
-                    return 0
-            except Exception as exc:  # noqa: BLE001
-                log(f"  …还没生效：{exc}")
-        log("! 线上核验超时，请稍后手动确认")
-        return 1
+        return verify_live(args.repo, commit['sha'])
     return 0
 
 

@@ -4181,5 +4181,168 @@
   "scope": "talent",
   "reviewed_at": "2026-11-05",
   "review_note": "已读本人 X 原帖（11 月 3 日）：离开 Perplexity，加入 Wispr Flow 负责 comms；帖文未写离职原因与具体职级。"
+ },
+ {
+  "id": "nvidia-20261106-david-holzmueller",
+  "date": "2026-11-06",
+  "title": "David Holzmüller 离开 Inria，加入 NVIDIA 研究结构化数据基础模型",
+  "summary": "David Holzmüller 在北京时间 11 月 6 日的 X 原帖中表示，结束在 Inria 的三年工作后，本周加入 NVIDIA，继续研究面向结构化数据的开放基础模型。他曾参与表格数据分类与回归模型及基准的开发。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "NVIDIA",
+    "slug": "nvidia"
+   },
+   {
+    "name": "Inria",
+    "slug": "inria"
+   }
+  ],
+  "person": "David Holzmüller",
+  "tags": [
+   "研究人员",
+   "NVIDIA",
+   "基础模型"
+  ],
+  "sources": [
+   {
+    "name": "X · @DHolzmueller",
+    "url": "https://x.com/DHolzmueller/status/2118464389439189411"
+   }
+  ],
+  "source_published_at": "2026-11-05T22:04:04Z",
+  "review_note": "已打开并阅读本人具体原帖：本周加入 NVIDIA，此前在 Inria 工作三年，方向为结构化数据开放基础模型。原帖 UTC 11 月 5 日 22:04，按北京时间归档为 11 月 6 日；实际入职日未披露。",
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-06"
+ },
+ {
+  "id": "anthropic-20261105-paul-jump",
+  "date": "2026-11-05",
+  "title": "Paul Jump 宣布加入 Anthropic",
+  "summary": "Paul Jump 11 月 5 日在 X 宣布加入 Anthropic，并表示会因工作减少发帖，继续投入产品构建。该帖未披露具体职位、团队和实际入职日期。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Paul Jump",
+  "tags": [
+   "Anthropic",
+   "加入"
+  ],
+  "sources": [
+   {
+    "name": "X · @paulljump",
+    "url": "https://x.com/paulljump/status/2118147652533834038"
+   }
+  ],
+  "source_published_at": "2026-11-05T01:05:28Z",
+  "review_note": "已读本人 X 原帖，明确宣布加入 Anthropic。原帖未披露职位、团队和前雇主，不采用聚合候选中的推断。",
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-06"
+ },
+ {
+  "id": "anthropic-20261105-ben-dechrai",
+  "date": "2026-11-05",
+  "title": "Ben Dechrai 加入 Anthropic，任 Member of Technical Staff",
+  "summary": "Ben Dechrai 11 月 5 日在 X 表示，已加入 Anthropic，任 Member of Technical Staff。他称过去几年主要构建用于安全测试和运行大语言模型的基准、软件工厂与安全工具，期待在更大的团队继续推进 AI 安全。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Ben Dechrai",
+  "tags": [
+   "Anthropic",
+   "AI 安全",
+   "工程人员"
+  ],
+  "sources": [
+   {
+    "name": "X · @bendechrai",
+    "url": "https://x.com/bendechrai/status/2118179783280669027"
+   }
+  ],
+  "source_published_at": "2026-11-05T03:13:08Z",
+  "review_note": "已读本人具体原帖，核对加入 Anthropic、Member of Technical Staff 职位及其自述的既往工作方向。具体部门未披露。",
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-06"
+ },
+ {
+  "id": "openai-20261105-austin-lau",
+  "date": "2026-11-05",
+  "title": "Austin Lau 离开 Anthropic，加入 OpenAI",
+  "summary": "Austin Lau 11 月 5 日在 X 宣布近期加入 OpenAI。他表示，此前在 Anthropic 参与建立增长职能，并与团队解决了许多职业生涯中的难题。原帖未说明离职原因、新职位名称或实际入职日期。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   },
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Austin Lau",
+  "tags": [
+   "OpenAI",
+   "Anthropic",
+   "增长",
+   "离职"
+  ],
+  "sources": [
+   {
+    "name": "X · @helloitsaustin",
+    "url": "https://x.com/helloitsaustin/status/2118161804463595931"
+   }
+  ],
+  "source_published_at": "2026-11-05T02:01:42Z",
+  "review_note": "已读本人 X 原帖：近期加入 OpenAI，并回顾在 Anthropic 建立增长职能的工作。原帖未说明离职原因，不采用聚合站给出的具体职级。",
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-06"
+ },
+ {
+  "id": "openai-20261105-cat-wu",
+  "date": "2026-11-05",
+  "title": "Cat Wu 加入 OpenAI，负责 Core Products 产品管理",
+  "summary": "Cat Wu 11 月 5 日在 X 宣布加入 OpenAI，负责 Core Products 的产品管理，并将与 @thsottiaux 及产品经理团队合作开发智能体。她的公开简介显示此前参与 Anthropic 的 Claude Code；原帖没有说明离职原因。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   },
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Cat Wu",
+  "tags": [
+   "OpenAI",
+   "Anthropic",
+   "产品负责人",
+   "Claude Code"
+  ],
+  "sources": [
+   {
+    "name": "X · @_catwu",
+    "url": "https://x.com/_catwu/status/2118137612577968402"
+   }
+  ],
+  "source_published_at": "2026-11-05T00:25:34Z",
+  "review_note": "已读本人 X 原帖，明确 lead product management for Core Products，并提及与 @thsottiaux 合作。公开简介写明此前参与 Claude Code。InfoQ 原文当前无法访问，未将其摘要作为已读来源；使用本人姓名 Cat Wu。",
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-06"
  }
 ]

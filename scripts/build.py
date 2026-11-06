@@ -6,6 +6,7 @@ from urllib.parse import quote, urlsplit
 from datetime import datetime, date, timedelta
 from collections import Counter
 import json, hashlib, re
+from schedule_config import SCHEDULE
 
 ROOT=Path(__file__).resolve().parents[1]
 BASE='https://shrekwang-netizen.github.io/aiflow-site/'
@@ -67,7 +68,7 @@ def build():
         return f'<header class="page-head"><p class="eyebrow">{eyebrow}</p><h1>{h(title)}</h1><p class="page-sub">{sub}</p></header>'
     def monitor_panel():
         enabled=monitor.get('automation_enabled',False)
-        return f'''<aside class="monitor-panel"><div class="panel-kicker"><span class="status-dot"></span> X 观察站</div><p class="monitor-count">{len(accounts)}<span> 个公开账号</span></p><p>研究者、实验室、报道者。<br>把信息追溯到具体原帖。</p><dl><div><dt>最近巡检</dt><dd>{checked_label}</dd></div><div><dt>更新安排</dt><dd>{'每天 10:00' if enabled else '正在配置'}</dd></div></dl><a href="watchlist.html">查看名单与覆盖情况 <span>↗</span></a></aside>'''
+        return f'''<aside class="monitor-panel"><div class="panel-kicker"><span class="status-dot"></span> X 观察站</div><p class="monitor-count">{len(accounts)}<span> 个公开账号</span></p><p>研究者、实验室、报道者。<br>把信息追溯到具体原帖。</p><dl><div><dt>最近巡检</dt><dd>{checked_label}</dd></div><div><dt>更新安排</dt><dd>{h(monitor.get('schedule', SCHEDULE)) if enabled else '正在配置'}</dd></div></dl><a href="watchlist.html">查看名单与覆盖情况 <span>↗</span></a></aside>'''
     recent_cut=(stamp.date()-timedelta(days=14)).isoformat()
     quality=[r for r in records if r['status']=='lead' and r['type']=='rumor' and r['scope']=='talent' and r['date']>=recent_cut][:2]
     home=f'''<section class="hero"><div><p class="eyebrow">THE PEOPLE BEHIND AI <span>独立人才观察</span></p><h1>技术向前，<br>人才流动。</h1><p class="hero-copy">谁加入了新团队，谁选择了下一站。<br>关注 AI 行业里的人，也关注他们正在改变的组织。</p><a class="text-link" href="all.html">查看全部记录 <span>↗</span></a></div>{monitor_panel()}</section><section class="section-intro"><div><p class="eyebrow">EDITOR’S DESK</p><h2>近期要闻</h2></div><p>已核对具体原文的人才记录，另附少量待核实线索，均标注信度。<br>按报道日期排序，不用热度代替事实。</p></section>{feed(sorted(checked[:9]+quality,key=lambda r:r['date'],reverse=True),feature=True)}'''
@@ -80,7 +81,7 @@ def build():
     leads=[r for r in records if r['status']=='lead']
     shell('rumors.html','小道消息',heading('小道消息，先不下结论。','传闻、聚合页与缺少具体原文的历史记录放在这里。补齐证据后，再决定是否进入要闻。','THE REVIEW QUEUE')+search()+feed(leads),'rumors')
     watch=heading('从这些人，听见行业。','这是一份公开账号观察名单，不是背书或排名。优先阅读一手发言，再用官方公告和原始报道交叉核对。','THE WATCHLIST')
-    watch+=f'<div class="watch-summary"><b>{len(accounts)} 个账号</b><span>每日上午 10:00 · 北京时间</span><a href="docs/x-watchlist.md">下载文字版名单 ↗</a></div>'
+    watch+=f'<div class="watch-summary"><b>{len(accounts)} 个账号</b><span>{h(monitor.get("schedule", SCHEDULE))}</span><a href="docs/x-watchlist.md">下载文字版名单 ↗</a></div>'
     for group in dict.fromkeys(a['group'] for a in accounts):
         watch+=f'<section class="watch-group"><h2>{h(group)}</h2><div class="watch-grid">'
         for a in accounts:
@@ -88,6 +89,19 @@ def build():
             watch+=f'<a class="watch-card" href="{a["url"]}" target="_blank" rel="noopener noreferrer"><span class="watch-initial">{h(a["name"][0])}</span><div><h3>{h(a["name"])}</h3><p class="handle">@{a["handle"]}</p><p>{h(a["focus"])}</p></div><span class="out-arrow">↗</span></a>'
         watch+='</div></section>'
     watch+=f'<section class="coverage"><p class="eyebrow">LAST CHECK · {date_label}</p><h2>最近一次查阅</h2><p>{h(monitor["summary"])}</p><p>成功读取 {len(monitor["accounts_checked"])} 个账号，未能读取 {len(monitor["accounts_failed"])} 个。公开时间线可能只展示部分帖子；访问受限时会保留缺口，不把“没读到”写成“没有消息”。</p><p>新内容须附具体原帖或报道、公开日期、人物与团队，并经过来源核对。没有合格新消息时，全部记录保持不变，只更新巡检记录。</p><a href="about.html">了解编辑标准 →</a></section>'
+    if monitor.get('source_coverage'):
+        labels={'x':'X 观察名单','news':'媒体 RSS','links':'手动链接','legacy':'DINQ 与其他信息源'}
+        states={'read':'已读取有限窗口','partial':'部分读取／存在缺口','failed':'读取失败','empty':'无待处理链接'}
+        watch+='<section class="coverage"><h2>本轮信息源覆盖</h2><p>采集结果先进入待核候选；试运行阶段由人工核查后更新新闻。</p><ul>'
+        for row in monitor['source_coverage']:
+            watch+=f'<li>{h(labels.get(row["source"],row["source"]))}：{h(states.get(row["status"],row["status"]))}，{row.get("candidates",0)} 条候选'
+            details=row.get('details',[])
+            if details:
+                watch+='；'+h('、'.join(f'{d["source"]} {d.get("count",0)} 条'+('（有失败）' if d.get('error') else '') for d in details))
+            if row.get('warnings'):
+                watch+='；'+h('；'.join(row['warnings']))
+            watch+='</li>'
+        watch+='</ul></section>'
     shell('watchlist.html','X 观察名单',watch,'watch')
     about=heading('把来源，放在结论前面。','AIFLOW 是个人维护的 AI 人才与组织观察站。','OUR EDITORIAL NOTES')+'''<div class="prose"><h2>我们收录什么</h2><p>研究人员与管理者的加入、离开、创业，团队招聘、裁员与组织调整。纯模型发布、融资数字、跑分和产品观点不进入人才要闻；有保留价值的观察留在全部记录。</p><h2>四种来源状态</h2><dl class="standards"><div><dt>本人／官方公开</dt><dd>已阅读当事人或机构的具体原文。只概括原文明确说明的信息，不推断薪酬、离职原因或未披露职务。</dd></div><div><dt>媒体报道 · 原文已读</dt><dd>已阅读相关报道，摘要注明报道方。报道不等同于公司或本人确认；单一媒体不会被标成“多家报道”。</dd></div><div><dt>历史记录 · 待复核</dt><dd>保留原站历史收录，尚未逐条重新核对。原来的 AI 分数、无依据热度与确认标签不再展示。</dd></div><div><dt>线索 · 未证实</dt><dd>匿名帖、传闻、搜索页、聚合首页或缺少具体原文的条目。不会进入要闻、RSS 和随机回顾。</dd></div></dl><h2>日期与更正</h2><p>列表日期是来源公开或报道的日期，不一定是实际入职、离职的日期。巡检时间与报道时间分别记录，旧闻不会因为重新抓取而变成今天的新消息。</p><h2>每日查阅怎么进行</h2><p>按 X 观察名单读取近期公开帖子，优先覆盖距离上次查阅以来的内容，并回看至少 48 小时。新线索核对原文、去重后才发布。无法读取、无法确定日期或只找到搜索摘要时，保留为待核线索，不自动升级为要闻。</p><p>任务运行于维护者的本地 Codex 环境，需要电脑与应用保持运行。公开页面、网络和登录状态会影响覆盖度；观察名单页记录最近一次实际查阅情况，不承诺全量实时覆盖。</p><h2>关于收藏和阅读记录</h2><p>这些偏好仅保存于当前浏览器，不需要账号，也不会跨设备同步。清理浏览器数据会重置记录。</p><h2>补充或纠正信息</h2><p>发现错误，请<a href="https://github.com/Shrekwang-netizen/aiflow-site/issues">提交更正</a>，附记录链接与公开依据。我们会保留更正说明，更新或撤下不再成立的表述。</p></div>'''
     shell('about.html','关于与编辑方法',about,'about')

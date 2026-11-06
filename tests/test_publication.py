@@ -3,6 +3,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
 from copy import deepcopy
+from datetime import datetime, timedelta
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 from build import validate,eligible
 class Links(HTMLParser):
@@ -24,8 +25,12 @@ class PublicationTests(unittest.TestCase):
         with self.assertRaises(AssertionError):validate([r])
     def test_context_not_talent_news(self):
         r=deepcopy(next(r for r in self.records if r['status']=='primary'));r['scope']='context';self.assertFalse(eligible(r))
-    def test_random_only_checked(self):
-        pool=json.loads((ROOT/'assets/data/random.json').read_text());expected={r['id'] for r in self.records if eligible(r)}
+    def test_random_recent_talent_with_evidence_labels(self):
+        pool=json.loads((ROOT/'assets/data/random.json').read_text())
+        stamp=datetime.fromisoformat(json.loads((ROOT/'data/monitor.json').read_text())['checked_at'])
+        cutoff=(stamp.date()-timedelta(days=7)).isoformat()
+        expected={r['id'] for r in self.records if r['scope']=='talent' and r['date']>=cutoff}
+        self.assertTrue(all(r.get('conf') for r in pool))
         self.assertEqual({r['id'] for r in pool},expected)
     def test_generated_local_links(self):
         missing=[]

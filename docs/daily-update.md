@@ -1,39 +1,31 @@
-# AIFLOW daily editorial run
+# AIFlow 日常采集与更新
 
-The owner has requested daily review of the public X accounts in `data/x-watchlist.json` and automatic publication of suitable AI talent news to the existing public GitHub Pages site. Work only in `/Users/wz/aiflow-site`, repository `Shrekwang-netizen/aiflow-site`, branch `gh-pages`. This authorizes normal content updates and deployment; it does not authorize sending messages, following accounts, paying for services, changing account permissions, or publishing private information.
+用户安排：北京时间周一至周五 09:30 扫描信息源，周末不运行。2026-11-06 决定先试运行不登录 Codex CLI 的方式：采集自动进行，候选由人工核查后入库。不得把“候选已采集”称为“新闻已更新”。
 
-## Automatic collection (10:00)
+## 位置与定时
 
-`scripts/daily.sh` (launchd `com.aiflow.site`) runs `collect_x.py`, `collect_news.py`, `collect_links.py`, and `collect_legacy.py` before building. Their raw and filtered candidates land in `.private-inbox/` (`x-*.json`, `news-*.json`, `links-*.json`, `legacy-*.json`) and must be reviewed against the original source before any record is written. A failed source is a coverage gap, not an empty result.
+项目入口 `/Users/wz/Desktop/超级周报服务器/aiflow-site` 是指向 `/Users/wz/aiflow-site` 的符号链接。后台任务使用后者，避开 macOS 对 Desktop 的后台访问限制。此目录通过 GitHub API 发布，目前没有 `.git`，不要误用旧架构，也不要执行假定存在工作树的 reset/checkout。
 
-## Read and collect
+`~/Library/LaunchAgents/com.aiflow.site.plist` 调用 `scripts/daily.sh` → `scripts/daily.py`。系统日历设置五个工作日 09:30，脚本按 Asia/Shanghai 再检查周末，并持有进程锁。Mac 系统时区应为 Asia/Shanghai；电脑需开机、登录并保持唤醒。X 需要用户已经登录的 Chrome 和允许 Apple 事件 JavaScript。当前试运行不依赖 Codex CLI 登录。
 
-1. Confirm the worktree is clean. Fetch origin and fast-forward `gh-pages`; if local edits or divergent changes exist, preserve them and report the blocker. Never force-push or discard changes.
-2. Read `data/records.json`, `data/x-watchlist.json`, `data/monitor.json`, and recent `data/run-history.json`. Use Asia/Shanghai for the run clock; preserve source timestamps independently.
-3. Use available supported browser tools to open each enabled account's public profile. Confirm identity again if redirected or renamed. Read original posts using visible page text, never hidden application state or unofficial authenticated scraping. Open relevant posts to read full text, date and canonical `/status/` link. Use web search for discovery and official organization pages or original media reports for corroboration.
-4. Cover the interval since the last successful account check, with a 48-hour overlap. On the first run, use 48 hours. A longer outage needs a catch-up window. Read pinned posts by their actual date. Scroll until the requested window is covered or a documented limit/access restriction is reached. Aim for at most 40 recent posts per account; record a `partial` result if the cutoff does not reach the start of the window. Never label a five-post sample as full coverage.
-5. If X is unavailable or requires login, do not bypass restrictions or invent access. Search publicly indexed specific posts and corroborating official announcements. Count accounts without readable recent timelines as incomplete. Do not infer absence of news from failed access. Repeated account-wide failure is actionable and should be surfaced to the owner.
+## 自动采集
 
-## Decide what belongs
+依次运行 X 55 个启用账号、媒体 RSS、手动链接收件箱、DINQ、扩展 RSS、RSSHub、晚点、知乎、HN、Blind 和公开搜索索引。媒体窗口至少四天，并按上次巡检时间加 48 小时重叠，覆盖周末；X 原采集器最多回补七天，公开时间线和 RSS 可能截断，不能宣称完整覆盖。
 
-- In scope: identified AI researchers, engineers, product or business leaders joining/leaving teams, founding an AI company, explicit team hiring, verified layoffs, organization and reporting-line changes.
-- Out of scope: model releases, benchmarks, financing alone, ordinary interviews/events, anonymous sentiment, vague speculation, and personal-life posts.
-- A concrete source must support the person, organization, event, and date. Preserve the distinction between publication date and occurrence date. Never invent employer, role, salary, motivation or destination.
-- `primary`: read a specific public post or announcement from the person/organization; set `reviewed_at`, `review_note`, and a specific canonical source URL. `reported`: read the original media report and attribute it explicitly. One article is not “multiple reports.”
-- Only `primary` or `reported` records with `scope: talent` enter the home page, weekly pages, random archive and RSS. Scores and unmeasured popularity are not editorial evidence.
-- Legacy `unreviewed` and `lead` records stay marked until individually rechecked. New unverified/reputationally sensitive rumors do not get automatically published; retain only local notes in `.private-inbox/` if needed, which is gitignored. Do not include private notes or raw full-post copies in a public commit.
-- Deduplicate by canonical source URL and by person/company/event. Expand an existing record when a second source describes the same move. Record a correction note for changed claims. Avoid deleting or renaming existing article IDs and URLs.
-- Write concise Chinese summaries, normally 60–140 Chinese characters. Paraphrase; do not copy full posts or copyrighted articles. Name the reporting source and preserve uncertainty. No unsupported “why this matters” speculation.
+原文及候选仅写 `.private-inbox/`。逐源记录读取、失败、有限窗口和候选数量；采集器报错或超时不应显示成“没有新闻”。空手动链接收件箱是正常空结果。日志在 `logs/daily-YYYY-MM-DD.log`。任务把本轮覆盖写入 monitor 和 run-history，构建并测试通过后发布巡检状态；新候选仍待核查。
 
-## Build and publish
+## 核查与入库
 
-1. Update `data/records.json` for qualified stories. Do not rewrite site design during a routine run.
-2. Update `data/monitor.json` with the actual timezone-aware `checked_at`, the checked/failed account lists, window/cutoff details per account, item counts, and a factual Chinese summary. Keep `automation_enabled: true` while this task is active. Append a compact run to `data/run-history.json`, retaining the latest 90 runs. No new qualifying news is a valid result; the status page may still be updated, without inventing a new article.
-3. Run `python3 scripts/build.py`, `python3 -m unittest discover -s tests`, `node --check assets/app.js`, and `git diff --check`. The generator updates all article, archive, company, tag, RSS and random-archive views. Review the staged diff for unrelated changes and unexpected removals.
-4. Commit only the intended source data and generated output, then push normally to `origin gh-pages`. The user has authorized publication. Do not push `.private-inbox/`, browser data, credentials or local tools. If the remote moved, rebase only a clean committed task change and rebuild/retest; stop on conflicting content rather than overwriting it.
-5. Verify the GitHub Pages deployment for the pushed SHA succeeds. Fetch the actual live new article and monitor page to confirm the expected text. Record/report publishing failure accurately; never say “updated” merely because a commit exists.
-6. Notify the owner concisely only when there are meaningful new stories, a correction, deployment failure, or an access issue that needs action. Stay quiet when there is no meaningful change. Link the site and primary sources when reporting additions.
+以 AI 人才流动、裁员、组织变化、员工公开观察为主，也可保留值得关注的融资、产品和重要从业者发言，按既有数据类型与 context 范围收录。核对具体原帖或原始报道，保留公开日期、事件日期和信息的不确定性。聚合首页、个人主页、搜索摘要不构成事件证据；不要补写未经确认的职务、原因或去向。
 
-## Runtime
+`primary` 表示本人／官方原文，`reported` 表示已读媒体原文；均需具体来源、reviewed_at、review_note。未核实线索明确标记 `lead`，敏感传闻缺乏依据时先留私有候选。默认不自动晋升未证实线索。要闻少量线索和最近七天随机池遵守现有显示规则。
 
-This is a local Codex scheduled task, not an always-on server. The computer must be on, Codex must be running, and GitHub/network/browser access must remain available. No X API token, paid feed, or unattended login setup is assumed.
+先按来源 URL，再按人物、公司、事件去重，同一事件增加来源而不重复建条目。保留已有 ID 和链接。摘要用中文，通常 60–140 字，不复制完整原文。不能把采集日期作为旧事件的报道日期。
+
+## 检查与发布
+
+运行 `python3 scripts/build.py`、`python3 -m unittest discover -s tests`、`node --check assets/app.js`、`node --check assets/theme.js`。任何检查失败都停止发布。
+
+发布前核对远端 gh-pages SHA。`scripts/publish.py --expected-head <SHA> --verify` 使用当前远端树，保留其他远端文件，非强制快进；远端变化时停止，先同步。`.private-inbox/published-head` 保存上次发布 SHA，定时任务遇到不一致时停止，避免覆盖他人的更新。私有候选、原帖全文、日志和凭据不得发布。
+
+发布完成需确认 GitHub Pages 构建对应提交成功，并比较线上首页、观察名单与本地内容。人工新增时还需打开新文章核对。只有实际上线的内容才能报告“已更新”。通知用户以有意义的新消息、更正或需要处理的运行失败为主。

@@ -22,6 +22,7 @@ X 观察名单巡检（新架构）
 """
 from __future__ import annotations
 
+from schedule_config import SCHEDULE
 import argparse
 import base64
 import json
@@ -597,7 +598,7 @@ def write_outputs(accounts: list[dict], failures: list[dict], start: datetime,
         "new_records": 0,
         "reviewed_records": 0,
         "summary": summary,
-        "schedule": "每天 10:00 · 北京时间",
+        "schedule": SCHEDULE,
         "automation_enabled": True,
         "automation_id": "aiflow",
     })
@@ -614,7 +615,7 @@ def write_outputs(accounts: list[dict], failures: list[dict], start: datetime,
         "new_records": 0,
         "reviewed_records": 0,
         "summary": summary,
-        "schedule": "每天 10:00 · 北京时间",
+        "schedule": SCHEDULE,
         "automation_enabled": True,
         "automation_id": "aiflow",
     })

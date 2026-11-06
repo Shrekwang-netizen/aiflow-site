@@ -45,6 +45,7 @@ def load_legacy():
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--sources", default="dinq,rss,rsshub,latepost,zhihu,hn,blind,buzz")
+    parser.add_argument("--days", type=int, default=7)
     parser.add_argument("--blind-channels", type=int, default=3)
     parser.add_argument("--buzz-queries", type=int, default=2)
     parser.add_argument("--dry-run", action="store_true")
@@ -62,7 +63,7 @@ def main() -> int:
         "rsshub": m.cand_from_rsshub,
         "latepost": m.cand_from_latepost,
         "zhihu": m.cand_from_zhihu,
-        "hn": m.cand_from_hn,
+        "hn": lambda: m.cand_from_hn(days=args.days),
         "blind": lambda: m.cand_from_blind(limit_channels=args.blind_channels, cursor=0),
         "buzz": lambda: m.cand_from_buzz(limit_queries=args.buzz_queries, cursor=0),
     }
@@ -84,7 +85,7 @@ def main() -> int:
             log(f"✗ {name}: {exc}")
 
     # 只保留 7 天内（没有日期的保留）
-    cutoff = (datetime.now(TZ_CN) - timedelta(days=7)).date().isoformat()
+    cutoff = (datetime.now(TZ_CN) - timedelta(days=args.days)).date().isoformat()
     items = [it for it in items if not it.get("date") or (it.get("date") or "") >= cutoff]
 
     # 去重（URL + 标题）
