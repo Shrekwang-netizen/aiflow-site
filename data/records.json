@@ -4562,5 +4562,44 @@
   "scope": "talent",
   "reviewed_at": "2026-11-09",
   "review_note": "已在 X 直读 @rowancheung 原帖（2026-11-07 01:31 北京时间）与 @alexeheath 的欢迎帖确认「以顾问身份加入 Sound Ventures」；原帖为长帖，采集到的文本在 280 字处截断，因此只写可见部分，职责范围与 The Rundown 职务变化均未披露，不作推断。"
+ },
+ {
+  "id": "nvidia-20261108-jensen-huang-investigation",
+  "date": "2026-11-08",
+  "title": "黄仁勋致信员工承认出轨，英伟达董事会就中国间谍传闻启动独立调查",
+  "summary": "11 月 8 日，英伟达 CEO 黄仁勋向全体员工发邮件承认「我对妻子不忠」，称自己的行为伤害了家人，并为由此引发的国家安全关切道歉；同日英伟达董事会发表声明，称鉴于有报道指黄仁勋成为外国情报行动的目标，已由独立董事组成委员会、聘请外部独立律师开展独立调查，并称目前没有理由相信国家安全或英伟达机密受到影响，「对黄仁勋及其领导团队有信心」。据 CNBC 引述《纽约时报》与《金融时报》报道，涉事女性 Alice Huang 与英伟达客户、云公司 Megaspeed 有关联，美国情报机构担心她向北京传递信息；英伟达表示黄仁勋将不间断继续担任 CEO。众议院三个共和党委员会主席已致函要求黄仁勋 11 月 18 日出席闭门简报会，英伟达将于 11 月 17 日发布第三季度财报。",
+  "type": "governance",
+  "companies": [
+   {
+    "name": "NVIDIA",
+    "slug": "nvidia"
+   }
+  ],
+  "person": "黄仁勋（Jensen Huang）",
+  "tags": [
+   "CEO",
+   "NVIDIA",
+   "治理",
+   "国家安全",
+   "出口管制"
+  ],
+  "sources": [
+   {
+    "name": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/08/nvidia-jensen-huang-investigation-china-spy.html"
+   },
+   {
+    "name": "CNBC · 黄仁勋员工信与董事会声明原文",
+    "url": "https://www.cnbc.com/2026/11/08/nvidia-jensen-huang-email-board-of-directors-statement.html"
+   },
+   {
+    "name": "NVIDIA 董事会声明（GlobeNewswire）",
+    "url": "https://www.globenewswire.com/news-release/2026/11/08/3398017/0/en/statement-from-nvidia-board-of-directors.html"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-09",
+  "review_note": "已读 CNBC 11 月 8 日报道、其刊出的黄仁勋员工信全文与英伟达董事会声明，并与 GlobeNewswire 上的董事会声明原文对照：员工信、董事会启动独立调查、公司称黄仁勋继续担任 CEO 均为原文表述；「中国间谍」相关说法按 CNBC 引述《纽约时报》《金融时报》与情报机构的消息处理，未当作已证实事实，摘要中标注信源。"
  }
 ]

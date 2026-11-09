@@ -10,7 +10,7 @@ from schedule_config import SCHEDULE
 
 ROOT=Path(__file__).resolve().parents[1]
 BASE='https://shrekwang-netizen.github.io/aiflow-site/'
-TYPES={'join':'加入','departure':'离开','hiring':'招聘','reorg':'组织调整','layoff':'裁员','rumor':'传闻','sentiment':'从业者观察','opinion':'观点'}
+TYPES={'join':'加入','departure':'离开','hiring':'招聘','reorg':'组织调整','layoff':'裁员','governance':'治理风波','rumor':'传闻','sentiment':'从业者观察','opinion':'观点'}
 STATUS={'primary':'本人／官方公开','reported':'媒体报道 · 原文已读','unreviewed':'历史记录 · 待复核','lead':'线索 · 未证实'}
 CHECKED={'primary','reported'}
 def load(name): return json.loads((ROOT/'data'/name).read_text())
