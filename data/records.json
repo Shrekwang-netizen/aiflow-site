@@ -1254,7 +1254,7 @@
   "id": "anthropic-20261024-thariq",
   "date": "2026-10-24",
   "title": "Claude Code 核心成员 Thariq 离开 Anthropic",
-  "summary": "在 Anthropic 一年多、主攻 Claude Code 的 Thariq 于 10 月 24 日宣布离职，称将先休息再开始新项目，未透露去向；离职帖把更新接力交给 Boris Cherny 等人。",
+  "summary": "Claude Code 工程师 Thariq Shihipar 10 月 24 日在 X 宣布离开 Anthropic，称在 Claude Code 工作一年多、看着它规模超出预想；他表示会先休息一段时间再开始新的事情，未公布去向。InfoQ 11 月 8 日报道他在播客《State of the Art Wives》中首次受访，谈顶尖 AI 实验室正在成为「人才黑洞」、外界对机构光环的过度崇拜，以及「勇气比天才更稀缺」。",
   "type": "departure",
   "companies": [
    {
@@ -1262,21 +1262,24 @@
     "slug": "anthropic"
    }
   ],
-  "person": "Thariq A Anthropic → 休息 Anthropic Claude Code 工程师",
+  "person": "Thariq Shihipar",
   "tags": [
    "核心研发"
   ],
   "sources": [
    {
-    "name": "TokenPost",
-    "url": "https://tokenpost.com/news/people/40214"
+    "name": "X · @trq212",
+    "url": "https://x.com/trq212/status/2113844051938054167"
+   },
+   {
+    "name": "InfoQ 中文",
+    "url": "https://www.infoq.cn/article/Qs0pJ5M43c56hdozHiR0"
    }
   ],
-  "status": "unreviewed",
+  "status": "primary",
   "scope": "talent",
-  "reviewed_at": null,
-  "review_note": "原站历史记录，尚未逐条核对原文。",
-  "legacy_confidence": "多家报道"
+  "reviewed_at": "2026-11-09",
+  "review_note": "已在 X 直读 @trq212 原帖（2026-10-24 12:04 北京时间）确认离职与「先休息」的本人表述，并读 InfoQ 11 月 8 日对其播客访谈的报道补充观点内容；去向仍未公开，记录不作推断。"
  },
  {
   "id": "moonshot-20261022-afb97f",
@@ -4344,5 +4347,220 @@
   "status": "primary",
   "scope": "talent",
   "reviewed_at": "2026-11-06"
+ },
+ {
+  "id": "fireworks-20261107-dave-wehner",
+  "date": "2026-11-07",
+  "title": "Meta 首席战略官 Dave Wehner 离职，出任 Fireworks AI 首席财务官",
+  "summary": "Dave Wehner 11 月 7 日在 X 宣布离开 Meta、加入 Fireworks AI 担任 CFO。据 CNBC 报道，他 2012 年加入 Facebook，2014 至 2022 年任 CFO，此后转任 Meta 首任首席战略官；Fireworks 是面向开源模型的推理与模型训练平台，7 月 Series D 时估值 175 亿美元，并据 Business Insider 报道正在洽谈以 300 亿至 400 亿美元估值再融资。他在帖中称 AI 是自己一生中最重大的技术变革，两家公司均未公布入职时间，Meta 也未说明其职责由谁接手。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Fireworks AI",
+    "slug": "fireworks"
+   },
+   {
+    "name": "Meta",
+    "slug": "meta"
+   }
+  ],
+  "person": "Dave Wehner",
+  "tags": [
+   "高管",
+   "CFO",
+   "Meta",
+   "Fireworks AI"
+  ],
+  "sources": [
+   {
+    "name": "X · @dwehner",
+    "url": "https://x.com/dwehner/status/2118880694474621166"
+   },
+   {
+    "name": "CNBC",
+    "url": "https://www.cnbc.com/2026/11/07/dave-wehner-meta-fireworks-cfo.html"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-09",
+  "review_note": "已在 X 直读 @dwehner 原帖（2026-11-07 09:38 北京时间）确认「离开 Meta、加入 Fireworks 任 CFO」为本人表述，并读 CNBC 11 月 7 日报道核对他在 Meta 的任职与 Fireworks 估值背景；入职时间与 Meta 交接安排两家均未披露，摘要不作推断。"
+ },
+ {
+  "id": "google-20261107-maxime-prades",
+  "date": "2026-11-07",
+  "title": "Cursor 产品负责人 Maxime Prades 离职，加入 Google 做企业级 Agentic Coding",
+  "summary": "Maxime Prades 11 月 7 日在 X 表示自己上周已离开 Cursor、本周加入 Google，方向是为企业构建 agentic coding；他回顾在 Cursor 期间参与 Origin、Cursor Router、Agent SDK 与统一订阅等产品工作。Google 与 Cursor 均未说明他的具体职级、团队与汇报关系。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Google",
+    "slug": "google"
+   },
+   {
+    "name": "Cursor",
+    "slug": "cursor"
+   }
+  ],
+  "person": "Maxime Prades",
+  "tags": [
+   "产品",
+   "Agentic Coding",
+   "Google",
+   "Cursor"
+  ],
+  "sources": [
+   {
+    "name": "X · @prades_maxime",
+    "url": "https://x.com/prades_maxime/status/2118823638170562806"
+   },
+   {
+    "name": "Atlassian 开发者博客（介绍其 Cursor 产品角色）",
+    "url": "https://www.atlassian.com/blog/how-we-build/how-cursor-is-navigating-the-new-shape-of-product-craft"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-09",
+  "review_note": "已在 X 直读 @prades_maxime 原帖（2026-11-07 05:51 北京时间）确认离职与入职表述；「负责产品」的说法取自 Atlassian 博客对谈中对他的角色介绍。他未说明具体职级与团队，记录不作推断。"
+ },
+ {
+  "id": "thinking-machines-20261107-yeshwenth-jayaraman",
+  "date": "2026-11-07",
+  "title": "Netflix CDN 可靠性工程经理 Yeshwenth Jayaraman 加入 Thinking Machines Lab",
+  "summary": "Yeshwenth Jayaraman 11 月 7 日在 X 表示本周已加入 Thinking Machines Lab，恰好赶上该公司的发布周；帖中未说明具体职位与方向。据其 LinkedIn 简介，他此前在 Netflix 担任工程经理，负责覆盖直播、点播与广告流量的全球 CDN 可靠性与分发平台。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Thinking Machines Lab",
+    "slug": "thinking-machines"
+   },
+   {
+    "name": "Netflix",
+    "slug": "netflix"
+   }
+  ],
+  "person": "Yeshwenth Jayaraman",
+  "tags": [
+   "基础设施",
+   "可靠性工程",
+   "Thinking Machines Lab",
+   "Netflix"
+  ],
+  "sources": [
+   {
+    "name": "X · @Yeshvj",
+    "url": "https://x.com/Yeshvj/status/2118742349174161661"
+   },
+   {
+    "name": "LinkedIn · 个人简介",
+    "url": "https://www.linkedin.com/in/yeshvj"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-09",
+  "review_note": "已在 X 直读 @Yeshvj 原帖（2026-11-07 00:28 北京时间）确认「本周加入 thinkymachines」为本人表述，并核对其 LinkedIn 简介中的 Netflix 职责描述；新职位与具体方向未披露，摘要不作推断。"
+ },
+ {
+  "id": "mistral-20261105-skiplabs",
+  "date": "2026-11-05",
+  "title": "SkipLabs 团队加入 Mistral AI，组建新的 Language 团队",
+  "summary": "SkipLabs 创始人兼 CEO Julien Verlaguet 11 月 5 日宣布 SkipLabs 加入 Mistral AI，将组建新的 Language 团队，重做面向 AI 时代的编程语言、类型系统与编译器，目标是让 AI 生成的代码更快、更安全、更可信；他在帖中同时表示正在招人。Mistral 官方账号发布欢迎帖确认收购，交易金额与团队规模未披露。",
+  "type": "reorg",
+  "companies": [
+   {
+    "name": "Mistral AI",
+    "slug": "mistral"
+   }
+  ],
+  "person": "Julien Verlaguet 与 SkipLabs 团队",
+  "tags": [
+   "收购",
+   "编程语言",
+   "编译器",
+   "Mistral AI"
+  ],
+  "sources": [
+   {
+    "name": "X · @JulienVerlaguet",
+    "url": "https://x.com/JulienVerlaguet/status/2118370409976569896"
+   },
+   {
+    "name": "LinkedIn · Mistral AI 官方",
+    "url": "https://www.linkedin.com/posts/mistralai_welcome-to-mistral-skiplabs-acquired-activity-7524372046043099136-2MpC"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-09",
+  "review_note": "已在 X 直读 @JulienVerlaguet 原帖（2026-11-05 23:50 北京时间）确认 SkipLabs 加入 Mistral、组建 Language 团队与招人计划，并读到 Mistral 官方 LinkedIn 的欢迎帖确认收购；金额与人员规模未披露，摘要不作推断。"
+ },
+ {
+  "id": "anthropic-20261024-anthony-morris",
+  "date": "2026-10-24",
+  "title": "Claude Code 桌面版作者 Anthony Morris 离开 Anthropic",
+  "summary": "Anthony Morris 10 月 24 日在 X 宣布离职，称「昨天是我在 Anthropic 的最后一天」；他做出 Claude Code 桌面版，说社区的功能请求与 bug 反馈是「礼物」，并表示会很快分享下一步。InfoQ 报道称他与同日宣布离职的 Claude Code 工程师 Thariq Shihipar 一起离职，加上 11 月初离开的产品负责人 Cat Wu，该团队十余天内有三名核心成员先后离开。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Anthony Morris",
+  "tags": [
+   "核心研发",
+   "Claude Code",
+   "Anthropic"
+  ],
+  "sources": [
+   {
+    "name": "X · @amorriscode",
+    "url": "https://x.com/amorriscode/status/2113972174524674247"
+   },
+   {
+    "name": "InfoQ 中文",
+    "url": "https://www.infoq.cn/article/Qs0pJ5M43c56hdozHiR0"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-09",
+  "review_note": "已在 X 直读 @amorriscode 原帖（2026-10-24 20:33 北京时间）确认「昨天是最后一天」与「很快分享下一步」为本人表述，并读 InfoQ 11 月 8 日报道核对他在 Claude Code 桌面版的角色与同团队另外两人的离职；去向未公布，摘要不作推断。"
+ },
+ {
+  "id": "sound-ventures-20261107-rowan-cheung",
+  "date": "2026-11-07",
+  "title": "The Rundown AI 创始人 Rowan Cheung 出任 Sound Ventures 顾问",
+  "summary": "Rowan Cheung 11 月 7 日在 X 宣布以顾问（advisor）身份加入 Sound Ventures，并回顾 The Rundown 的订阅数从 15 万增长到 350 万的过程；Sound Ventures 的 Alex Eheath 同日发文欢迎，称他是「全球最大 AI 通讯的作者」。帖中未说明顾问职责的范围、是否涉及投资决策，也未提及他在 The Rundown 的职务是否有变化。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Sound Ventures",
+    "slug": "sound-ventures"
+   }
+  ],
+  "person": "Rowan Cheung",
+  "tags": [
+   "顾问",
+   "投资",
+   "AI 媒体",
+   "Sound Ventures"
+  ],
+  "sources": [
+   {
+    "name": "X · @rowancheung",
+    "url": "https://x.com/rowancheung/status/2118758232139366404"
+   },
+   {
+    "name": "X · @alexeheath",
+    "url": "https://x.com/alexeheath/status/2118759866798113164"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-09",
+  "review_note": "已在 X 直读 @rowancheung 原帖（2026-11-07 01:31 北京时间）与 @alexeheath 的欢迎帖确认「以顾问身份加入 Sound Ventures」；原帖为长帖，采集到的文本在 280 字处截断，因此只写可见部分，职责范围与 The Rundown 职务变化均未披露，不作推断。"
  }
 ]
