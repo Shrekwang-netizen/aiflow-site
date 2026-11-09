@@ -1,5 +1,231 @@
 [
  {
+  "checked_at": "2026-11-09T09:23:31+08:00",
+  "mode": "scheduled-scan",
+  "coverage": "visible-window",
+  "accounts_checked": [
+   "OpenAI",
+   "AnthropicAI",
+   "GoogleDeepMind",
+   "deepseek_ai",
+   "MistralAI",
+   "cohere",
+   "cursor_ai",
+   "MiniMax_AI",
+   "MoonshotAI",
+   "Kimi_Moonshot",
+   "ZhipuAI",
+   "Zai_org",
+   "Alibaba_Qwen",
+   "TencentHunyuan",
+   "StepFun_ai",
+   "SpaceXSI",
+   "tianyi",
+   "sama",
+   "gdb",
+   "demishassabis",
+   "karpathy",
+   "jackclarkSF",
+   "ylecun",
+   "DarioAmodei",
+   "mustafasuleyman",
+   "AravSrinivas",
+   "mntruell",
+   "soumithchintala",
+   "Thom_Wolf",
+   "ClementDelangue",
+   "miramurati",
+   "JeffDean",
+   "sundarpichai",
+   "satyanadella",
+   "elonmusk",
+   "DrJimFan",
+   "_akhaliq",
+   "_jasonwei",
+   "arankomatsuzaki",
+   "giffmana",
+   "goodside",
+   "AndrewYNg",
+   "jiayq",
+   "badlogicgames",
+   "rowancheung",
+   "dotey",
+   "op7418",
+   "huybery",
+   "karminski3",
+   "teortaxesTex",
+   "amir",
+   "steph_palazzolo",
+   "kyliebytes",
+   "shiringhaffary",
+   "alexeheath"
+  ],
+  "accounts_failed": [],
+  "posts_read": 120,
+  "new_records": 0,
+  "reviewed_records": 0,
+  "summary": "已依次运行 X、媒体、手动链接、DINQ/RSSHub/HN/Blind 等采集，共 37 条候选（跨源未去重），待人工核查；本轮未新增新闻。有限窗口或访问缺口：x, legacy。来源读取成功不代表完整覆盖。",
+  "schedule": "周一至周五 09:30 · 北京时间",
+  "automation_enabled": true,
+  "automation_id": "aiflow",
+  "editorial_mode": "manual",
+  "review_status": "pending",
+  "source_coverage": [
+   {
+    "source": "x",
+    "status": "partial",
+    "exit_code": 0,
+    "warnings": [],
+    "candidates": 8,
+    "accounts_read": 55,
+    "failures": []
+   },
+   {
+    "source": "news",
+    "status": "read",
+    "exit_code": 0,
+    "warnings": [],
+    "candidates": 3,
+    "failures": [],
+    "details": [
+     {
+      "source": "OpenAI 官方",
+      "read": 1368,
+      "count": 0,
+      "error": null
+     },
+     {
+      "source": "量子位",
+      "read": 10,
+      "count": 0,
+      "error": null
+     },
+     {
+      "source": "雷峰网",
+      "read": 20,
+      "count": 0,
+      "error": null
+     },
+     {
+      "source": "IT之家",
+      "read": 60,
+      "count": 1,
+      "error": null
+     },
+     {
+      "source": "钛媒体",
+      "read": 19,
+      "count": 0,
+      "error": null
+     },
+     {
+      "source": "极客公园",
+      "read": 30,
+      "count": 0,
+      "error": null
+     },
+     {
+      "source": "InfoQ 中文",
+      "read": 20,
+      "count": 1,
+      "error": null
+     },
+     {
+      "source": "TechCrunch AI",
+      "read": 20,
+      "count": 1,
+      "error": null
+     },
+     {
+      "source": "TechCrunch Layoffs",
+      "read": 20,
+      "count": 0,
+      "error": null
+     },
+     {
+      "source": "The Verge AI",
+      "read": 10,
+      "count": 0,
+      "error": null
+     }
+    ]
+   },
+   {
+    "source": "links",
+    "status": "read",
+    "exit_code": 0,
+    "warnings": [],
+    "candidates": 1,
+    "failures": [],
+    "details": []
+   },
+   {
+    "source": "legacy",
+    "status": "partial",
+    "exit_code": 0,
+    "warnings": [
+     "! TechCrunch AI 拉取失败：The read operation timed out",
+     "! VentureBeat AI 拉取失败：HTTP Error 308: Permanent Redirect",
+     "! Semafor Tech 拉取失败：<urlopen error timed out>",
+     "! The Register AI 拉取失败：not well-formed (invalid token): line 7, column 22"
+    ],
+    "candidates": 25,
+    "failures": [],
+    "details": [
+     {
+      "source": "dinq",
+      "count": 7,
+      "error": null,
+      "seconds": 2.7
+     },
+     {
+      "source": "rss",
+      "count": 11,
+      "error": null,
+      "seconds": 69.7
+     },
+     {
+      "source": "rsshub",
+      "count": 2,
+      "error": null,
+      "seconds": 9.0
+     },
+     {
+      "source": "latepost",
+      "count": 1,
+      "error": null,
+      "seconds": 0.7
+     },
+     {
+      "source": "zhihu",
+      "count": 0,
+      "error": null,
+      "seconds": 0.3
+     },
+     {
+      "source": "hn",
+      "count": 6,
+      "error": null,
+      "seconds": 16.0
+     },
+     {
+      "source": "blind",
+      "count": 11,
+      "error": null,
+      "seconds": 50.4
+     },
+     {
+      "source": "buzz",
+      "count": 13,
+      "error": null,
+      "seconds": 14.8
+     }
+    ]
+   }
+  ],
+  "reviewed_at": "2026-11-06T11:48:51+08:00"
+ },
+ {
   "checked_at": "2026-11-06T11:48:51+08:00",
   "mode": "manual-review",
   "coverage": "visible-window",
