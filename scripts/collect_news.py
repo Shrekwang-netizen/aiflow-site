@@ -3,7 +3,7 @@
 """
 中文/英文 AI 媒体 RSS 采集（新架构）
 
-把公开 RSS 里命中「人事 / 组织」关键词的条目收成候选，写：
+把公开 RSS 里命中「人事 / 组织」或「并购 / 治理 / 政策选举」关键词的条目收成候选，写：
   .private-inbox/news-<时间戳>.json / .md   （gitignored，供人/AI 复核）
 
 只做发现，不写 records.json、不自动上站。公开报道需要回原文核对后才进入
@@ -51,6 +51,19 @@ TALENT_TITLE_RE = re.compile(
     r"解散|重组|组织调整|内部信|全员信|晋升|任命|接管|接任|出任|招聘|扩招|招人|"
     r"\b(depart\w*|resign\w*|quit|leav\w*|join\w*|hir(?:e|es|ed|ing)|poach\w*|layoff\w*|"
     r"laid off|reorg\w*|restructur\w*|step(?:ping)? down|appoint\w*|promot\w*|found\w*)\b",
+    re.I,
+)
+
+
+EVENT_TITLE_RE = re.compile(
+    r"收购|并购|合并|买下|出售|剥离|分拆|破产|清算|退出中国|退市|上市|IPO|估值|融资|领投|"
+    r"董事会|独立董事|调查|听证|传唤|起诉|诉讼|罚款|处罚|禁令|封禁|制裁|出口管制|限制出口|"
+    r"监管|法案|立法|选举|大选|初选|提名|白宫|国会|参议院|众议院|政府|部长|"
+    r"\b(acquir\w*|merger|merges|merging|buyout|bought|sell(?:s|ing)?|divest\w*|spinoff|"
+    r"bankrupt\w*|IPO|go(?:es)? public|valuation|raise[sd]? \$|series [a-e]|board of directors|"
+    r"investigat\w*|subpoena\w*|lawsuit|sue[sd]?|antitrust|fine[sd]?|bans?|banned|sanction\w*|"
+    r"export control\w*|regulat\w*|legislation|bill|election|elect\w*|nominee|nominat\w*|"
+    r"congress\w*|senate|white house|testif\w*|hearing)\b",
     re.I,
 )
 
@@ -165,7 +178,11 @@ def main() -> int:
                 continue
             title = item["title"]
             blob = title + " " + item["summary"]
-            if not TALENT_TITLE_RE.search(title) or NOISE_RE.search(title):
+            if NOISE_RE.search(title):
+                continue
+            personnel = bool(TALENT_TITLE_RE.search(title))
+            pattern = TALENT_TITLE_RE if personnel else EVENT_TITLE_RE
+            if not pattern.search(title):
                 continue
             if name in GENERAL_SOURCES and not AI_RE.search(blob):
                 continue
@@ -177,7 +194,8 @@ def main() -> int:
                 "url": item["link"],
                 "published": dt.astimezone(TZ_CN).isoformat() if dt else "",
                 "summary": item["summary"][:400],
-                "matched": sorted({m.group(0).lower() for m in TALENT_TITLE_RE.finditer(title)})[:5],
+                "kind": "personnel" if personnel else "event",
+                "matched": sorted({m.group(0).lower() for m in pattern.finditer(title)})[:5],
             })
             picked += 1
         coverage.append({"source": name, "read": len(items), "count": picked, "error": None})
@@ -197,7 +215,8 @@ def main() -> int:
     stamp = datetime.now(TZ_CN).strftime("%Y-%m-%d-%H%M")
     log(f"\n共命中 {len(unique)} 条（{args.days} 天内），失败源 {len(failures)} 个")
     for row in unique[:20]:
-        log(f"  · {row['published'][:16].replace('T', ' ')} [{row['source']}] {row['title'][:70]}")
+        kind = "人事" if row.get("kind") == "personnel" else "事件"
+        log(f"  · [{kind}] {row['published'][:16].replace('T', ' ')} [{row['source']}] {row['title'][:70]}")
 
     if args.dry_run:
         return 0

@@ -1669,7 +1669,7 @@
   "date": "2026-10-16",
   "title": "Character.AI 破产，迪士尼接走 CEO 与 66 人",
   "summary": "Character.AI 申请第 11 章破产保护。据破产文件，迪士尼每年付 6000 万美元接收 66 名员工；CEO Karandeep Anand 已任迪士尼首位全公司 CTO，66 人中 56 人已离职。",
-  "type": "reorg",
+  "type": "deal",
   "companies": [
    {
     "name": "Character.AI",
@@ -2455,7 +2455,7 @@
   "date": "2026-09-03",
   "title": "Nvidia 129 亿美元买下 Hugging Face",
   "summary": "Nvidia 以 129 亿美元收购 Hugging Face，为其史上第二大并购。CEO Clément Delangue 与联创 Julien Chaumond、Thomas Wolf 将加入 Nvidia。",
-  "type": "reorg",
+  "type": "deal",
   "companies": [
    {
     "name": "Hugging Face",
@@ -4032,7 +4032,7 @@
   "date": "2026-11-04",
   "title": "OpenAI 宣布收购 Pierre Computer Company，补强 Codex 开发工具",
   "summary": "OpenAI 11 月 4 日宣布收购 Pierre Computer Company（Code Storage 与 Trees、Diffs 等开源工具），交易尚待监管批准；官方称将与 Pierre 团队一起把相关能力并入 Codex，开源项目保持开源。",
-  "type": "reorg",
+  "type": "deal",
   "companies": [
    {
     "name": "OpenAI",
@@ -4066,7 +4066,7 @@
   "date": "2026-11-04",
   "title": "Meta 收购 Conductor，创始人团队加入超级智能实验室",
   "summary": "Conductor 创始人兼 CEO Charlie Holtz 11 月 4 日宣布公司加入 Meta；Meta 向 TechCrunch 确认收购，团队将进入 Meta Superintelligence Labs，与 Alexandr Wang、Nat Friedman 合作，金额未披露。",
-  "type": "reorg",
+  "type": "deal",
   "companies": [
    {
     "name": "Meta",
@@ -4467,7 +4467,7 @@
   "date": "2026-11-05",
   "title": "SkipLabs 团队加入 Mistral AI，组建新的 Language 团队",
   "summary": "SkipLabs 创始人兼 CEO Julien Verlaguet 11 月 5 日宣布 SkipLabs 加入 Mistral AI，将组建新的 Language 团队，重做面向 AI 时代的编程语言、类型系统与编译器，目标是让 AI 生成的代码更快、更安全、更可信；他在帖中同时表示正在招人。Mistral 官方账号发布欢迎帖确认收购，交易金额与团队规模未披露。",
-  "type": "reorg",
+  "type": "deal",
   "companies": [
    {
     "name": "Mistral AI",
@@ -4601,5 +4601,110 @@
   "scope": "talent",
   "reviewed_at": "2026-11-09",
   "review_note": "已读 CNBC 11 月 8 日报道、其刊出的黄仁勋员工信全文与英伟达董事会声明，并与 GlobeNewswire 上的董事会声明原文对照：员工信、董事会启动独立调查、公司称黄仁勋继续担任 CEO 均为原文表述；「中国间谍」相关说法按 CNBC 引述《纽约时报》《金融时报》与情报机构的消息处理，未当作已证实事实，摘要中标注信源。"
+ },
+ {
+  "id": "nvidia-20261105-midterm-selloff",
+  "date": "2026-11-05",
+  "title": "美国中期选举民主党大胜，AI 与芯片股单日蒸发约 3.2 万亿美元",
+  "summary": "11 月 5 日（周四）美国中期选举后科技股大跌：纳斯达克综合指数跌 5.52%，创 2025 年 4 月以来最大单日跌幅；费城半导体指数跌约 12.3%，英伟达跌 9.3%、闪迪跌约 22%，美光、西部数据与 AMD 跌幅均在 17% 左右，华尔街股票市值单日蒸发约 3.2 万亿美元。据路透社等报道，民主党赢得国会控制权后，投资者担心 AI 基础设施建设面临更严格监管；社区对数据中心用电与用水的反对进一步放大了担忧。",
+  "type": "policy",
+  "companies": [
+   {
+    "name": "NVIDIA",
+    "slug": "nvidia"
+   }
+  ],
+  "person": "美国中期选举（AI 与芯片行业）",
+  "tags": [
+   "政策",
+   "选举",
+   "美股",
+   "数据中心",
+   "监管"
+  ],
+  "sources": [
+   {
+    "name": "极客公园（综合路透社、快科技等）",
+    "url": "https://www.geekpark.net/news/373554"
+   },
+   {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-09",
+  "review_note": "已读极客公园 11 月 6 日的汇编（其标注信源为路透社、快科技等）取得跌幅与市值数据，并用 TechCrunch 11 月 6 日报道中「民主党中期选举压倒性胜利＋数据中心负面民意导致市场恐慌」的表述交叉核对；汇编类来源已在 sources 中标明，不把它当成单一通讯社原稿。"
+ },
+ {
+  "id": "us-congress-20261105-asi-ban-bill",
+  "date": "2026-11-05",
+  "title": "美国民主党推动《禁止人工超级智能法案》：企业可被强制解散，个人最高 20 年监禁",
+  "summary": "据快科技 11 月 5 日报道，美国民主党宣布推动《禁止人工超级智能法案》，草案要求全面暂停先进 AI 研发，直至联邦层级的专属监管机构正式运作，并禁止任何个人或机构研发、部署「人工超级智能」（ASI）；草案提议新设内阁级人工智能部，监管前沿模型的研发、审查与全生命周期，违规企业可被强制解散，违规个人最高判 20 年联邦监禁，同时把「全球禁止超级智能」列为美国外交政策目标并要求强化出口管制。该法案目前仍是提案，尚未进入表决。",
+  "type": "policy",
+  "companies": [
+   {
+    "name": "其他",
+    "slug": "other"
+   }
+  ],
+  "person": "美国民主党",
+  "tags": [
+   "政策",
+   "立法",
+   "监管",
+   "美国",
+   "超级智能"
+  ],
+  "sources": [
+   {
+    "name": "极客公园（引快科技）",
+    "url": "https://www.geekpark.net/news/373554"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-09",
+  "review_note": "已读极客公园 11 月 6 日汇编中转述的快科技 11 月 5 日消息，逐条核对其列出的 ASI 定义、暂停研发、内阁级 AI 部门与罚则；单一媒体转述、未见法案原文与提案编号，因此只写草案内容并明确「仍是提案、尚未表决」。"
+ },
+ {
+  "id": "openai-20261106-funding-anthropic-ipo",
+  "date": "2026-11-06",
+  "title": "OpenAI 新一轮已到账 110 亿美元、估值 1.25 万亿；Anthropic IPO 估值预期被下修",
+  "summary": "据彭博社 11 月 6 日报道，OpenAI 在尚未关闭的新一轮融资中已募集 110 亿美元，估值 1.25 万亿美元，整轮预计数周内完成、总额可能约 200 亿美元，明显低于 9 月报道的 300 亿美元目标；同一天彭博社称 Anthropic IPO 的潜在买家给出的估值可能低至 1.1 万亿美元，而一个月前投资者的预期约为 2 万亿美元。TechCrunch 指出，中期选举结果与围绕数据中心的负面民意让 AI 市场情绪明显转弱。",
+  "type": "deal",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   },
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "OpenAI 与 Anthropic",
+  "tags": [
+   "融资",
+   "估值",
+   "IPO",
+   "OpenAI",
+   "Anthropic"
+  ],
+  "sources": [
+   {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/"
+   },
+   {
+    "name": "量子位",
+    "url": "https://www.qbitai.com/2026/11/508344.html"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-09",
+  "review_note": "已读 TechCrunch 11 月 6 日报道（引彭博社）：110 亿美元、1.25 万亿美元估值、整轮或约 200 亿美元、9 月目标 300 亿美元、Anthropic IPO 估值可能低至 1.1 万亿美元等数字均按报道转述；交易未关闭，摘要写「已到账」部分而非整轮金额，不推断后续估值。"
  }
 ]
