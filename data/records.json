@@ -4669,28 +4669,23 @@
   "review_note": "已读极客公园 11 月 6 日汇编中转述的快科技 11 月 5 日消息，逐条核对其列出的 ASI 定义、暂停研发、内阁级 AI 部门与罚则；单一媒体转述、未见法案原文与提案编号，因此只写草案内容并明确「仍是提案、尚未表决」。"
  },
  {
-  "id": "openai-20261106-funding-anthropic-ipo",
+  "id": "openai-20261106-funding",
   "date": "2026-11-06",
-  "title": "OpenAI 新一轮已到账 110 亿美元、估值 1.25 万亿；Anthropic IPO 估值预期被下修",
-  "summary": "据彭博社 11 月 6 日报道，OpenAI 在尚未关闭的新一轮融资中已募集 110 亿美元，估值 1.25 万亿美元，整轮预计数周内完成、总额可能约 200 亿美元，明显低于 9 月报道的 300 亿美元目标；同一天彭博社称 Anthropic IPO 的潜在买家给出的估值可能低至 1.1 万亿美元，而一个月前投资者的预期约为 2 万亿美元。TechCrunch 指出，中期选举结果与围绕数据中心的负面民意让 AI 市场情绪明显转弱。",
-  "type": "deal",
+  "title": "OpenAI 新一轮融资已到账 110 亿美元，估值 1.25 万亿美元",
+  "summary": "据彭博社 11 月 6 日报道，OpenAI 在尚未关闭的新一轮融资中已募集 110 亿美元，估值 1.25 万亿美元；整轮预计在数周内完成，总额可能约 200 亿美元，明显低于 9 月报道的 300 亿美元目标。TechCrunch 指出，中期选举结果与围绕数据中心的负面民意让 AI 市场情绪转弱，这轮融资的规模与估值都低于此前预期。",
+  "type": "funding",
   "companies": [
    {
     "name": "OpenAI",
     "slug": "openai"
-   },
-   {
-    "name": "Anthropic",
-    "slug": "anthropic"
    }
   ],
-  "person": "OpenAI 与 Anthropic",
+  "person": "OpenAI",
   "tags": [
    "融资",
    "估值",
-   "IPO",
    "OpenAI",
-   "Anthropic"
+   "市场"
   ],
   "sources": [
    {
@@ -4705,6 +4700,66 @@
   "status": "reported",
   "scope": "talent",
   "reviewed_at": "2026-11-09",
-  "review_note": "已读 TechCrunch 11 月 6 日报道（引彭博社）：110 亿美元、1.25 万亿美元估值、整轮或约 200 亿美元、9 月目标 300 亿美元、Anthropic IPO 估值可能低至 1.1 万亿美元等数字均按报道转述；交易未关闭，摘要写「已到账」部分而非整轮金额，不推断后续估值。"
+  "review_note": "已读 TechCrunch 11 月 6 日报道（引彭博社）：110 亿美元为「本轮已到账部分」，整轮未关闭、或约 200 亿美元，9 月目标为 300 亿美元，均按报道转述；不把未完成部分写成已到账。"
+ },
+ {
+  "id": "anthropic-20261106-ipo-valuation",
+  "date": "2026-11-06",
+  "title": "Anthropic IPO 估值预期被下修，潜在买家给出的估值可能低至 1.1 万亿美元",
+  "summary": "据彭博社 11 月 6 日报道，OpenAI 的主要竞争对手 Anthropic 在筹备 IPO 过程中，潜在买家的估值预期明显低于一个月前：有买家认为其估值可能低至 1.1 万亿美元，而此前投资者的预期约为 2 万亿美元。报道把这一变化与 AI 板块近期抛售联系在一起；Anthropic 尚未公布 IPO 的时间与定价区间。",
+  "type": "ipo",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Anthropic",
+  "tags": [
+   "IPO",
+   "估值",
+   "Anthropic",
+   "市场"
+  ],
+  "sources": [
+   {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-09",
+  "review_note": "已读 TechCrunch 11 月 6 日报道中转述的彭博社消息：买家估值可能低至 1.1 万亿美元、一个月前预期约 2 万亿美元；报道称这是发行预期而非定价，摘要不写成已确定估值。"
+ },
+ {
+  "id": "meta-20261105-data-center-backlash",
+  "date": "2026-11-05",
+  "title": "Meta 高管：中期选举后数据中心更难建，反 AI 情绪是更大问题",
+  "summary": "Meta 总裁 Dina Powell McCormick 11 月 4 日在 WSJ Tech 大会上表示，民主党在中期选举中获胜会让公司更难建数据中心；她认为对数据中心的反对只是表象，「更深的问题是人们对 AI 本身的感受」，如果能把价值讲清楚，公众情绪可以扭转。TechCrunch 指出，数据中心议题这次直接出现在选票上；Meta 目前在 23 个州有数据中心，其中 5 个项目规划在 1 吉瓦以上，公司担心部分投资会因为政客打反数据中心牌而流失。",
+  "type": "sentiment",
+  "companies": [
+   {
+    "name": "Meta",
+    "slug": "meta"
+   }
+  ],
+  "person": "Dina Powell McCormick（Meta 总裁）",
+  "tags": [
+   "公众情绪",
+   "数据中心",
+   "Meta",
+   "中期选举"
+  ],
+  "sources": [
+   {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-09",
+  "review_note": "已读 TechCrunch 11 月 5 日报道（引其 WSJ Tech 大会现场发言）：发言内容按报道转述，数据中心数量与项目规模亦来自该报道；「公众情绪」的判断属于当事公司高管的表述，记录中标注了说话人，未当作独立民意数据。"
  }
 ]

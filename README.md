@@ -2,7 +2,7 @@
 
 **Live:** https://shrekwang-netizen.github.io/aiflow-site/
 
-An editorial site for AI talent moves, hiring and organization changes — plus the events that reshape who holds which seat: M&A and deals, board-level governance crises, and AI policy or elections. GitHub Pages publishes the `gh-pages` branch. The repository now contains both the content source and a reproducible static generator; no framework, package install, paid API or separate application server is required.
+An editorial site for AI talent moves, hiring and organization changes — plus the events that reshape who holds which seat and where the money and rules go: M&A and deals, funding rounds and IPOs, board-level governance crises, AI policy and elections, and public sentiment around AI and data centers. GitHub Pages publishes the `gh-pages` branch. The repository now contains both the content source and a reproducible static generator; no framework, package install, paid API or separate application server is required.
 
 ## Source of truth
 
@@ -33,7 +33,7 @@ The site works at the GitHub Pages project prefix and in a local root. Asset ver
 The daily job runs these collectors before building. They only write candidates to `.private-inbox/` (gitignored); a human or AI editor still verifies the original source and updates `data/records.json`:
 
 - **X**: 55 accounts in `data/x-watchlist.json`, via the owner’s logged-in Chrome (AppleScript, background tab; 48h overlap, at most 40 posts/account).
-- **Media RSS**: OpenAI official news, 量子位, 雷峰网, IT之家, 钛媒体, 极客公园, InfoQ 中文, TechCrunch AI / Layoffs, The Verge AI. Matches both personnel keywords and event keywords (M&A, governance, policy, elections) and tags each candidate `kind`.
+- **Media RSS**: OpenAI official news, 量子位, 雷峰网, IT之家, 钛媒体, 极客公园, InfoQ 中文, TechCrunch AI / Layoffs, The Verge AI. Matches both personnel keywords and event keywords (M&A, funding, IPO, governance, policy, elections, sentiment) and tags each candidate `kind`.
 - **Legacy sources**: Talent.dinq.me, RSSHub (36 氪快讯 / 财新 / 华尔街见闻), 晚点 LatePost, 知乎热榜, Hacker News Algolia, Blind channels, 360 索引（脉脉）.
 - **URL inbox**: WeChat public-account links without RSS go in `.private-inbox/links.txt`.
 

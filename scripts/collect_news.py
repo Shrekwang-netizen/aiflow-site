@@ -59,11 +59,13 @@ EVENT_TITLE_RE = re.compile(
     r"收购|并购|合并|买下|出售|剥离|分拆|破产|清算|退出中国|退市|上市|IPO|估值|融资|领投|"
     r"董事会|独立董事|调查|听证|传唤|起诉|诉讼|罚款|处罚|禁令|封禁|制裁|出口管制|限制出口|"
     r"监管|法案|立法|选举|大选|初选|提名|白宫|国会|参议院|众议院|政府|部长|"
+    r"股价|市值|泡沫|信心|信任|反对|抗议|民调|舆论|情绪|裁员潮|数据中心争议|"
     r"\b(acquir\w*|merger|merges|merging|buyout|bought|sell(?:s|ing)?|divest\w*|spinoff|"
     r"bankrupt\w*|IPO|go(?:es)? public|valuation|raise[sd]? \$|series [a-e]|board of directors|"
     r"investigat\w*|subpoena\w*|lawsuit|sue[sd]?|antitrust|fine[sd]?|bans?|banned|sanction\w*|"
     r"export control\w*|regulat\w*|legislation|bill|election|elect\w*|nominee|nominat\w*|"
-    r"congress\w*|senate|white house|testif\w*|hearing)\b",
+    r"congress\w*|senate|white house|testif\w*|hearing|bubble|sentiment|backlash|protest\w*|"
+    r"poll|survey|confidence|hype|layoff wave)\b",
     re.I,
 )
 
