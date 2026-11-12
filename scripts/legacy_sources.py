@@ -554,6 +554,60 @@ def parse_maimai_article(url: str) -> dict:
     return {"title": title, "date": dt, "author": author, "summary": summary}
 
 
+def cand_from_bing(query: str, label: str) -> list[dict]:
+    """360 结果块为 0（限流或结构变化）时，用必应索引同一关键词兜底。"""
+    try:
+        page = fetch("https://cn.bing.com/search?q=" + urllib.parse.quote(query) + "&setlang=zh-CN")
+    except Exception as exc:  # noqa: BLE001
+        print(f"  ! 必应「{query}」失败：{exc}", file=sys.stderr)
+        return []
+    blocks = re.findall(r'<li class="b_algo"(.*?)</li>', page, re.S)
+    wanted = ""
+    mm = re.search(r"site:([A-Za-z0-9.\-]+)", query)
+    if mm:
+        wanted = mm.group(1).lower()
+    out: list[dict] = []
+    for b in blocks:
+        mt = re.search(r"<h2[^>]*>(.*?)</h2>", b, re.S)
+        mu = re.search(r'href="([^"]+)"', b)
+        if not (mt and mu):
+            continue
+        title = text_of(re.sub(r"<!--.*?-->", "", mt.group(1)))
+        if is_noise(title) or not hit_keyword(title):
+            continue
+        if re.search(r"请教|请问|提问|怎么|如何|吗？|\?|？$", title) or len(title) < 12:
+            continue
+        url = htmllib.unescape(mu.group(1))
+        if not url.startswith("http") or "bing.com/ck/a" in url:
+            continue
+        # 必应会把站内结果换成别的站点，必须校验域名，否则会把百科/知乎教程当爆料收进来
+        if wanted and wanted not in urllib.parse.urlsplit(url).netloc.lower():
+            continue
+        dt = date.today().isoformat()
+        summary = ""
+        author = ""
+        if label == "脉脉":
+            try:
+                info = parse_maimai_article(url)
+                title = info["title"] or title
+                dt = info["date"] or dt
+                author = info["author"]
+                summary = info["summary"]
+            except Exception:  # noqa: BLE001
+                pass
+            if not summary:
+                summary = "脉脉文章，需打开原文核实。"
+        elif label == "微博":
+            title = re.sub(r"^#?[^#]*#\s*", "", title).strip()
+            title = re.sub(r"\s*-\s*微博$", "", title).strip()
+            summary = "微博博文（登录后可见全文），标题即爆料信息。"
+        rec = candidate(label, title, url, dt, summary=summary,
+                        extra={"tags": [label, "待复核"], "author": author})
+        rec["confidence"] = "rumor"
+        out.append(rec)
+    return out
+
+
 def cand_from_buzz(limit_queries: int = 2, cursor: int = 0) -> list[dict]:
     out: list[dict] = []
     queries = [BUZZ_QUERIES[(cursor + i) % len(BUZZ_QUERIES)] for i in range(limit_queries)]
@@ -566,6 +620,13 @@ def cand_from_buzz(limit_queries: int = 2, cursor: int = 0) -> list[dict]:
             print(f"  ! 360「{q}」失败：{exc}", file=sys.stderr)
             continue
         blocks = re.findall(r'<li class="res-list"(.*?)</li>', page, re.S)
+        if not blocks:
+            print(f"  ! 360「{q}」0 个结果块（限流或结构变化），改用必应兜底", file=sys.stderr)
+            extra = cand_from_bing(q, label)
+            print(f"  · 必应「{q}」→ 命中 {len(extra)}")
+            out.extend(extra)
+            time.sleep(2)
+            continue
         hits = 0
         for b in blocks:
             mt = re.search(r"<h3[^>]*>(.*?)</h3>", b, re.S)

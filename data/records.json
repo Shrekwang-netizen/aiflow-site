@@ -5152,5 +5152,375 @@
   "scope": "talent",
   "reviewed_at": "2026-11-12",
   "review_note": "已读 TechCrunch 11 月 9 日报道：金额、设备来源（OnePWR 原订单、改为直接向卡特彼勒购买）与 1.7 吉瓦容量按其对《金融时报》的转述；S-1 中每月 12.5 亿美元租用 xAI 算力的数字同样来自该报道。"
+ },
+ {
+  "id": "openai-20261110-cyrus-nouroozi",
+  "date": "2026-11-10",
+  "title": "Cyrus Nouroozi 结束休假回到 OpenAI",
+  "summary": "Cyrus Nouroozi 11 月 10 日在 X 表示在结束休假后回到 OpenAI、当天是第一天上班，称这段时间是他「最有产出的一段时间」，接下来会投入最有影响力的问题。他未说明具体团队。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   }
+  ],
+  "person": "Cyrus Nouroozi",
+  "tags": [
+   "加入",
+   "OpenAI"
+  ],
+  "sources": [
+   {
+    "name": "X · @cyrusnewday",
+    "url": "https://x.com/cyrusnewday/status/2119826934318375178"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已在 X 直读 @cyrusnewday 原帖（2026-11-10 00:18 北京时间）确认「回到 OpenAI、今天第一天」为本人表述；团队与职级未披露，不作推断。"
+ },
+ {
+  "id": "anthropic-20261110-bingjie-tang",
+  "date": "2026-11-10",
+  "title": "Bingjie Tang 加入 Anthropic",
+  "summary": "Bingjie Tang 11 月 10 日在 X 表示已加入 Anthropic，期待在 AI 前沿问题上与团队合作。她未说明具体团队与职位。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Bingjie Tang",
+  "tags": [
+   "加入",
+   "Anthropic"
+  ],
+  "sources": [
+   {
+    "name": "X · @bingjietang07",
+    "url": "https://x.com/bingjietang07/status/2119884727339643169"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已在 X 直读 @bingjietang07 原帖（2026-11-10 02:57 北京时间）确认加入 Anthropic；其原帖未写职位与团队，摘要不作推断。"
+ },
+ {
+  "id": "openai-20261110-simon-koser",
+  "date": "2026-11-10",
+  "title": "Simon Mattias Koser 加入 OpenAI，做新一代用户体验",
+  "summary": "Simon Mattias Koser 11 月 10 日在 X 宣布加入 OpenAI，称将与研究和产品团队一起构建「下一代用户体验」。他未说明具体职级与产品线。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   }
+  ],
+  "person": "Simon Mattias Koser",
+  "tags": [
+   "加入",
+   "产品",
+   "OpenAI"
+  ],
+  "sources": [
+   {
+    "name": "X · @simon_m_l",
+    "url": "https://x.com/simon_m_l/status/2119838190135894142"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已在 X 直读 @simon_m_l 原帖（2026-11-10 01:03 北京时间）确认加入 OpenAI 与「下一代用户体验」的表述；未披露职位，不作推断。"
+ },
+ {
+  "id": "openai-20261109-soham-de",
+  "date": "2026-11-09",
+  "title": "Google DeepMind 研究员 Soham De 加入 OpenAI，在伦敦做训练",
+  "summary": "Soham De 11 月 9 日在 X 表示自己现在在 OpenAI 伦敦办公室做训练相关工作；他此前在 Google DeepMind 任研究科学家。他未说明具体团队与职级。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   },
+   {
+    "name": "Google DeepMind",
+    "slug": "google-deepmind"
+   }
+  ],
+  "person": "Soham De",
+  "tags": [
+   "加入",
+   "研究员",
+   "训练",
+   "OpenAI"
+  ],
+  "sources": [
+   {
+    "name": "X · @sohamde_",
+    "url": "https://x.com/sohamde_/status/2119710791158976787"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已在 X 直读 @sohamde_ 原帖（2026-11-09 16:36 北京时间）确认「现在在 OpenAI 伦敦做训练」；「此前在 Google DeepMind」取自公开履历与聚合站线索，原帖未复述，摘要保留旧东家但不写职级。"
+ },
+ {
+  "id": "openai-20261102-xi-yin",
+  "date": "2026-11-02",
+  "title": "OpenAI 研究员 Xi Yin 离职，称去追寻新方向",
+  "summary": "Xi Yin 11 月 2 日在 X 表示当天是他在 OpenAI 的最后一天，将「提早一点下车」去追寻新方向；他感谢了同事，但未说明去向。其公开资料显示他为哈佛背景的技术人员。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   }
+  ],
+  "person": "Xi Yin",
+  "tags": [
+   "离职",
+   "OpenAI"
+  ],
+  "sources": [
+   {
+    "name": "X · @XiYin137",
+    "url": "https://x.com/XiYin137/status/2117405976462844370"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已在 X 直读 @XiYin137 原帖（2026-11-03 07:58 北京时间发布，帖内称「今天是最后一天」，对应 11 月 2 日）确认离职与「追寻新方向」的表述；去向未公布，摘要不作推断。"
+ },
+ {
+  "id": "modal-20261109-eric-zhang",
+  "date": "2026-11-09",
+  "title": "Eric Zhang 离开 Thinking Machines Lab，回到 Modal",
+  "summary": "Eric Zhang 11 月 9 日在 X 表示自己已回到 Modal；他回顾在 Thinking Machines Lab 的一年，称参与了 ML 与生产系统、训练与推理内核、研究基础设施扩容以及 RL 相关工作。他未说明回 Modal 后的职位。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Modal",
+    "slug": "modal"
+   },
+   {
+    "name": "Thinking Machines Lab",
+    "slug": "thinking-machines"
+   }
+  ],
+  "person": "Eric Zhang",
+  "tags": [
+   "加入",
+   "离职",
+   "Modal",
+   "Thinking Machines Lab"
+  ],
+  "sources": [
+   {
+    "name": "X · @ekzhang1",
+    "url": "https://x.com/ekzhang1/status/2119813512629559507"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已在 X 直读 @ekzhang1 原帖（2026-11-09 23:25 北京时间）确认「回到 Modal」与对 Thinking Machines 工作的回顾；回任职位未披露，不作推断。"
+ },
+ {
+  "id": "meta-20261111-janardhan",
+  "date": "2026-11-11",
+  "title": "Meta 基础设施主管 Santosh Janardhan 将于 2027 年初离职，AWS 前高管接任",
+  "summary": "据彭博社报道，Meta 长期负责基础设施的高管 Santosh Janardhan 已告知员工将卸任基础设施组织负责人，于 2027 年初离开公司；他在备忘录中未说明原因，并将在第一季度留任支持过渡。接任者是今年加入 Meta 任基础设施副总裁的 Dave Brown，其此前在 AWS 工作近二十年、最近担任高级副总裁，负责计算与机器学习服务。Janardhan 2009 年加入 Facebook，今年 1 月起兼任「Meta Compute」联合负责人。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "Meta",
+    "slug": "meta"
+   }
+  ],
+  "person": "Santosh Janardhan",
+  "tags": [
+   "高管",
+   "基础设施",
+   "Meta",
+   "交接"
+  ],
+  "sources": [
+   {
+    "name": "华尔街见闻快讯（引彭博社）",
+    "url": "https://wallstreetcn.com/livenews/3198535"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已读华尔街见闻 11 月 11 日快讯（标注来源为彭博）：离职时间、备忘录内容与继任者履历均按该转述；未取得彭博原文与 Meta 官方确认，摘要只写报道明确的信息。"
+ },
+ {
+  "id": "anthropic-20261111-david-labianca",
+  "date": "2026-11-11",
+  "title": "传 Google 安全工程高级总监 David LaBianca 加入 Anthropic",
+  "summary": "聚合站 Talent.dinq.me 的近期变动记录显示，Google 安全工程高级总监 David LaBianca 已离开 Google 加入 Anthropic。尚未找到本人发帖或媒体报道，Google 与 Anthropic 均未回应。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   },
+   {
+    "name": "Google",
+    "slug": "google"
+   }
+  ],
+  "person": "David LaBianca",
+  "tags": [
+   "小道消息",
+   "安全",
+   "Anthropic"
+  ],
+  "sources": [
+   {
+    "name": "Talent.dinq.me（聚合）",
+    "url": "https://talent.dinq.me/?range=7d"
+   }
+  ],
+  "status": "lead",
+  "scope": "talent",
+  "reviewed_at": null,
+  "review_note": "来源为聚合站的变动记录，未核到本人原帖或报道；按未证实线索收录，补到具体原文后再升级。"
+ },
+ {
+  "id": "openai-20261110-samuel-bevan",
+  "date": "2026-11-10",
+  "title": "传 Samuel Bevan 加入 OpenAI",
+  "summary": "聚合站 Talent.dinq.me 显示 Samuel Bevan 近期加入 OpenAI；目前只能追溯到 X 上观察类账号的转述，未见本人发帖或媒体报道。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   }
+  ],
+  "person": "Samuel Bevan",
+  "tags": [
+   "小道消息",
+   "OpenAI"
+  ],
+  "sources": [
+   {
+    "name": "Talent.dinq.me（聚合）",
+    "url": "https://talent.dinq.me/?range=7d"
+   },
+   {
+    "name": "X · @The_ADSN（观察号）",
+    "url": "https://x.com/The_ADSN/status/2120217983893266884"
+   }
+  ],
+  "status": "lead",
+  "scope": "talent",
+  "reviewed_at": null,
+  "review_note": "仅有聚合站与观察号转述，未见本人原帖；按未证实线索收录。"
+ },
+ {
+  "id": "anthropic-20261107-felix-binder",
+  "date": "2026-11-07",
+  "title": "传 Meta 超级智能实验室对齐研究员 Felix Binder 加入 Anthropic",
+  "summary": "聚合站 Talent.dinq.me 显示 Meta 超级智能实验室（MSL）的 AI 安全与对齐研究科学家 Felix Binder 已离开 Meta、加入 Anthropic，但具体职位未公开。X 上仅有观察类账号转述，本人时间线未见声明。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   },
+   {
+    "name": "Meta",
+    "slug": "meta"
+   }
+  ],
+  "person": "Felix Binder",
+  "tags": [
+   "小道消息",
+   "AI 安全",
+   "Anthropic"
+  ],
+  "sources": [
+   {
+    "name": "Talent.dinq.me（聚合）",
+    "url": "https://talent.dinq.me/?range=7d"
+   },
+   {
+    "name": "X · @ArfurGrok（观察号）",
+    "url": "https://x.com/ArfurGrok/status/2119211477307445511"
+   }
+  ],
+  "status": "lead",
+  "scope": "talent",
+  "reviewed_at": null,
+  "review_note": "本人时间线未见声明，仅观察号转述；按未证实线索收录，DINQ 自己也标注为爆料。"
+ },
+ {
+  "id": "wonderlead-20261107-patricia-juarez",
+  "date": "2026-11-07",
+  "title": "传 Amazon 的 Patricia Juárez Muñoz 离职加入 WonderLead",
+  "summary": "聚合站 Talent.dinq.me 显示 Amazon 的 Staff AI 产品工程师 Patricia Juárez Muñoz 已离职，去向为 WonderLead；未找到可引用的具体帖子，公司与本人都未公开说明。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "亚马逊",
+    "slug": "amazon"
+   }
+  ],
+  "person": "Patricia Juárez Muñoz",
+  "tags": [
+   "小道消息",
+   "亚马逊"
+  ],
+  "sources": [
+   {
+    "name": "Talent.dinq.me（聚合）",
+    "url": "https://talent.dinq.me/?range=7d"
+   }
+  ],
+  "status": "lead",
+  "scope": "talent",
+  "reviewed_at": null,
+  "review_note": "仅有聚合站记录与个人主页地址，缺少可引用的具体原文；按未证实线索收录。"
+ },
+ {
+  "id": "meta-20261112-blind-hiring",
+  "date": "2026-11-12",
+  "title": "Blind 上自称 Meta 员工：正在大量招人，为 2027 年 2 月裁员做准备",
+  "summary": "Blind 的 Layoffs 频道 11 月 12 日出现一条匿名帖，发帖人自称 Meta 员工，称公司「正在以前所未有的低门槛大量招人」，目的是为 2027 年 2 月的裁员准备人头（headcount），并称可以内推。该说法无任何官方或媒体佐证。",
+  "type": "rumor",
+  "companies": [
+   {
+    "name": "Meta",
+    "slug": "meta"
+   }
+  ],
+  "person": "（匿名发帖人，自称 Meta 员工）",
+  "tags": [
+   "小道消息",
+   "裁员",
+   "Meta"
+  ],
+  "sources": [
+   {
+    "name": "Blind · Layoffs",
+    "url": "https://www.teamblind.com/post/meta-hiring-agressively-dneb1law"
+   }
+  ],
+  "status": "lead",
+  "scope": "talent",
+  "reviewed_at": null,
+  "review_note": "来源为 Blind 匿名帖，发帖人身份无法核实，也无其他佐证；按未证实线索收录，只复述帖子里的说法。"
  }
 ]

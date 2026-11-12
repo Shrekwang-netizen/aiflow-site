@@ -79,7 +79,8 @@ def build():
     archive_head=heading('全部记录','默认展示已核对记录（本人／官方公开、媒体原文已读）。用「来源状态」可切换到历史待复核与未证实线索；收藏和未读记录只保存在当前浏览器。','THE ARCHIVE')
     shell('all.html','全部记录',archive_head+search(default_quality='checked')+feed(records,hide_unchecked=True),'all')
     leads=[r for r in records if r['status']=='lead']
-    shell('rumors.html','小道消息',heading('小道消息，先不下结论。','传闻、聚合页与缺少具体原文的历史记录放在这里。补齐证据后，再决定是否进入要闻。','THE REVIEW QUEUE')+search()+feed(leads),'rumors')
+    recent_leads=sum(1 for r in leads if r['date']>=(stamp.date()-timedelta(days=7)).isoformat())
+    shell('rumors.html','小道消息',heading('小道消息，先不下结论。',f'传闻、聚合页与缺少具体原文的记录放在这里：共 {len(leads)} 条，最近 7 天新增 {recent_leads} 条。''每条都标注来源与信度，补齐具体原文后才移入要闻。','THE REVIEW QUEUE')+search()+feed(leads),'rumors')
     watch=heading('从这些人，听见行业。','这是一份公开账号观察名单，不是背书或排名。优先阅读一手发言，再用官方公告和原始报道交叉核对。','THE WATCHLIST')
     watch+=f'<div class="watch-summary"><b>{len(accounts)} 个账号</b><span>{h(monitor.get("schedule", SCHEDULE))}</span><a href="docs/x-watchlist.md">下载文字版名单 ↗</a></div>'
     for group in dict.fromkeys(a['group'] for a in accounts):

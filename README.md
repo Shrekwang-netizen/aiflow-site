@@ -7,7 +7,7 @@ An editorial site for AI talent moves, hiring and organization changes — plus 
 ## Source of truth
 
 - `data/records.json`: all historical and reviewed records, explicit evidence state and review notes.
-- `data/x-watchlist.json`: 55 verified public X profiles and their monitoring focus.
+- `data/x-watchlist.json`: 56 verified public X profiles and their monitoring focus.
 - `data/monitor.json`, `data/run-history.json`: actual inspection coverage and run outcomes.
 - `scripts/build.py`: produces every HTML page, RSS, and random archive. Preserve existing record IDs.
 - `scripts/collect_x.py`, `collect_news.py`, `collect_links.py`, `collect_legacy.py`: automated discovery; output only to `.private-inbox/` for review.
@@ -32,7 +32,7 @@ The site works at the GitHub Pages project prefix and in a local root. Asset ver
 
 The daily job runs these collectors before building. They only write candidates to `.private-inbox/` (gitignored); a human or AI editor still verifies the original source and updates `data/records.json`:
 
-- **X**: 55 accounts in `data/x-watchlist.json`, via the owner’s logged-in Chrome (AppleScript, background tab; 48h overlap, at most 40 posts/account).
+- **X**: 56 accounts in `data/x-watchlist.json`, via the owner’s logged-in Chrome (AppleScript, background tab; 48h overlap, at most 40 posts/account).
 - **Media RSS**: OpenAI official news, 量子位, 雷峰网, IT之家, 钛媒体, 极客公园, InfoQ 中文, TechCrunch AI / Layoffs, The Verge AI. Matches both personnel keywords and event keywords (M&A, funding, IPO, governance, policy, elections, sentiment) and tags each candidate `kind`.
 - **Legacy sources**: Talent.dinq.me, RSSHub (36 氪快讯 / 财新 / 华尔街见闻), 晚点 LatePost, 知乎热榜, Hacker News Algolia, Blind channels, 360 索引（脉脉）.
 - **URL inbox**: WeChat public-account links without RSS go in `.private-inbox/links.txt`.
