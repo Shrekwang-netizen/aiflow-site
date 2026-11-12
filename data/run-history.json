@@ -1,5 +1,427 @@
 [
  {
+  "checked_at": "2026-11-12T09:30:04+08:00",
+  "mode": "scheduled-scan",
+  "coverage": "visible-window",
+  "accounts_checked": [
+   "OpenAI",
+   "AnthropicAI",
+   "GoogleDeepMind",
+   "deepseek_ai",
+   "MistralAI",
+   "cohere",
+   "cursor_ai",
+   "MiniMax_AI",
+   "MoonshotAI"
+  ],
+  "accounts_failed": [
+   "Kimi_Moonshot",
+   "ZhipuAI",
+   "Zai_org",
+   "Alibaba_Qwen",
+   "TencentHunyuan",
+   "StepFun_ai",
+   "SpaceXSI",
+   "tianyi",
+   "sama",
+   "gdb",
+   "demishassabis",
+   "karpathy",
+   "jackclarkSF",
+   "ylecun",
+   "DarioAmodei",
+   "mustafasuleyman",
+   "AravSrinivas",
+   "mntruell",
+   "soumithchintala",
+   "Thom_Wolf",
+   "ClementDelangue",
+   "miramurati",
+   "JeffDean",
+   "sundarpichai",
+   "satyanadella",
+   "elonmusk",
+   "DrJimFan",
+   "_akhaliq",
+   "_jasonwei",
+   "arankomatsuzaki",
+   "giffmana",
+   "goodside",
+   "AndrewYNg",
+   "jiayq",
+   "badlogicgames",
+   "rowancheung",
+   "dotey",
+   "op7418",
+   "huybery",
+   "karminski3",
+   "teortaxesTex",
+   "amir",
+   "steph_palazzolo",
+   "kyliebytes",
+   "shiringhaffary",
+   "alexeheath"
+  ],
+  "posts_read": 12,
+  "new_records": 0,
+  "reviewed_records": 0,
+  "summary": "已依次运行 X、媒体、手动链接、DINQ/RSSHub/HN/Blind 等采集，共 47 条候选（跨源未去重），待人工核查；本轮未新增新闻。有限窗口或访问缺口：x, news, legacy。来源读取成功不代表完整覆盖。",
+  "schedule": "周一至周五 09:30 · 北京时间",
+  "automation_enabled": true,
+  "automation_id": "aiflow",
+  "editorial_mode": "manual",
+  "review_status": "pending",
+  "source_coverage": [
+   {
+    "source": "x",
+    "status": "partial",
+    "exit_code": 0,
+    "warnings": [],
+    "candidates": 2,
+    "accounts_read": 9,
+    "failures": [
+     {
+      "handle": "Kimi_Moonshot",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "ZhipuAI",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "Zai_org",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "Alibaba_Qwen",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "TencentHunyuan",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "StepFun_ai",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "SpaceXSI",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "tianyi",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "sama",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "gdb",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "demishassabis",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "karpathy",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "jackclarkSF",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "ylecun",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "DarioAmodei",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "mustafasuleyman",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "AravSrinivas",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "mntruell",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "soumithchintala",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "Thom_Wolf",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "ClementDelangue",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "miramurati",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "JeffDean",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "sundarpichai",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "satyanadella",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "elonmusk",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "DrJimFan",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "_akhaliq",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "_jasonwei",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "arankomatsuzaki",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "giffmana",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "goodside",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "AndrewYNg",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "jiayq",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "badlogicgames",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "rowancheung",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "dotey",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "op7418",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "huybery",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "karminski3",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "teortaxesTex",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "amir",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "steph_palazzolo",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "kyliebytes",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "shiringhaffary",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     },
+     {
+      "handle": "alexeheath",
+      "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
+     }
+    ]
+   },
+   {
+    "source": "news",
+    "status": "partial",
+    "exit_code": 0,
+    "warnings": [
+     "✗ 雷峰网: HTTP Error 502: Bad Gateway"
+    ],
+    "candidates": 21,
+    "failures": [
+     {
+      "source": "雷峰网",
+      "url": "https://www.leiphone.com/feed",
+      "reason": "HTTP Error 502: Bad Gateway"
+     }
+    ],
+    "details": [
+     {
+      "source": "OpenAI 官方",
+      "read": 1381,
+      "count": 0,
+      "error": null
+     },
+     {
+      "source": "量子位",
+      "read": 10,
+      "count": 1,
+      "error": null
+     },
+     {
+      "source": "雷峰网",
+      "count": 0,
+      "error": "HTTP Error 502: Bad Gateway"
+     },
+     {
+      "source": "IT之家",
+      "read": 60,
+      "count": 8,
+      "error": null
+     },
+     {
+      "source": "钛媒体",
+      "read": 18,
+      "count": 2,
+      "error": null
+     },
+     {
+      "source": "极客公园",
+      "read": 30,
+      "count": 3,
+      "error": null
+     },
+     {
+      "source": "InfoQ 中文",
+      "read": 20,
+      "count": 2,
+      "error": null
+     },
+     {
+      "source": "TechCrunch AI",
+      "read": 20,
+      "count": 5,
+      "error": null
+     },
+     {
+      "source": "TechCrunch Layoffs",
+      "read": 20,
+      "count": 0,
+      "error": null
+     },
+     {
+      "source": "The Verge AI",
+      "read": 10,
+      "count": 0,
+      "error": null
+     }
+    ]
+   },
+   {
+    "source": "links",
+    "status": "read",
+    "exit_code": 0,
+    "warnings": [],
+    "candidates": 1,
+    "failures": [],
+    "details": []
+   },
+   {
+    "source": "legacy",
+    "status": "partial",
+    "exit_code": 0,
+    "warnings": [
+     "! VentureBeat AI 拉取失败：HTTP Error 308: Permanent Redirect",
+     "! Semafor Tech 拉取失败：<urlopen error timed out>",
+     "! The Register AI 拉取失败：not well-formed (invalid token): line 7, column 22",
+     "! 36 氪快讯 @ https://rsshub.rssforever.com 失败：The read operation timed out",
+     "! 36 氪快讯 @ https://hub.slarker.me 失败：The read operation timed out",
+     "! 财新 @ https://rsshub.rssforever.com 失败：The read operation timed out",
+     "! 华尔街见闻快讯 @ https://rsshub.rssforever.com 失败：The read operation timed out"
+    ],
+    "candidates": 23,
+    "failures": [],
+    "details": [
+     {
+      "source": "dinq",
+      "count": 7,
+      "error": null,
+      "seconds": 3.0
+     },
+     {
+      "source": "rss",
+      "count": 10,
+      "error": null,
+      "seconds": 46.8
+     },
+     {
+      "source": "rsshub",
+      "count": 4,
+      "error": null,
+      "seconds": 126.3
+     },
+     {
+      "source": "latepost",
+      "count": 1,
+      "error": null,
+      "seconds": 0.3
+     },
+     {
+      "source": "zhihu",
+      "count": 0,
+      "error": null,
+      "seconds": 0.3
+     },
+     {
+      "source": "hn",
+      "count": 2,
+      "error": null,
+      "seconds": 15.2
+     },
+     {
+      "source": "blind",
+      "count": 8,
+      "error": null,
+      "seconds": 103.7
+     },
+     {
+      "source": "buzz",
+      "count": 13,
+      "error": null,
+      "seconds": 18.5
+     }
+    ]
+   }
+  ],
+  "reviewed_at": "2026-11-06T11:48:51+08:00"
+ },
+ {
   "checked_at": "2026-11-10T09:30:04+08:00",
   "mode": "scheduled-scan",
   "coverage": "visible-window",
