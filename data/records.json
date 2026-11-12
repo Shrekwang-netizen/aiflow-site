@@ -4761,5 +4761,336 @@
   "scope": "talent",
   "reviewed_at": "2026-11-09",
   "review_note": "已读 TechCrunch 11 月 5 日报道（引其 WSJ Tech 大会现场发言）：发言内容按报道转述，数据中心数量与项目规模亦来自该报道；「公众情绪」的判断属于当事公司高管的表述，记录中标注了说话人，未当作独立民意数据。"
+ },
+ {
+  "id": "nvidia-20261112-board-ceo-search",
+  "date": "2026-11-12",
+  "title": "英伟达董事会聘请外部机构物色新 CEO，并考虑临时 CEO 方案",
+  "summary": "据彭博社、《华尔街日报》与《纽约时报》报道，英伟达董事会正讨论黄仁勋的去留：已与外部机构合作寻找可接替他的 CEO 人选，并考虑在找到正式继任者前先任命临时 CEO；董事会成员于当地时间 11 月 12 日开会讨论相关安排。《纽约时报》称五名前员工指控黄仁勋与英伟达医疗健康业务副总裁 Kimberly Powell 存在第二段婚外情，市场对他在 2027 年 7 月前离职的预测概率升至 80%。消息传出后英伟达股价盘后一度跌约 9%。英伟达未就相关报道置评。",
+  "type": "governance",
+  "companies": [
+   {
+    "name": "NVIDIA",
+    "slug": "nvidia"
+   }
+  ],
+  "person": "黄仁勋（Jensen Huang）",
+  "tags": [
+   "CEO更替",
+   "NVIDIA",
+   "治理",
+   "董事会"
+  ],
+  "sources": [
+   {
+    "name": "IT之家（引彭博社）",
+    "url": "https://www.ithome.com/1/025/852.htm"
+   },
+   {
+    "name": "IT之家（引华尔街日报、纽约时报）",
+    "url": "https://www.ithome.com/1/025/829.htm"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已读 IT之家 11 月 12 日两篇报道，其分别转述彭博社（董事会聘请外部机构物色继任者、考虑临时 CEO）与《华尔街日报》《纽约时报》（董事会准备罢免、第二段婚外情指控、离职概率与股价）；英伟达均未回应，摘要保留「据报道」的归属，不把传闻写成已决定。"
+ },
+ {
+  "id": "nvidia-20261111-congress-huang-resign",
+  "date": "2026-11-11",
+  "title": "美国两党议员要求黄仁勋辞职，众议院委员会准备传票",
+  "summary": "11 月 11 日，美国两党多名国会议员要求英伟达 CEO 黄仁勋辞职或赴国会说明。众议院中国问题特别委员会主席 Moolenaar 称黄须在当天结束前回应闭门说明会的要求，否则很可能发出传票；众议院外交委员会主席 Mast 表示委员会正在准备传票。参议员 Cramer 以可能遭勒索、涉及国家安全风险为由要求其离职，民主党众议员 Subramanyam 与共和党众议员 Bacon 也表达了类似立场。彭博社称国会正准备传唤黄仁勋就其与 Alice Huang 的关系作证。",
+  "type": "policy",
+  "companies": [
+   {
+    "name": "NVIDIA",
+    "slug": "nvidia"
+   }
+  ],
+  "person": "黄仁勋（Jensen Huang）",
+  "tags": [
+   "国会",
+   "传票",
+   "NVIDIA",
+   "国家安全"
+  ],
+  "sources": [
+   {
+    "name": "IT之家（引 CNBC）",
+    "url": "https://www.ithome.com/1/025/883.htm"
+   },
+   {
+    "name": "TechCrunch（引彭博社）",
+    "url": "https://techcrunch.com/2026/11/11/congress-to-call-jensen-huang-in-to-answer-for-alleged-chinese-spy-affair/"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已读 IT之家 11 月 12 日报道（转述 CNBC 11 月 11 日消息）与 TechCrunch 11 月 11 日报道（转述彭博社）：议员姓名与职务、传票准备情况按原文转述；英伟达未回应，未把「将发出传票」写成已发出。"
+ },
+ {
+  "id": "anthropic-20261110-ipo",
+  "date": "2026-11-10",
+  "title": "Anthropic 启动 IPO 路演：发行价 70–78 美元，七位创始人各套现约 2.5 亿美元",
+  "summary": "Anthropic 11 月 10 日披露 S-1 文件并启动 IPO：发行价区间定为 70 至 78 美元，按区间计算公司估值可能达到 1.4 万亿美元；七位联合创始人各计划卖出 3,378,378 股，按区间中值 74 美元计每人套现约 2.5 亿美元。董事 Reed Hastings 表示有意通过捐赠人建议基金认购 3 亿美元，董事 Christopher Liddell 拟认购 300 万美元。出售后七位创始人合计持有约 22% 的 A 类股，但通过超级投票权股掌握 51.1% 的表决权。",
+  "type": "ipo",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Dario Amodei 等七位联合创始人",
+  "tags": [
+   "IPO",
+   "估值",
+   "创始人",
+   "Anthropic"
+  ],
+  "sources": [
+   {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/10/all-7-anthropic-founders-will-each-cash-out-about-250m-in-ipo/"
+   },
+   {
+    "name": "极客公园",
+    "url": "https://www.geekpark.net/news/373796"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已读 TechCrunch 11 月 10 日报道（依据 S-1）：股数、价区间、套现金额与表决权比例均按原文，估值写成「按区间可能达到」而非确定值；极客公园 11 月 11 日汇编用于交叉核对「创始人合计套现约 17.5 亿美元」。"
+ },
+ {
+  "id": "openai-20261110-odessia",
+  "date": "2026-11-10",
+  "title": "OpenAI 收购 AI 旅行代理 Odessia，创始人 Francis Davidson 加入",
+  "summary": "OpenAI 已收购 AI 旅行代理公司 Odessia，金额未披露；创始人 Francis Davidson 11 月 10 日在 X 宣布公司被收购、自己加入 OpenAI 负责旅行业务方向。Odessia 成立不到一年、约五个月前上线，获红杉领投的 600 万美元 pre-seed；Davidson 称今夏有数万名早期用户用它规划了年化超 6000 万美元的旅行，产品目前已关停。OpenAI 发言人向 TechCrunch 确认了这次人才收购，但未公布旅行相关产品计划。Davidson 此前创办的短租公司 Sonder 曾上市，并在 2026 年破产清算。",
+  "type": "deal",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   }
+  ],
+  "person": "Francis Davidson",
+  "tags": [
+   "收购",
+   "AI 代理",
+   "旅行",
+   "OpenAI"
+  ],
+  "sources": [
+   {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/"
+   },
+   {
+    "name": "X · @FDavidsonT",
+    "url": "https://x.com/FDavidsonT/status/2120214953349263473"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已在 X 直读 @FDavidsonT 原帖（2026-11-11 02:00 北京时间）确认「Odessia 被 OpenAI 收购、本人加入」为本人表述，并读 TechCrunch 11 月 10 日报道（含 OpenAI 发言人确认）：交易金额未披露，摘要不写猜测金额；「年化超 6000 万美元」为创始人自述，已标注。"
+ },
+ {
+  "id": "oura-20261110-counsel-health",
+  "date": "2026-11-10",
+  "title": "Oura 以 6.25 亿美元收购 AI 医疗公司 Counsel Health，CEO 任首席临床 AI 官",
+  "summary": "Oura 11 月 10 日宣布以 6.25 亿美元收购 AI 原生初级医疗公司 Counsel Health；Counsel CEO Muthu Alagappan 将加入 Oura 任首席临床 AI 官，团队约 70 人一并加入，交易预计在 2027 年底前完成。此前几周，Oura 以「IPO 市场不确定」为由无限期推迟最多 22 亿美元的上市计划。Counsel Health 一年前完成 a16z 与 GV 领投的 2500 万美元 A 轮，累计融资约 3600 万美元。",
+  "type": "deal",
+  "companies": [
+   {
+    "name": "Oura",
+    "slug": "oura"
+   },
+   {
+    "name": "Counsel Health",
+    "slug": "counsel-health"
+   }
+  ],
+  "person": "Muthu Alagappan",
+  "tags": [
+   "收购",
+   "医疗 AI",
+   "Oura",
+   "IPO"
+  ],
+  "sources": [
+   {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/10/oura-to-acquire-ai-native-primary-care-startup-counsel-health-for-625m/"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已读 TechCrunch 11 月 10 日报道：金额、团队人数与人事安排按原文（团队人数与 CEO 新职位引用彭博社）；IPO 推迟与融资历史亦来自该报道，摘要把「预计 2027 年底前完成」写成计划而非已完成。"
+ },
+ {
+  "id": "alibaba-20261110-pingtouge-ipo",
+  "date": "2026-11-10",
+  "title": "阿里巴巴申请芯片子公司平头哥独立上市",
+  "summary": "阿里巴巴 11 月 10 日晚公告，已就旗下芯片子公司平头哥向香港联交所提交上市申请，计划以 H 股在主板独立上市，发行规模尚未确定；上市完成后平头哥仍为阿里巴巴子公司。公告显示平头哥已于 9 月 11 日交表，截至 2026 年 4 月真武系列 AI 芯片累计出货 56 万片。阿里称分拆有助于更清晰地为集团核心业务定价，并支撑平头哥加大研发与人才投入、提升国产算力供给。",
+  "type": "ipo",
+  "companies": [
+   {
+    "name": "平头哥",
+    "slug": "pingtouge"
+   },
+   {
+    "name": "阿里巴巴",
+    "slug": "alibaba"
+   }
+  ],
+  "person": "平头哥（阿里巴巴芯片子公司）",
+  "tags": [
+   "IPO",
+   "芯片",
+   "阿里巴巴",
+   "算力"
+  ],
+  "sources": [
+   {
+    "name": "雷峰网",
+    "url": "https://www.leiphone.com/category/industrynews/dew7AYBxkGAYilZj.html"
+   },
+   {
+    "name": "钛媒体",
+    "url": "https://www.tmtpost.com/8202083.html"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已读雷峰网 11 月 10 日报道（引阿里巴巴公告）：交表日期、H 股主板安排、出货量与公司表述均按公告转述；发行规模原文为「尚未最终确定」，摘要照此保留，不推断估值。"
+ },
+ {
+  "id": "citadel-20261111-nataniel-ruiz",
+  "date": "2026-11-11",
+  "title": "Google DeepMind 研究员 Nataniel Ruiz 加入 Citadel EQR，转向量化交易研究",
+  "summary": "Nataniel Ruiz 11 月 11 日在 X 宣布已入职对冲基金 Citadel 的股票量化研究部门 EQR，转向市场与交易模型研究；他称自己过去一年已在业余做交易模型。其 X 简介显示他此前在 Google DeepMind 做研究，参与 Gemini Omni 预训练与视频方向，也是 DreamBooth 的作者。他未说明离职时间与在 Citadel 的具体职位。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Citadel EQR",
+    "slug": "citadel-eqr"
+   },
+   {
+    "name": "Google DeepMind",
+    "slug": "google-deepmind"
+   }
+  ],
+  "person": "Nataniel Ruiz",
+  "tags": [
+   "研究员",
+   "量化",
+   "Google DeepMind",
+   "Citadel"
+  ],
+  "sources": [
+   {
+    "name": "X · @natanielruizg",
+    "url": "https://x.com/natanielruizg/status/2120294076608061684"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已在 X 直读 @natanielruizg 原帖（2026-11-11 07:14 北京时间）与其个人简介确认入职 Citadel 及此前在 Google DeepMind 的履历；具体职级与离职时间未公开，摘要不作推断。"
+ },
+ {
+  "id": "anthropic-20261110-alex-bleakley",
+  "date": "2026-11-10",
+  "title": "Alex Bleakley 宣布加入 Anthropic：先能解释安全，再谈推进能力前沿",
+  "summary": "Alex Bleakley 11 月 9 日在 X 宣布第二天加入 Anthropic，并公开表态：「在能够可靠地解释 AI 为何安全之前，没有人应该继续推进能力前沿。」他未说明具体职位与团队。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Alex Bleakley",
+  "tags": [
+   "加入",
+   "AI 安全",
+   "Anthropic"
+  ],
+  "sources": [
+   {
+    "name": "X · @bleakleya",
+    "url": "https://x.com/bleakleya/status/2119837355976900724"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已在 X 直读 @bleakleya 原帖（2026-11-10 00:59 北京时间）确认「明天加入 Anthropic」与安全表态的原话；其个人简介为空，未核实此前任职公司，摘要只写帖子明确的内容。"
+ },
+ {
+  "id": "anthropic-20261110-mark-landgrebe",
+  "date": "2026-11-10",
+  "title": "Mark Landgrebe 加入 Anthropic，负责生产级 Agent 平台",
+  "summary": "Mark Landgrebe 11 月 10 日在 X 表示已加入 Anthropic，负责生产环境中的 Agent 平台，帮助团队安全地承接长周期任务与上千个 Agent 协作；他未说明具体职级与汇报关系。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Mark Landgrebe",
+  "tags": [
+   "加入",
+   "Agent",
+   "平台工程",
+   "Anthropic"
+  ],
+  "sources": [
+   {
+    "name": "X · @markletree",
+    "url": "https://x.com/markletree/status/2119904310578594262"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已在 X 直读 @markletree 原帖（2026-11-10 05:25 北京时间）确认「最近加入 Anthropic、做生产 Agent 平台」为本人表述；职级未披露，不作推断。"
+ },
+ {
+  "id": "manus-20261111-hiring-shift",
+  "date": "2026-11-11",
+  "title": "工程师招聘降至 2022 年峰值一半以下，Manus 取消传统编程面试",
+  "summary": "InfoQ 11 月 11 日报道，Manus 联合创始人兼首席产品官 Tao Zhang 在 Web Summit 访谈中称，公司从 2026 年 3 月起不再要求工程师候选人做传统编程测试，改为四小时用 Manus 解决实际问题并复盘过程；其团队中产品经理与设计师已可直接向代码仓库提交代码。同日发布的 Lenny's Newsletter 就业报告显示，美国企业软件工程师招聘量已从 2022 年的 23.9 万人降至约 11.3 万人（降幅约 53%），产品经理岗位空缺自 2023 年初增长 56%，设计岗位空缺同比减少 28%，前沿部署工程师（FDE）岗位一年增长 4.6 倍。",
+  "type": "sentiment",
+  "companies": [
+   {
+    "name": "Manus",
+    "slug": "manus"
+   }
+  ],
+  "person": "Tao Zhang（Manus 联合创始人兼首席产品官）",
+  "tags": [
+   "招聘",
+   "就业市场",
+   "工程师",
+   "Manus"
+  ],
+  "sources": [
+   {
+    "name": "InfoQ 中文",
+    "url": "https://www.infoq.cn/article/HKFSZ6a0DM97BV7FXP2t"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已读 InfoQ 11 月 11 日报道：Manus 的做法来自其对 Tao Zhang 在 Web Summit 访谈的转述，就业数据来自其引用的 Lenny's Newsletter 报告（TrueUp 与 Live Data Technologies 两份数据）。数字按报道转述，未直接读取原始报告，摘要已标注数据来源层级。"
  }
 ]

@@ -233,11 +233,14 @@ end run
 APPLESCRIPT_OPEN = r"""on run argv
   set theUrl to item 1 of argv
   tell application "Google Chrome"
+    if (count of windows) is 0 then
+      make new window
+    end if
     set w to front window
-    set wid to id of w
+    set wid to (id of w) as integer
     set oldIndex to active tab index of w
     set t to make new tab at end of tabs of w with properties {URL:theUrl}
-    set tid to id of t
+    set tid to (id of t) as integer
     try
       set active tab index of w to oldIndex
     end try
@@ -307,7 +310,11 @@ class ChromeApp:
                 raise ScanError(
                     "Chrome 的「允许 Apple 事件中的 JavaScript」没开："
                     "菜单栏 查看/显示 → 开发者 → 允许 Apple 事件中的 JavaScript")
-            if "can’t get tab" in low or "can't get tab" in low or "invalid index" in low:
+            # Chrome 报错文案会随系统语言变化：中文「无效的索引／不能获得」、错误码 -1719、
+            # 以及窗口被整个关掉导致的「不能获得 window」，都按标签页丢失处理，交给重开逻辑兜住。
+            if ("-1719" in err or "无效的索引" in err or "不能获得" in err
+                    or "can’t get tab" in low or "can't get tab" in low
+                    or "can't get window" in low or "invalid index" in low):
                 raise TabGone(f"扫描标签页被关掉了：{err[:120]}")
             raise ScanError(f"AppleScript 执行失败：{err[:300]}")
         return res.stdout.rstrip("\n")
@@ -315,7 +322,8 @@ class ChromeApp:
     def open_tab(self, url: str = "about:blank") -> "AppleTab":
         raw = self._osa("open", url).strip()
         try:
-            wid, tid = (int(x) for x in raw.split("|"))
+            # AppleScript 有时把大整数当 real 返回，形如 1.278070679E+9，先转 float 再取整
+            wid, tid = (int(float(x)) for x in raw.split("|"))
         except ValueError:
             raise ScanError(f"新建标签页失败：{raw[:200]}") from None
         return AppleTab(self, wid, tid)

@@ -1,6 +1,6 @@
 {
- "checked_at": "2026-11-12T09:30:04+08:00",
- "mode": "scheduled-scan",
+ "checked_at": "2026-11-12T13:27:37+08:00",
+ "mode": "daily-scan",
  "coverage": "visible-window",
  "accounts_checked": [
   "OpenAI",
@@ -11,9 +11,7 @@
   "cohere",
   "cursor_ai",
   "MiniMax_AI",
-  "MoonshotAI"
- ],
- "accounts_failed": [
+  "MoonshotAI",
   "Kimi_Moonshot",
   "ZhipuAI",
   "Zai_org",
@@ -61,10 +59,11 @@
   "shiringhaffary",
   "alexeheath"
  ],
- "posts_read": 12,
+ "accounts_failed": [],
+ "posts_read": 74,
  "new_records": 0,
  "reviewed_records": 0,
- "summary": "已依次运行 X、媒体、手动链接、DINQ/RSSHub/HN/Blind 等采集，共 47 条候选（跨源未去重），待人工核查；本轮未新增新闻。有限窗口或访问缺口：x, news, legacy。来源读取成功不代表完整覆盖。",
+ "summary": "自动巡检 55 个账号：成功读取 55 个，失败 0 个；共读到 74 条可见帖子（11-10 09:30 至 11-12 13:27，每号最多 40 条），其中 9 条命中人才/组织关键词，已写入本地候选待复核。公开时间线可能只展示部分帖子，不代表完整抓取。",
  "schedule": "周一至周五 09:30 · 北京时间",
  "automation_enabled": true,
  "automation_id": "aiflow",
