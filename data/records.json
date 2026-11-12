@@ -5092,5 +5092,65 @@
   "scope": "talent",
   "reviewed_at": "2026-11-12",
   "review_note": "已读 InfoQ 11 月 11 日报道：Manus 的做法来自其对 Tao Zhang 在 Web Summit 访谈的转述，就业数据来自其引用的 Lenny's Newsletter 报告（TrueUp 与 Live Data Technologies 两份数据）。数字按报道转述，未直接读取原始报告，摘要已标注数据来源层级。"
+ },
+ {
+  "id": "nvidia-20261109-securities-suit",
+  "date": "2026-11-09",
+  "title": "英伟达遭证券集体诉讼，被指就黄仁勋与 Alice Huang 关系误导投资者",
+  "summary": "据 TechCrunch 11 月 9 日报道，罗森律师事务所（Rosen Law Firm）当日在加州北区联邦法院代表散户投资者 Mark Kistenmacher 提起证券集体诉讼，被告为英伟达与黄仁勋；拟议集体诉讼覆盖 2025 年 10 月 9 日至 2026 年 11 月 8 日买入英伟达证券的投资者。起诉书称公司此前的三处表述不实或误导：称黄仁勋与 Alice Huang 的往来「不异常」、称未发现芯片被转运的证据、以及黄仁勋 10 月 30 日称与 Megaspeed 的往来「正常」。报道称至少四家律所已宣布就英伟达是否误导投资者展开调查；消息公布后首个交易日英伟达股价跌 4.27%。",
+  "type": "governance",
+  "companies": [
+   {
+    "name": "NVIDIA",
+    "slug": "nvidia"
+   }
+  ],
+  "person": "黄仁勋（Jensen Huang）",
+  "tags": [
+   "诉讼",
+   "证券欺诈",
+   "NVIDIA",
+   "投资者"
+  ],
+  "sources": [
+   {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/09/the-race-is-on-to-sue-nvidia/"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已读 TechCrunch 11 月 9 日报道：诉讼当事人、法院、拟议集体诉讼期与被告按起诉书转述；「误导」是起诉方主张，摘要写明「起诉书称」，未作为已认定事实；股价跌幅为当日收盘数据。"
+ },
+ {
+  "id": "anthropic-20261109-turbines",
+  "date": "2026-11-09",
+  "title": "Anthropic 花 34 亿美元买天然气涡轮机，首次自建发电能力",
+  "summary": "据 TechCrunch 11 月 9 日引《金融时报》报道，Anthropic 正以 34 亿美元直接向卡特彼勒购买天然气发电机组，这批设备原由设备供应商 OnePWR 订购、可发电最多 1.7 吉瓦。Anthropic 此前更倾向租用算力：其 5 月披露的 S-1 文件显示，公司到 2029 年 5 月每月向 xAI 支付 12.5 亿美元使用其算力。报道称天然气涡轮机交付排期已排到 2030 年代初、并网排队同样漫长，自购发电设备更像是被算力需求逼出来的选择。",
+  "type": "deal",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Anthropic",
+  "tags": [
+   "算力",
+   "数据中心",
+   "电力",
+   "Anthropic"
+  ],
+  "sources": [
+   {
+    "name": "TechCrunch（引金融时报）",
+    "url": "https://techcrunch.com/2026/11/09/anthropic-joins-ais-natural-gas-frenzy-buys-3-4b-worth-of-turbines/"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-12",
+  "review_note": "已读 TechCrunch 11 月 9 日报道：金额、设备来源（OnePWR 原订单、改为直接向卡特彼勒购买）与 1.7 吉瓦容量按其对《金融时报》的转述；S-1 中每月 12.5 亿美元租用 xAI 算力的数字同样来自该报道。"
  }
 ]
