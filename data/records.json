@@ -5522,5 +5522,570 @@
   "scope": "talent",
   "reviewed_at": null,
   "review_note": "来源为 Blind 匿名帖，发帖人身份无法核实，也无其他佐证；按未证实线索收录，只复述帖子里的说法。"
+ },
+ {
+  "id": "nvidia-20261112-ceo-transition",
+  "date": "2026-11-12",
+  "title": "黄仁勋辞去英伟达 CEO 职务，Colette Kress 暂代",
+  "summary": "英伟达 11 月 12 日公布，董事会已于前一日接受黄仁勋辞去总裁、CEO 和董事职务的决定，即时生效。财务负责人 Colette Kress 兼任临时 CEO，董事会将从公司内外遴选正式继任者。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "NVIDIA",
+    "slug": "nvidia"
+   }
+  ],
+  "person": "黄仁勋 / Colette Kress",
+  "tags": [
+   "高管",
+   "董事会",
+   "继任"
+  ],
+  "sources": [
+   {
+    "name": "NVIDIA 董事会公告",
+    "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+   },
+   {
+    "name": "SEC · NVIDIA Form 8-K，Item 5.02",
+    "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-15",
+  "review_note": "已读公司 11 月 12 日公告及 SEC 文件。8-K 明确董事会 11 月 11 日接受辞呈；未将离职动机或继任人选猜测写成事实。"
+ },
+ {
+  "id": "cohere-20261113-aisle-cubic",
+  "date": "2026-11-13",
+  "title": "AISLE 和 cubic 团队加入 Cohere，分掌安全和编程业务",
+  "summary": "Cohere 11 月 13 日宣布完成对 AISLE 的收购。其联合创始人 Ondrej Vlcek 将领导新设的安全业务，Jaya Baloo 任首席信息安全官，Stanislav Fort 将负责 AI 安全研究。加入 Cohere 的 cubic 团队将组建安全编程业务。",
+  "type": "reorg",
+  "companies": [
+   {
+    "name": "Cohere",
+    "slug": "cohere"
+   },
+   {
+    "name": "AISLE",
+    "slug": "aisle"
+   },
+   {
+    "name": "cubic",
+    "slug": "cubic"
+   }
+  ],
+  "person": "Ondrej Vlcek / Jaya Baloo / Stanislav Fort / cubic 团队",
+  "tags": [
+   "团队整合",
+   "AI 安全",
+   "AI 编程"
+  ],
+  "sources": [
+   {
+    "name": "Cohere · AISLE 和 cubic 的团队安排",
+    "url": "https://cohere.com/blog/cohere-expands-its-sovereign-ai-platform-with-aisle-and-cubic"
+   },
+   {
+    "name": "Cohere · 首席信息安全官任命",
+    "url": "https://cohere.com/blog/cohere-welcomes-jaya-baloo-as-first-ciso"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-15",
+  "review_note": "已读 11 月 13 日整合公告与 11 月 12 日人事公告。AISLE 的收购已完成；cubic 团队及各位负责人的安排合并收录，未推断单项交易金额。"
+ },
+ {
+  "id": "weka-20261112-nic-morales",
+  "date": "2026-11-12",
+  "title": "Cohere 前客户体验负责人 Nic Morales 加入 WEKA",
+  "summary": "AI 数据与内存基础设施公司 WEKA 11 月 12 日宣布，Nic Morales 出任公司首位首席客户官，负责全球客户成功团队，向联合创始人兼 CEO Liran Zvibel 汇报。他此前在 Cohere 任副总裁，负责客户体验。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "WEKA",
+    "slug": "weka"
+   },
+   {
+    "name": "Cohere",
+    "slug": "cohere"
+   }
+  ],
+  "person": "Nic Morales",
+  "tags": [
+   "客户团队",
+   "AI 基础设施",
+   "高管"
+  ],
+  "sources": [
+   {
+    "name": "WEKA 官方任命公告",
+    "url": "https://www.weka.io/news/weka-names-nic-morales-chief-customer-officer"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-15",
+  "review_note": "已读 WEKA 11 月 12 日公告，核对前后职务与汇报关系；公告未单列实际入职日。"
+ },
+ {
+  "id": "openai-20261114-robotics-reorg",
+  "date": "2026-11-14",
+  "title": "OpenAI 调整机器人团队",
+  "summary": "据《财富》报道并获公司确认，OpenAI 将机器人团队并入核心研究与应用部门。",
+  "type": "reorg",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   }
+  ],
+  "person": "OpenAI 机器人团队",
+  "tags": [
+   "机器人",
+   "组织调整"
+  ],
+  "sources": [
+   {
+    "name": "Fortune · Wen Shao 独家报道",
+    "url": "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-15",
+  "review_note": "已读原报道，公开日期由美东时间转为北京时间；具体生效日未披露。",
+  "source_published_at": "2026-11-13T17:05:00Z"
+ },
+ {
+  "id": "anthropic-20261112-vartika-bansal",
+  "date": "2026-11-12",
+  "title": "Vartika Bansal 加入 Anthropic，负责印度初创企业合作",
+  "summary": "Vartika Bansal 在领英宣布加入 Anthropic，负责印度初创企业合作。她表示将与当地创始人及投资人合作，了解他们正在开发的产品，并帮助他们使用 Anthropic 的服务。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Vartika Bansal",
+  "tags": [
+   "创业生态",
+   "印度",
+   "商业合作"
+  ],
+  "sources": [
+   {
+    "name": "Vartika Bansal · 领英原帖",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526533720317693952/"
+   },
+   {
+    "name": "exchange4media · 11 月 12 日报道",
+    "url": "https://www.exchange4media.com/people-movement-news/vartika-bansal-joins-anthropic-as-head-of-startup-partnerships-india-160182.html"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-15",
+  "review_note": "已读本人领英原帖，岗位及职责由本人公开；11 月 12 日可确定已公开，依据当天直接引用并链接原帖的报道。原帖网页仅显示相对时间，未推断实际入职日。"
+ },
+ {
+  "id": "qimingdaren-20261113-li-muqing",
+  "date": "2026-11-13",
+  "title": "前腾讯云 AI 全球业务负责人李牧青出任启鸣达人联席 CEO",
+  "summary": "雷峰网 11 月 13 日报道，李牧青已出任教育 AI 公司启鸣达人联席 CEO。他于 9 月离开腾讯，此前负责腾讯云 AI 全球业务，曾带队将大模型应用于多个行业。报道未披露新职务的确切生效日。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "启鸣达人",
+    "slug": "qimingdaren"
+   },
+   {
+    "name": "腾讯",
+    "slug": "tencent"
+   }
+  ],
+  "person": "李牧青",
+  "tags": [
+   "教育 AI",
+   "高管"
+  ],
+  "sources": [
+   {
+    "name": "雷峰网 · 独家报道",
+    "url": "https://m.leiphone.com/category/industrynews/xfpQo71RiPDWJHvS.html"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-15",
+  "review_note": "已读记者高允毅 11 月 13 日 11:43 发表的原报道；9 月为离开腾讯的时间，11 月 13 日为新职务报道日期。"
+ },
+ {
+  "id": "shlab-20261113-scientific-agent-hiring",
+  "date": "2026-11-13",
+  "title": "上海人工智能实验室招募材料与地球科学方向的智能体工程师",
+  "summary": "上海人工智能实验室公布两项上海全职岗位：物质科学中心招募 Agent 算法工程师，开发材料发现与优化工具；天文与地球科学组招募科学智能体算法工程师，面向气象、遥感和能源场景。两份公告均未列申请截止日。",
+  "type": "hiring",
+  "companies": [
+   {
+    "name": "上海人工智能实验室",
+    "slug": "shlab"
+   }
+  ],
+  "person": "物质科学中心、天文与地球科学组",
+  "tags": [
+   "招聘",
+   "科学智能体"
+  ],
+  "sources": [
+   {
+    "name": "上海人工智能实验室 · 物质科学中心岗位",
+    "url": "https://www.shlab.org.cn/joinus/detail/7688673894496880906?mode=8"
+   },
+   {
+    "name": "上海人工智能实验室 · 天文与地球科学组岗位",
+    "url": "https://www.shlab.org.cn/joinus/detail/7686387234296105235?mode=social"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-15",
+  "review_note": "已读两份实验室岗位原文，页面均标注 2026-11-13、上海、全职，区分岗位与人数，不推断计划编制。"
+ },
+ {
+  "id": "deep-robotics-20261113-xiamen-embodied-center",
+  "date": "2026-11-13",
+  "title": "云深处与厦门市政集团组建市政具身智能团队",
+  "summary": "云深处科技 11 月 13 日介绍，与厦门市政集团共建的具身智能联合创新中心已于 12 日揭牌。双方已组建专职团队，成员来自云深处及厦门市政集团的水务、环科等单位，首批两项研发课题已立项。",
+  "type": "reorg",
+  "companies": [
+   {
+    "name": "云深处科技",
+    "slug": "deep-robotics"
+   },
+   {
+    "name": "厦门市政集团",
+    "slug": "xiamen-municipal"
+   }
+  ],
+  "person": "市政具身智能联合创新中心",
+  "tags": [
+   "具身智能",
+   "联合研究"
+  ],
+  "sources": [
+   {
+    "name": "云深处科技署名公告 · 同花顺转载全文",
+    "url": "https://news.10jqka.com.cn/20261113/c681813386.shtml"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-15",
+  "review_note": "已读同花顺页面上云深处科技署名的公告正文，非页面自动摘要；公告发表于 11 月 13 日，明确 12 日揭牌且专职班组已组建。公众号入口未能打开。"
+ },
+ {
+  "id": "molinx-20261112-li-xin",
+  "date": "2026-11-12",
+  "title": "达摩院 Rynn 模型负责人李昕离职，加入睦灵科技创业",
+  "summary": "据量子位 ROBO 11 月 12 日报道，李昕近期离开阿里达摩院，加入睦灵科技，与前同事陈明修合作研究物理 AI 基础模型。他在达摩院负责 Rynn 系列模型与算法；报道未披露他在新公司的职衔及入职日。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "睦灵科技",
+    "slug": "molinx"
+   },
+   {
+    "name": "阿里达摩院",
+    "slug": "alibaba-damo"
+   }
+  ],
+  "person": "李昕",
+  "tags": [
+   "具身智能",
+   "人才流动"
+  ],
+  "sources": [
+   {
+    "name": "量子位 ROBO · 智能车参考署名全文",
+    "url": "https://www.eet-china.com/mp/a538642.html"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-15",
+  "review_note": "已读量子位 ROBO 林方舟撰写的独家报道，原文署名账号在电子工程专辑发布于 2026-11-12 08:35；陈明修创立睦灵科技，文中称李昕参与创业，不推断具体头衔。"
+ },
+ {
+  "id": "bytedance-20261111-shi-yunfeng",
+  "date": "2026-11-11",
+  "title": "晚点：字节 AI 芯片负责人施云峰已提交离职申请",
+  "summary": "晚点 LatePost 11 月 11 日报道，字节跳动 AI 芯片与 DPU 团队负责人施云峰已提交离职申请，当时正进行工作交接。他于 2018 年加入字节。报道未披露最终离任日期、接任者或下一站。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "字节跳动",
+    "slug": "bytedance"
+   }
+  ],
+  "person": "施云峰",
+  "tags": [
+   "AI 芯片",
+   "负责人"
+  ],
+  "sources": [
+   {
+    "name": "晚点 LatePost · 官方微博",
+    "url": "https://m.weibo.cn/2/detail/5364181664534949"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-15",
+  "review_note": "已读晚点官方微博正文，明确离职申请及交接状态；同一作者在新浪财经的发布记录标注 2026-11-11 21:33。未视作正式离任。"
+ },
+ {
+  "id": "enflame-20261113-li-xingyu",
+  "date": "2026-11-13",
+  "title": "雷峰网：燧原科技首席生态官李星宇离职",
+  "summary": "雷峰网 11 月 13 日报道，AI 芯片公司燧原科技的首席生态官李星宇近日已离职。他此前在地平线负责生态发展与战略规划。报道未披露李星宇的下一站，也未给出他离开燧原的具体日期。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "燧原科技",
+    "slug": "enflame"
+   }
+  ],
+  "person": "李星宇",
+  "tags": [
+   "AI 芯片",
+   "高管"
+  ],
+  "sources": [
+   {
+    "name": "雷峰网 · 包永刚",
+    "url": "https://www.leiphone.com/category/chips/G6AiPuplIGyPkaQL.html"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-15",
+  "review_note": "已直接读取雷峰网 2026-11-13 18:00 记者署名原文。以原文更新后的标题及正文为准，仅写“首席生态官”，不采用转载稿中“联合创始人”的额外头衔。"
+ },
+ {
+  "id": "perplexity-20261114-global-hiring",
+  "date": "2026-11-14",
+  "title": "Perplexity 持续在全球招聘，特别关注纽约人才",
+  "summary": "Perplexity 联合创始人 Johnny Ho 11 月 14 日表示，公司仍在全球招聘，并特别提到纽约。CEO Aravind Srinivas 随后邀请候选人参与前沿产品开发。两人均未披露具体岗位数量、截止日期或入职安排。",
+  "type": "hiring",
+  "companies": [
+   {
+    "name": "Perplexity",
+    "slug": "perplexity"
+   }
+  ],
+  "person": "Johnny Ho、Aravind Srinivas",
+  "tags": [
+   "招聘",
+   "纽约",
+   "产品团队"
+  ],
+  "sources": [
+   {
+    "name": "Johnny Ho · X 招聘原帖",
+    "url": "https://x.com/randomjohnnyh/status/2121320650275184802"
+   },
+   {
+    "name": "Aravind Srinivas · X 招聘原帖",
+    "url": "https://x.com/AravSrinivas/status/2121332985672958106"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-15",
+  "review_note": "已阅读两条具体原帖全文及公开简介。页面分别显示 2026-11-14 3:13 AM 和 4:02 AM；说明招聘仍在进行，不把发帖日期作为新增职位或入职日期。"
+ },
+ {
+  "id": "langchain-20261113-series-c",
+  "date": "2026-11-13",
+  "title": "LangChain 完成 3 亿美元 C 轮融资，估值 30 亿美元",
+  "summary": "LangChain 联合创始人 Harrison Chase 11 月 13 日宣布完成 3 亿美元 C 轮融资，估值 30 亿美元。原有投资方 CapitalG 领投，GIC、DFJ Growth、IVP 和 Sapphire Ventures 等参与；公司称资金将用于推进企业 Agent 平台。",
+  "type": "funding",
+  "companies": [
+   {
+    "name": "LangChain",
+    "slug": "langchain"
+   }
+  ],
+  "person": "Harrison Chase",
+  "tags": [
+   "融资",
+   "Agent",
+   "开发者工具"
+  ],
+  "sources": [
+   {
+    "name": "LangChain · Harrison Chase 官方公告",
+    "url": "https://www.langchain.com/blog/series-c"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-15",
+  "review_note": "已阅读公司 2026-11-13 C 轮公告，区分 3 亿美元融资额与 30 亿美元估值；公告未注明估值为投前或投后，不作推断。"
+ },
+ {
+  "id": "openai-20261105-dots-hiring",
+  "date": "2026-11-05",
+  "title": "OpenAI Dots 团队公开招募新成员",
+  "summary": "samir 11 月 5 日发帖邀请有兴趣的人加入 Dots 团队，称团队已聚集持续运行 Agent 领域的从业者。原帖未列出具体岗位、办公地点或申请截止日期，联系渠道为发帖者私信。",
+  "type": "hiring",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   }
+  ],
+  "person": "samir（@_samirism）",
+  "tags": [
+   "招聘",
+   "Agent",
+   "Dots"
+  ],
+  "sources": [
+   {
+    "name": "samir · X 招聘原帖",
+    "url": "https://x.com/_samirism/status/2118077964936163717"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-05",
+  "review_note": "已阅读招聘原帖，页面显示 2026-11-05 4:28 AM；作者公开简介标明 Dots & ChatGPT @OpenAI。仅记录公开招募，不推断职位或招聘规模。"
+ },
+ {
+  "id": "factory-20261104-humanlayer",
+  "date": "2026-11-04",
+  "title": "HumanLayer 团队宣布加入 Factory",
+  "summary": "HumanLayer 团队 11 月 4 日宣布加入 Factory，共同开发自主软件工具。公告称将把多人任务、文档协作等能力整合进 Factory，并开源 HumanLayer；未披露交易金额或团队成员的新职级。",
+  "type": "reorg",
+  "companies": [
+   {
+    "name": "Factory",
+    "slug": "factory"
+   },
+   {
+    "name": "HumanLayer",
+    "slug": "humanlayer"
+   }
+  ],
+  "person": "HumanLayer 团队（Dex 与 Kyle）",
+  "tags": [
+   "团队整合",
+   "AI 编程"
+  ],
+  "sources": [
+   {
+    "name": "HumanLayer 官方公告 · Dex & Kyle",
+    "url": "https://www.humanlayer.dev/blog/humanlayer-joins-factory"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-05",
+  "review_note": "已阅读 HumanLayer 官方博客全文及 2026-11-04 署名日期。公告明确团队加入 Factory，不据此推断未披露的交易条款。"
+ },
+ {
+  "id": "dragos-20261104-rob-lee",
+  "date": "2026-11-04",
+  "title": "Rob T. Lee 加入 Dragos，出任首位首席 AI 官",
+  "summary": "Dragos 11 月 4 日宣布 Rob T. Lee 加入公司，担任首位首席 AI 官，负责工业与关键基础设施场景的 AI 应用和安全策略。他此前在 SANS 任职逾 25 年，近期担任首席 AI 官及研究负责人。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Dragos",
+    "slug": "dragos"
+   }
+  ],
+  "person": "Rob T. Lee",
+  "tags": [
+   "首席 AI 官",
+   "网络安全"
+  ],
+  "sources": [
+   {
+    "name": "Dragos 官方任命公告",
+    "url": "https://www.dragos.com/resources/press-release/rob-t-lee-joins-dragos-chief-ai-officer"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-05",
+  "review_note": "已直接阅读 Dragos 官方公告，发布日期为 2026-11-04。任命对象 Rob T. Lee 与公司 CEO Robert M. Lee 为不同人物；不推断此前职务离任日期。"
+ },
+ {
+  "id": "anthropic-20261103-residency-applications",
+  "date": "2026-11-03",
+  "title": "Anthropic 开放 Residency 申请，面向资深技术人才",
+  "summary": "Anthropic 11 月 3 日公开招募 Residency 成员，面向学者、技术创始人和资深工程师。项目提供 6 周、3 个月或 6 个月的带薪研究机会，无需机器学习背景，申请截止日为 11 月 22 日。",
+  "type": "hiring",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Anthropic Residency 项目",
+  "tags": [
+   "招聘",
+   "AI 研究",
+   "Residency"
+  ],
+  "sources": [
+   {
+    "name": "Anthropic · X 招募原帖",
+    "url": "https://x.com/AnthropicAI/status/2117343929960112486"
+   },
+   {
+    "name": "Anthropic Residency 官方申请说明",
+    "url": "https://alignment.anthropic.com/2026/anthropic-residency/"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-05",
+  "review_note": "已阅读官方 X 招募原帖（页面显示 2026-11-03 3:51 AM）及链接中的 Residency 官方说明；时长、带薪性质与 2026-11-22 截止日均来自项目页面。不将项目参与等同于获得正式职位。"
+ },
+ {
+  "id": "eptura-20261102-nuala-larkin",
+  "date": "2026-11-02",
+  "title": "Eptura 任命 Nuala Larkin 为首位首席 AI 官",
+  "summary": "Eptura 11 月 2 日任命 Nuala Larkin 为首位首席 AI 官，负责公司整体 AI 战略。她此前已在公司领导 AI 卓越中心，此次属于内部职责扩展；更早曾在 Forcepoint 担任技术与业务领导职务。",
+  "type": "reorg",
+  "companies": [
+   {
+    "name": "Eptura",
+    "slug": "eptura"
+   }
+  ],
+  "person": "Nuala Larkin",
+  "tags": [
+   "首席 AI 官",
+   "内部任命"
+  ],
+  "sources": [
+   {
+    "name": "Eptura 官方任命公告",
+    "url": "https://eptura.com/news/eptura-names-first-chief-ai-officer/"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-05",
+  "review_note": "已阅读 Eptura 官方公告，发布日期为 2026-11-02，仅精确到日。公告说明她此前领导公司 AI Center of Excellence，因此归为内部组织任命，不标记为外部入职。"
  }
 ]

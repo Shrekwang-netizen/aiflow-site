@@ -88,9 +88,10 @@
    "group": "实验室与产品团队",
    "focus": "Kimi 团队、研究与招聘",
    "url": "https://x.com/MoonshotAI",
-   "enabled": true,
-   "verified_at": "2026-11-04",
-   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+   "enabled": false,
+   "verified_at": null,
+   "verification": "该主页为 Chancellor Moonshot AI，帖子涉及荷兰政治与足球，与 Kimi 实验室身份不符。",
+   "identity_checked_at": "2026-11-15"
   },
   {
    "handle": "Kimi_Moonshot",
@@ -108,9 +109,10 @@
    "group": "实验室与产品团队",
    "focus": "GLM 团队与组织动态",
    "url": "https://x.com/ZhipuAI",
-   "enabled": true,
-   "verified_at": "2026-11-04",
-   "verification": "2026-11-04 巡检时打开公开主页，显示名称与名单一致；近期帖子可读。"
+   "enabled": false,
+   "verified_at": null,
+   "verification": "仅可见 2025 年 1 月的一条代币推广帖，不能确认智谱官方身份。",
+   "identity_checked_at": "2026-11-15"
   },
   {
    "handle": "Zai_org",

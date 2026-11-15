@@ -1,6 +1,6 @@
 # AIFLOW · X 人才要闻观察名单
 
-身份核对：2026-11-12。共 56 个公开账号。按关注方向分组，不是影响力排名。
+名单复核：2026-11-15。共 54 个启用账号，另有 2 个暂停核验。按关注方向分组，不是影响力排名。
 
 巡检计划：周一至周五，北京时间 09:30。周末不运行，周一补扫。只收录具体原帖支持的人才与组织消息。
 
@@ -16,9 +16,7 @@
 | [Cohere · @cohere](https://x.com/cohere) | 企业 AI 团队与研究招聘 |
 | [Cursor · @cursor_ai](https://x.com/cursor_ai) | 编程 Agent 团队与工程招聘 |
 | [MiniMax (official) · @MiniMax_AI](https://x.com/MiniMax_AI) | 中国团队、模型发布与招聘 |
-| [Moonshot AI · @MoonshotAI](https://x.com/MoonshotAI) | Kimi 团队、研究与招聘 |
 | [Kimi.ai · @Kimi_Moonshot](https://x.com/Kimi_Moonshot) | Kimi 产品与团队动态 |
-| [Zhipu AI · @ZhipuAI](https://x.com/ZhipuAI) | GLM 团队与组织动态 |
 | [Z.ai · @Zai_org](https://x.com/Zai_org) | GLM 团队、研究与招聘 |
 | [Qwen · @Alibaba_Qwen](https://x.com/Alibaba_Qwen) | 通义千问团队与招聘 |
 | [Tencent Hy · @TencentHunyuan](https://x.com/TencentHunyuan) | 混元团队与模型动态 |
@@ -88,3 +86,8 @@
 | 账号 | 关注方向 |
 | --- | --- |
 | [Arfur Grok · @ArfurGrok](https://x.com/ArfurGrok) | 匿名爆料：AI 公司与实验室的人事变动线索，需回查原帖与官方确认 |
+
+## 暂停采集
+
+- `@MoonshotAI`：当前主页身份与 Kimi 实验室不符；继续观察 `@Kimi_Moonshot`。
+- `@ZhipuAI`：公开内容不足以确认其官方身份；继续观察 `@Zai_org`。

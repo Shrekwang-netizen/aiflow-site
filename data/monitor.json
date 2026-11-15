@@ -1,8 +1,201 @@
 {
- "checked_at": "2026-11-12T13:27:37+08:00",
- "mode": "daily-scan",
- "coverage": "visible-window",
+ "checked_at": "2026-11-15T19:27:55+08:00",
+ "mode": "manual-reviewed-scan",
+ "coverage": "partial",
  "accounts_checked": [
+  "OpenAI",
+  "AnthropicAI",
+  "GoogleDeepMind",
+  "deepseek_ai",
+  "MistralAI",
+  "cohere",
+  "cursor_ai",
+  "MiniMax_AI",
+  "Kimi_Moonshot",
+  "Zai_org",
+  "Alibaba_Qwen",
+  "TencentHunyuan",
+  "StepFun_ai",
+  "SpaceXSI",
+  "tianyi",
+  "sama",
+  "gdb",
+  "demishassabis",
+  "karpathy",
+  "jackclarkSF",
+  "ylecun",
+  "DarioAmodei",
+  "mustafasuleyman",
+  "AravSrinivas",
+  "mntruell",
+  "elonmusk",
+  "DrJimFan",
+  "_akhaliq",
+  "_jasonwei",
+  "arankomatsuzaki",
+  "giffmana",
+  "goodside",
+  "AndrewYNg",
+  "jiayq",
+  "badlogicgames",
+  "rowancheung",
+  "dotey",
+  "soumithchintala",
+  "Thom_Wolf",
+  "ClementDelangue",
+  "miramurati",
+  "JeffDean",
+  "sundarpichai",
+  "satyanadella",
+  "op7418",
+  "huybery",
+  "karminski3",
+  "teortaxesTex",
+  "amir",
+  "steph_palazzolo",
+  "kyliebytes",
+  "shiringhaffary",
+  "alexeheath",
+  "ArfurGrok"
+ ],
+ "accounts_failed": [
+  "MoonshotAI",
+  "ZhipuAI"
+ ],
+ "posts_read": 276,
+ "new_records": 13,
+ "reviewed_records": 13,
+ "summary": "11 月 15 日手动补查并核实 13 条新内容：12 条人才与组织消息及 1 条大额融资。另恢复 5 条被旧快照覆盖的已核实历史记录，沿用原日期与链接。56 个名单主页共读到 276 条可见帖子；54 个为有限时间线，2 个因身份错配或未确认而暂停。10 个媒体 RSS 中 9 个可读，IT之家遇连接错误。公开样本和 RSS 均不代表完整覆盖；匿名爆料未经当事人或原始报道确认，未自动发布。",
+ "schedule": "周一至周五 09:30 · 北京时间",
+ "automation_enabled": true,
+ "automation_id": "aiflow",
+ "editorial_mode": "manual",
+ "review_status": "reviewed-with-coverage-gaps",
+ "source_coverage": [
+  {
+   "source": "x",
+   "status": "partial",
+   "checked_at": "2026-11-15T02:27:29.398Z",
+   "accounts_attempted": 56,
+   "accounts_read": 56,
+   "valid_accounts": 54,
+   "identity_issues": [
+    "MoonshotAI",
+    "ZhipuAI"
+   ],
+   "full_window_accounts": 0,
+   "posts_read": 276,
+   "candidates": 1,
+   "warnings": [
+    "54 个有效账号均为有限可见样本，未完成整个回看窗口；2 个账号暂停身份核验。"
+   ]
+  },
+  {
+   "source": "news",
+   "status": "partial",
+   "checked_at": "2026-11-15T10:22:51+08:00",
+   "feeds_attempted": 10,
+   "feeds_read": 9,
+   "failures": [
+    {
+     "source": "IT之家",
+     "url": "https://www.ithome.com/rss/",
+     "reason": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>"
+    }
+   ],
+   "details": [
+    {
+     "source": "OpenAI 官方",
+     "read": 1387,
+     "count": 0,
+     "error": null
+    },
+    {
+     "source": "量子位",
+     "read": 10,
+     "count": 1,
+     "error": null
+    },
+    {
+     "source": "雷峰网",
+     "read": 20,
+     "count": 4,
+     "error": null
+    },
+    {
+     "source": "IT之家",
+     "count": 0,
+     "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>"
+    },
+    {
+     "source": "钛媒体",
+     "read": 17,
+     "count": 1,
+     "error": null
+    },
+    {
+     "source": "极客公园",
+     "read": 30,
+     "count": 2,
+     "error": null
+    },
+    {
+     "source": "InfoQ 中文",
+     "read": 20,
+     "count": 2,
+     "error": null
+    },
+    {
+     "source": "TechCrunch AI",
+     "read": 20,
+     "count": 5,
+     "error": null
+    },
+    {
+     "source": "TechCrunch Layoffs",
+     "read": 20,
+     "count": 0,
+     "error": null
+    },
+    {
+     "source": "The Verge AI",
+     "read": 10,
+     "count": 1,
+     "error": null
+    }
+   ],
+   "candidates": 16,
+   "warnings": [
+    "IT之家 RSS 连接失败；其他源只覆盖当前可见 RSS 条目。"
+   ]
+  },
+  {
+   "source": "原始公告与报道核查",
+   "status": "read",
+   "checked_at": "2026-11-15T19:27:55+08:00",
+   "new_record_ids": [
+    "nvidia-20261112-ceo-transition",
+    "cohere-20261113-aisle-cubic",
+    "weka-20261112-nic-morales",
+    "openai-20261114-robotics-reorg",
+    "anthropic-20261112-vartika-bansal",
+    "qimingdaren-20261113-li-muqing",
+    "shlab-20261113-scientific-agent-hiring",
+    "deep-robotics-20261113-xiamen-embodied-center",
+    "molinx-20261112-li-xin",
+    "bytedance-20261111-shi-yunfeng",
+    "enflame-20261113-li-xingyu",
+    "perplexity-20261114-global-hiring",
+    "langchain-20261113-series-c"
+   ],
+   "note": "逐条原文核对，包含官方公告、公司文件、具名报道及具体招聘原帖。其他聚合站与私有链接收件箱本轮未重跑，不沿用旧轮覆盖。",
+   "candidates": 13
+  }
+ ],
+ "reviewed_at": "2026-11-15T19:27:55+08:00",
+ "window_start": "2026-11-10T13:27:37+08:00",
+ "window_end": "2026-11-15T19:27:55+08:00",
+ "accounts_attempted": [
   "OpenAI",
   "AnthropicAI",
   "GoogleDeepMind",
@@ -30,13 +223,6 @@
   "mustafasuleyman",
   "AravSrinivas",
   "mntruell",
-  "soumithchintala",
-  "Thom_Wolf",
-  "ClementDelangue",
-  "miramurati",
-  "JeffDean",
-  "sundarpichai",
-  "satyanadella",
   "elonmusk",
   "DrJimFan",
   "_akhaliq",
@@ -49,6 +235,13 @@
   "badlogicgames",
   "rowancheung",
   "dotey",
+  "soumithchintala",
+  "Thom_Wolf",
+  "ClementDelangue",
+  "miramurati",
+  "JeffDean",
+  "sundarpichai",
+  "satyanadella",
   "op7418",
   "huybery",
   "karminski3",
@@ -57,365 +250,1137 @@
   "steph_palazzolo",
   "kyliebytes",
   "shiringhaffary",
-  "alexeheath"
+  "alexeheath",
+  "ArfurGrok"
  ],
- "accounts_failed": [],
- "posts_read": 74,
- "new_records": 0,
- "reviewed_records": 0,
- "summary": "自动巡检 55 个账号：成功读取 55 个，失败 0 个；共读到 74 条可见帖子（11-10 09:30 至 11-12 13:27，每号最多 40 条），其中 9 条命中人才/组织关键词，已写入本地候选待复核。公开时间线可能只展示部分帖子，不代表完整抓取。",
- "schedule": "周一至周五 09:30 · 北京时间",
- "automation_enabled": true,
- "automation_id": "aiflow",
- "editorial_mode": "manual",
- "review_status": "pending",
- "source_coverage": [
+ "partial_accounts": 54,
+ "full_window_accounts": 0,
+ "restored_records": 5,
+ "restored_record_ids": [
+  "openai-20261105-dots-hiring",
+  "factory-20261104-humanlayer",
+  "dragos-20261104-rob-lee",
+  "anthropic-20261103-residency-applications",
+  "eptura-20261102-nuala-larkin"
+ ],
+ "account_results": [
   {
-   "source": "x",
+   "handle": "OpenAI",
+   "url": "https://x.com/OpenAI",
+   "checked_at": "2026-11-15T02:21:21.351Z",
+   "displayed_name": "OpenAI",
    "status": "partial",
-   "exit_code": 0,
-   "warnings": [],
-   "candidates": 2,
-   "accounts_read": 9,
-   "failures": [
-    {
-     "handle": "Kimi_Moonshot",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "ZhipuAI",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "Zai_org",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "Alibaba_Qwen",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "TencentHunyuan",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "StepFun_ai",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "SpaceXSI",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "tianyi",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "sama",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "gdb",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "demishassabis",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "karpathy",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "jackclarkSF",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "ylecun",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "DarioAmodei",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "mustafasuleyman",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "AravSrinivas",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "mntruell",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "soumithchintala",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "Thom_Wolf",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "ClementDelangue",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "miramurati",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "JeffDean",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "sundarpichai",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "satyanadella",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "elonmusk",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "DrJimFan",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "_akhaliq",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "_jasonwei",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "arankomatsuzaki",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "giffmana",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "goodside",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "AndrewYNg",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "jiayq",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "badlogicgames",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "rowancheung",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "dotey",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "op7418",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "huybery",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "karminski3",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "teortaxesTex",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "amir",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "steph_palazzolo",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "kyliebytes",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "shiringhaffary",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    },
-    {
-     "handle": "alexeheath",
-     "reason": "AppleScript 执行失败：/var/folders/rw/xnn2rp693435zrzmj85btqhh0000gn/T/aiflow_xscan_set_url.applescript:215:245: execution error: “Google Chrome”遇到一个错误：不能获得“tab 1 of"
-    }
-   ]
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Oct 27",
+    "Nov 11",
+    "Nov 11",
+    "Nov 10",
+    "Nov 7"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
   },
   {
-   "source": "news",
+   "handle": "AnthropicAI",
+   "url": "https://x.com/AnthropicAI",
+   "checked_at": "2026-11-15T02:21:24.016Z",
+   "displayed_name": "Anthropic",
    "status": "partial",
-   "exit_code": 0,
-   "warnings": [
-    "✗ 雷峰网: HTTP Error 502: Bad Gateway"
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 14",
+    "Nov 14",
+    "Nov 12",
+    "Nov 10",
+    "Nov 10"
    ],
-   "candidates": 21,
-   "failures": [
-    {
-     "source": "雷峰网",
-     "url": "https://www.leiphone.com/feed",
-     "reason": "HTTP Error 502: Bad Gateway"
-    }
-   ],
-   "details": [
-    {
-     "source": "OpenAI 官方",
-     "read": 1381,
-     "count": 0,
-     "error": null
-    },
-    {
-     "source": "量子位",
-     "read": 10,
-     "count": 1,
-     "error": null
-    },
-    {
-     "source": "雷峰网",
-     "count": 0,
-     "error": "HTTP Error 502: Bad Gateway"
-    },
-    {
-     "source": "IT之家",
-     "read": 60,
-     "count": 8,
-     "error": null
-    },
-    {
-     "source": "钛媒体",
-     "read": 18,
-     "count": 2,
-     "error": null
-    },
-    {
-     "source": "极客公园",
-     "read": 30,
-     "count": 3,
-     "error": null
-    },
-    {
-     "source": "InfoQ 中文",
-     "read": 20,
-     "count": 2,
-     "error": null
-    },
-    {
-     "source": "TechCrunch AI",
-     "read": 20,
-     "count": 5,
-     "error": null
-    },
-    {
-     "source": "TechCrunch Layoffs",
-     "read": 20,
-     "count": 0,
-     "error": null
-    },
-    {
-     "source": "The Verge AI",
-     "read": 10,
-     "count": 0,
-     "error": null
-    }
-   ]
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
   },
   {
-   "source": "links",
-   "status": "read",
-   "exit_code": 0,
-   "warnings": [],
-   "candidates": 1,
-   "failures": [],
-   "details": []
+   "handle": "GoogleDeepMind",
+   "url": "https://x.com/GoogleDeepMind",
+   "checked_at": "2026-11-15T02:21:24.866Z",
+   "displayed_name": "Google DeepMind",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 13",
+    "Nov 13",
+    "Nov 12",
+    "Nov 11",
+    "Nov 11"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
   },
   {
-   "source": "legacy",
+   "handle": "deepseek_ai",
+   "url": "https://x.com/deepseek_ai",
+   "checked_at": "2026-11-15T02:21:26.988Z",
+   "displayed_name": "DeepSeek",
    "status": "partial",
-   "exit_code": 0,
-   "warnings": [
-    "! VentureBeat AI 拉取失败：HTTP Error 308: Permanent Redirect",
-    "! Semafor Tech 拉取失败：<urlopen error timed out>",
-    "! The Register AI 拉取失败：not well-formed (invalid token): line 7, column 22",
-    "! 36 氪快讯 @ https://rsshub.rssforever.com 失败：The read operation timed out",
-    "! 36 氪快讯 @ https://hub.slarker.me 失败：The read operation timed out",
-    "! 财新 @ https://rsshub.rssforever.com 失败：The read operation timed out",
-    "! 华尔街见闻快讯 @ https://rsshub.rssforever.com 失败：The read operation timed out"
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 13",
+    "Oct 20",
+    "Oct 17",
+    "Oct 2",
+    "Sep 10"
    ],
-   "candidates": 23,
-   "failures": [],
-   "details": [
-    {
-     "source": "dinq",
-     "count": 7,
-     "error": null,
-     "seconds": 3.0
-    },
-    {
-     "source": "rss",
-     "count": 10,
-     "error": null,
-     "seconds": 46.8
-    },
-    {
-     "source": "rsshub",
-     "count": 4,
-     "error": null,
-     "seconds": 126.3
-    },
-    {
-     "source": "latepost",
-     "count": 1,
-     "error": null,
-     "seconds": 0.3
-    },
-    {
-     "source": "zhihu",
-     "count": 0,
-     "error": null,
-     "seconds": 0.3
-    },
-    {
-     "source": "hn",
-     "count": 2,
-     "error": null,
-     "seconds": 15.2
-    },
-    {
-     "source": "blind",
-     "count": 8,
-     "error": null,
-     "seconds": 103.7
-    },
-    {
-     "source": "buzz",
-     "count": 13,
-     "error": null,
-     "seconds": 18.5
-    }
-   ]
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "MistralAI",
+   "url": "https://x.com/MistralAI",
+   "checked_at": "2026-11-15T02:21:28.170Z",
+   "displayed_name": "Mistral AI",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Oct 29",
+    "Nov 11",
+    "Nov 7",
+    "Nov 5",
+    "Nov 5"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "cohere",
+   "url": "https://x.com/cohere",
+   "checked_at": "2026-11-15T02:21:34.883Z",
+   "displayed_name": "Cohere",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Oct 29",
+    "Nov 14",
+    "Nov 13",
+    "Nov 12",
+    "Nov 10"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "cursor_ai",
+   "url": "https://x.com/cursor_ai",
+   "checked_at": "2026-11-15T02:21:36.500Z",
+   "displayed_name": "Cursor",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Aug 14",
+    "Nov 14",
+    "Nov 13",
+    "Nov 11",
+    "Nov 11"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "MiniMax_AI",
+   "url": "https://x.com/MiniMax_AI",
+   "checked_at": "2026-11-15T02:21:39.619Z",
+   "displayed_name": "MiniMax (official)",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 10",
+    "Nov 12",
+    "Nov 11",
+    "Nov 11",
+    "Nov 11"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "MoonshotAI",
+   "url": "https://x.com/MoonshotAI",
+   "checked_at": "2026-11-15T02:21:41.836Z",
+   "displayed_name": "Chancellor Moonshot AI (ask.at.ai.moonshot)",
+   "status": "identity_mismatch",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Sep 13",
+    "Feb 13",
+    "Nov 4, 2025",
+    "Jan 26, 2025",
+    "Dec 14, 2024"
+   ],
+   "window_complete": false,
+   "restriction": "该主页为 Chancellor Moonshot AI，帖子涉及荷兰政治与足球，与 Kimi 实验室身份不符。",
+   "identity_evidence": "https://x.com/MoonshotAi/status/2022297152727265654",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "Kimi_Moonshot",
+   "url": "https://x.com/Kimi_Moonshot",
+   "checked_at": "2026-11-15T02:21:43.758Z",
+   "displayed_name": "Kimi.ai",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Oct 24",
+    "Nov 5",
+    "Oct 30",
+    "Oct 29",
+    "Oct 26"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "ZhipuAI",
+   "url": "https://x.com/ZhipuAI",
+   "checked_at": "2026-11-15T02:21:45.563Z",
+   "displayed_name": "ZhipuAI by BigModel",
+   "status": "identity_unverified",
+   "posts_read": 1,
+   "visible_date_labels": [
+    "Jan 5, 2025"
+   ],
+   "window_complete": false,
+   "restriction": "仅可见 2025 年 1 月的一条代币推广帖，不能确认智谱官方身份。",
+   "identity_evidence": "https://x.com/ZhipuAI/status/1875761216062439461",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "Zai_org",
+   "url": "https://x.com/Zai_org",
+   "checked_at": "2026-11-15T02:21:47.021Z",
+   "displayed_name": "Z.ai",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Oct 13",
+    "Oct 6",
+    "Sep 17",
+    "Sep 3",
+    "Sep 1"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "Alibaba_Qwen",
+   "url": "https://x.com/Alibaba_Qwen",
+   "checked_at": "2026-11-15T02:22:04.666Z",
+   "displayed_name": "Qwen",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 11",
+    "Nov 6",
+    "Oct 14",
+    "Oct 12",
+    "Oct 9"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "TencentHunyuan",
+   "url": "https://x.com/TencentHunyuan",
+   "checked_at": "2026-11-15T02:22:07.997Z",
+   "displayed_name": "Tencent Hy",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 4",
+    "Nov 13",
+    "Nov 11",
+    "Nov 11",
+    "Nov 6"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "StepFun_ai",
+   "url": "https://x.com/StepFun_ai",
+   "checked_at": "2026-11-15T02:22:13.070Z",
+   "displayed_name": "StepFun",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Sep 20",
+    "Nov 12",
+    "Nov 7",
+    "Oct 29",
+    "Oct 23"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "SpaceXSI",
+   "url": "https://x.com/SpaceXSI",
+   "checked_at": "2026-11-15T02:22:14.265Z",
+   "displayed_name": "SpaceX Super Intelligence",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 12",
+    "Oct 23",
+    "Oct 22",
+    "Oct 15",
+    "Oct 13"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "tianyi",
+   "url": "https://x.com/tianyi",
+   "checked_at": "2026-11-15T02:22:16.223Z",
+   "displayed_name": "Tianyi Cui",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 13",
+    "Nov 13",
+    "Nov 8",
+    "Nov 2",
+    "Nov 2"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "sama",
+   "url": "https://x.com/sama",
+   "checked_at": "2026-11-15T02:22:21.591Z",
+   "displayed_name": "Sam Altman",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 4",
+    "Oct 27",
+    "Oct 21",
+    "Oct 17",
+    "Oct 17"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "gdb",
+   "url": "https://x.com/gdb",
+   "checked_at": "2026-11-15T02:22:25.287Z",
+   "displayed_name": "Greg Brockman",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 14",
+    "Nov 13",
+    "Nov 11",
+    "Nov 10",
+    "Nov 9"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "demishassabis",
+   "url": "https://x.com/demishassabis",
+   "checked_at": "2026-11-15T02:22:31.185Z",
+   "displayed_name": "Demis Hassabis",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "1h",
+    "Nov 13",
+    "Nov 13",
+    "Nov 12",
+    "Nov 11"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "karpathy",
+   "url": "https://x.com/karpathy",
+   "checked_at": "2026-11-15T02:22:50.605Z",
+   "displayed_name": "Andrej Karpathy",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 8",
+    "Nov 2",
+    "Oct 12",
+    "Oct 2",
+    "Oct 2"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "jackclarkSF",
+   "url": "https://x.com/jackclarkSF",
+   "checked_at": "2026-11-15T02:22:51.641Z",
+   "displayed_name": "Jack Clark",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "May 28, 2021",
+    "4h",
+    "Nov 10",
+    "Nov 2",
+    "Nov 2"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "ylecun",
+   "url": "https://x.com/ylecun",
+   "checked_at": "2026-11-15T02:22:56.316Z",
+   "displayed_name": "Yann LeCun",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 30, 2024",
+    "Nov 8",
+    "Aug 16",
+    "Aug 1",
+    "Jul 24"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "DarioAmodei",
+   "url": "https://x.com/DarioAmodei",
+   "checked_at": "2026-11-15T02:22:59.474Z",
+   "displayed_name": "Dario Amodei",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Oct 21",
+    "Sep 24",
+    "Sep 12",
+    "Aug 16",
+    "Jun 11"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "mustafasuleyman",
+   "url": "https://x.com/mustafasuleyman",
+   "checked_at": "2026-11-15T02:23:01.728Z",
+   "displayed_name": "Mustafa Suleyman",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Oct 16",
+    "Nov 12",
+    "Nov 11",
+    "Nov 10",
+    "Nov 6"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "AravSrinivas",
+   "url": "https://x.com/AravSrinivas",
+   "checked_at": "2026-11-15T02:23:03.279Z",
+   "displayed_name": "Aravind Srinivas",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 6",
+    "2h",
+    "Nov 14",
+    "Nov 14",
+    "Nov 14"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "mntruell",
+   "url": "https://x.com/mntruell",
+   "checked_at": "2026-11-15T02:23:06.689Z",
+   "displayed_name": "Michael Truell",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 14",
+    "Nov 14",
+    "Nov 13",
+    "Nov 12",
+    "Nov 5"
+   ],
+   "window_complete": false,
+   "restriction": "公开页面展示有限时间线并提示登录；未验证目标窗口完整覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "elonmusk",
+   "url": "https://x.com/elonmusk",
+   "checked_at": "2026-11-15T02:25:06.242Z",
+   "displayed_name": "Elon Musk",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "1h",
+    "1h",
+    "1h",
+    "1h",
+    "2h"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "DrJimFan",
+   "url": "https://x.com/DrJimFan",
+   "checked_at": "2026-11-15T02:25:07.711Z",
+   "displayed_name": "Jim Fan",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "May 8",
+    "Nov 11",
+    "Nov 11",
+    "Nov 10",
+    "Nov 8"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "_akhaliq",
+   "url": "https://x.com/_akhaliq",
+   "checked_at": "2026-11-15T02:25:09.063Z",
+   "displayed_name": "AK",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Oct 11, 2024",
+    "Nov 14",
+    "Nov 14",
+    "Nov 13",
+    "Nov 12"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "_jasonwei",
+   "url": "https://x.com/_jasonwei",
+   "checked_at": "2026-11-15T02:25:10.645Z",
+   "displayed_name": "Jason Wei",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Jul 16, 2025",
+    "6h",
+    "Nov 13",
+    "Nov 13",
+    "Nov 12"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "arankomatsuzaki",
+   "url": "https://x.com/arankomatsuzaki",
+   "checked_at": "2026-11-15T02:25:12.001Z",
+   "displayed_name": "Aran Komatsuzaki",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 14",
+    "Nov 13",
+    "Nov 11",
+    "Nov 10",
+    "Nov 6"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "giffmana",
+   "url": "https://x.com/giffmana",
+   "checked_at": "2026-11-15T02:25:13.349Z",
+   "displayed_name": "Lucas Beyer (bl16)",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Sep 15, 2022",
+    "18h",
+    "Nov 14",
+    "Nov 14",
+    "Nov 13"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "goodside",
+   "url": "https://x.com/goodside",
+   "checked_at": "2026-11-15T02:25:20.394Z",
+   "displayed_name": "Riley Goodside",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 14",
+    "Oct 31",
+    "Oct 29",
+    "Oct 28",
+    "Oct 27"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "AndrewYNg",
+   "url": "https://x.com/AndrewYNg",
+   "checked_at": "2026-11-15T02:25:25.835Z",
+   "displayed_name": "Andrew Ng",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Aug 15",
+    "Nov 5",
+    "Sep 30",
+    "Sep 29",
+    "Sep 22"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "jiayq",
+   "url": "https://x.com/jiayq",
+   "checked_at": "2026-11-15T02:25:30.874Z",
+   "displayed_name": "Yangqing Jia",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 11",
+    "Nov 7",
+    "Oct 31",
+    "Oct 30",
+    "Oct 29"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "badlogicgames",
+   "url": "https://x.com/badlogicgames",
+   "checked_at": "2026-11-15T02:25:35.489Z",
+   "displayed_name": "Mario Zechner",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "May 31",
+    "5h",
+    "6h",
+    "6h",
+    "16h"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "rowancheung",
+   "url": "https://x.com/rowancheung",
+   "checked_at": "2026-11-15T02:25:38.872Z",
+   "displayed_name": "Rowan Cheung",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Aug 3",
+    "Nov 11",
+    "Nov 7",
+    "Oct 29",
+    "Oct 29"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "dotey",
+   "url": "https://x.com/dotey",
+   "checked_at": "2026-11-15T02:25:40.755Z",
+   "displayed_name": "宝玉",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Dec 4, 2025",
+    "3h",
+    "23h",
+    "Nov 14",
+    "Nov 14"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "soumithchintala",
+   "url": "https://x.com/soumithchintala",
+   "checked_at": "2026-11-15T02:25:50.333Z",
+   "displayed_name": "Soumith Chintala",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 14",
+    "Nov 13",
+    "Nov 10",
+    "Nov 7",
+    "Nov 6"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "Thom_Wolf",
+   "url": "https://x.com/Thom_Wolf",
+   "checked_at": "2026-11-15T02:25:51.200Z",
+   "displayed_name": "Thomas Wolf",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 6",
+    "10h",
+    "11h",
+    "Nov 14",
+    "Nov 13"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "ClementDelangue",
+   "url": "https://x.com/ClementDelangue",
+   "checked_at": "2026-11-15T02:25:52.419Z",
+   "displayed_name": "clem 🤗",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 13",
+    "Nov 13",
+    "Nov 12",
+    "Nov 11",
+    "Nov 7"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "miramurati",
+   "url": "https://x.com/miramurati",
+   "checked_at": "2026-11-15T02:25:53.529Z",
+   "displayed_name": "Mira Murati",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 14",
+    "Nov 13",
+    "Nov 6",
+    "Oct 16",
+    "Sep 15"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "JeffDean",
+   "url": "https://x.com/JeffDean",
+   "checked_at": "2026-11-15T02:25:54.435Z",
+   "displayed_name": "Jeff Dean",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Dec 3, 2018",
+    "Nov 6",
+    "Nov 4",
+    "Nov 2",
+    "Oct 27"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "sundarpichai",
+   "url": "https://x.com/sundarpichai",
+   "checked_at": "2026-11-15T02:25:55.688Z",
+   "displayed_name": "Sundar Pichai",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "4h",
+    "Nov 14",
+    "Nov 13",
+    "Nov 13",
+    "Nov 13"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "satyanadella",
+   "url": "https://x.com/satyanadella",
+   "checked_at": "2026-11-15T02:25:57.300Z",
+   "displayed_name": "Satya Nadella",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Oct 29",
+    "Oct 29",
+    "Oct 23",
+    "Oct 22",
+    "Oct 22"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "op7418",
+   "url": "https://x.com/op7418",
+   "checked_at": "2026-11-15T02:26:39.517Z",
+   "displayed_name": "歸藏(guizang.ai)",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 12",
+    "1h",
+    "2h",
+    "13h",
+    "20h"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "huybery",
+   "url": "https://x.com/huybery",
+   "checked_at": "2026-11-15T02:26:41.018Z",
+   "displayed_name": "Binyuan Hui",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Sep 11",
+    "Sep 8",
+    "Aug 3",
+    "Aug 2",
+    "Apr 22"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "karminski3",
+   "url": "https://x.com/karminski3",
+   "checked_at": "2026-11-15T02:26:42.369Z",
+   "displayed_name": "karminski-牙医",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "18h",
+    "Nov 12",
+    "Nov 12",
+    "Nov 12",
+    "Nov 11"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "teortaxesTex",
+   "url": "https://x.com/teortaxesTex",
+   "checked_at": "2026-11-15T02:26:45.388Z",
+   "displayed_name": "Teortaxes▶️ (DeepSeek 推特🐋铁粉 2023 – ∞)",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 13",
+    "40m",
+    "58m",
+    "1h",
+    "2h"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "amir",
+   "url": "https://x.com/amir",
+   "checked_at": "2026-11-15T02:26:46.437Z",
+   "displayed_name": "Amir Efrati",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 10",
+    "Nov 14",
+    "Nov 13",
+    "Nov 13",
+    "Nov 13"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "steph_palazzolo",
+   "url": "https://x.com/steph_palazzolo",
+   "checked_at": "2026-11-15T02:26:56.458Z",
+   "displayed_name": "Stephanie Palazzolo",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 13",
+    "Nov 12",
+    "Nov 12",
+    "Nov 12",
+    "Nov 11"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "kyliebytes",
+   "url": "https://x.com/kyliebytes",
+   "checked_at": "2026-11-15T02:26:59.450Z",
+   "displayed_name": "Kylie Robison",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 3",
+    "3h",
+    "9h",
+    "Nov 14",
+    "Nov 13"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "shiringhaffary",
+   "url": "https://x.com/shiringhaffary",
+   "checked_at": "2026-11-15T02:27:24.492Z",
+   "displayed_name": "Shirin Ghaffary",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 12",
+    "Nov 12",
+    "Nov 11",
+    "Nov 11",
+    "Nov 6"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "alexeheath",
+   "url": "https://x.com/alexeheath",
+   "checked_at": "2026-11-15T02:27:26.143Z",
+   "displayed_name": "Alex Heath",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "Nov 11",
+    "Nov 14",
+    "Nov 13",
+    "Nov 11",
+    "Nov 11"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
+  },
+  {
+   "handle": "ArfurGrok",
+   "url": "https://x.com/ArfurGrok",
+   "checked_at": "2026-11-15T02:27:29.398Z",
+   "displayed_name": "Arfur Grok",
+   "status": "partial",
+   "posts_read": 5,
+   "visible_date_labels": [
+    "5h",
+    "Nov 12",
+    "Nov 11",
+    "Nov 8",
+    "Nov 8"
+   ],
+   "window_complete": false,
+   "restriction": "公开主页仅展示五条样本并提示登录，不能确认完整时间线覆盖。",
+   "window_start": "2026-11-10T13:27:37+08:00",
+   "cutoff_reached": null,
+   "date_precision": "可见日期标签，含置顶；相对时间以 checked_at 为准。未从样本推断缺失帖子。"
   }
- ],
- "reviewed_at": "2026-11-06T11:48:51+08:00"
+ ]
 }

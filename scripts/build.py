@@ -89,7 +89,7 @@ def build():
             if a['group']!=group:continue
             watch+=f'<a class="watch-card" href="{a["url"]}" target="_blank" rel="noopener noreferrer"><span class="watch-initial">{h(a["name"][0])}</span><div><h3>{h(a["name"])}</h3><p class="handle">@{a["handle"]}</p><p>{h(a["focus"])}</p></div><span class="out-arrow">↗</span></a>'
         watch+='</div></section>'
-    watch+=f'<section class="coverage"><p class="eyebrow">LAST CHECK · {date_label}</p><h2>最近一次查阅</h2><p>{h(monitor["summary"])}</p><p>成功读取 {len(monitor["accounts_checked"])} 个账号，未能读取 {len(monitor["accounts_failed"])} 个。公开时间线可能只展示部分帖子；访问受限时会保留缺口，不把“没读到”写成“没有消息”。</p><p>新内容须附具体原帖或报道、公开日期、人物与团队，并经过来源核对。没有合格新消息时，全部记录保持不变，只更新巡检记录。</p><a href="about.html">了解编辑标准 →</a></section>'
+    watch+=f'<section class="coverage"><p class="eyebrow">LAST CHECK · {date_label}</p><h2>最近一次查阅</h2><p>{h(monitor["summary"])}</p><p>成功读取 {len(monitor["accounts_checked"])} 个账号，未纳入有效覆盖 {len(monitor["accounts_failed"])} 个。公开时间线可能只展示部分帖子；访问受限或身份未核实时会保留缺口，不把“没读到”写成“没有消息”。</p><p>新内容须附具体原帖或报道、公开日期、人物与团队，并经过来源核对。没有合格新消息时，全部记录保持不变，只更新巡检记录。</p><a href="about.html">了解编辑标准 →</a></section>'
     if monitor.get('source_coverage'):
         labels={'x':'X 观察名单','news':'媒体 RSS','links':'手动链接','legacy':'DINQ 与其他信息源'}
         states={'read':'已读取有限窗口','partial':'部分读取／存在缺口','failed':'读取失败','empty':'无待处理链接'}
