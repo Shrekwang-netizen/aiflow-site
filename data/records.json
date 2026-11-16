@@ -6087,5 +6087,157 @@
   "scope": "talent",
   "reviewed_at": "2026-11-05",
   "review_note": "已阅读 Eptura 官方公告，发布日期为 2026-11-02，仅精确到日。公告说明她此前领导公司 AI Center of Excellence，因此归为内部组织任命，不标记为外部入职。"
+ },
+ {
+  "id": "aimotion-20261115-mu-li",
+  "date": "2026-11-15",
+  "title": "机器之心：李沐出任 Aimotion 联合创始人兼 CTO",
+  "summary": "机器之心 11 月 15 日报道，李沐出任硅谷 AI 销售营销公司 Aimotion 联合创始人兼 CTO，主导下一代产业级 AI 技术体系建设，同时继续担任 Boson AI 联合创始人兼 CTO。报道未披露新职务生效日。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Aimotion",
+    "slug": "aimotion"
+   },
+   {
+    "name": "Boson AI",
+    "slug": "boson-ai"
+   }
+  ],
+  "person": "李沐（Mu Li）",
+  "tags": [
+   "高管",
+   "商业 Agent",
+   "双重任职"
+  ],
+  "sources": [
+   {
+    "name": "机器之心编辑部 · 凤凰号署名全文",
+    "url": "https://tech.ifeng.com/c/8y4HAROf71n"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-16",
+  "review_note": "已读机器之心编辑部在凤凰网发布的完整署名原文，页面标注 2026-11-15 10:33:57。机器之心本站文章当前只返回登录页，因此引用作者分发全文，按已读媒体报道收录；保留 Boson AI 职务，不写成离职跳槽。"
+ },
+ {
+  "id": "nvidia-20261116-darrell-dai",
+  "date": "2026-11-16",
+  "title": "IT之家：英伟达机器人学习工程师戴士钦宣布离职",
+  "summary": "IT之家 11 月 16 日报道，英伟达机器人学习工程师戴士钦（Darrell Dai）前一日在 X 宣布将离开公司。他称黄仁勋离任缺少充分说明，使他对公司方向与工程师文化感到不确定。实际离任日及下一站未披露。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "NVIDIA",
+    "slug": "nvidia"
+   }
+  ],
+  "person": "戴士钦（Darrell Dai）",
+  "tags": [
+   "机器人",
+   "研究工程师",
+   "离职"
+  ],
+  "sources": [
+   {
+    "name": "IT之家 · 潞源",
+    "url": "https://m.ithome.com/html/1027541.htm"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-16",
+  "review_note": "已读 IT之家 2026-11-16 10:36 完整报道。报道引述本人前一日 X 发文，但本轮尚未直接阅读具体原帖，不升为本人公开核验；记录日期沿用已读报道日期。只描述其自述，不推断调查结论或更多员工动向。"
+ },
+ {
+  "id": "giant-network-20261116-ai-lab-reorg",
+  "date": "2026-11-16",
+  "title": "巨人网络将 AI 实验室团队整合至技术中台",
+  "summary": "新京报 11 月 16 日报道，巨人网络已调整 AI 实验室组织架构，将相关团队和技术能力整合至公司技术中台。公司称调整旨在让 AI 技术与游戏业务场景进一步结合；报道未披露人数、负责人或具体生效日。",
+  "type": "reorg",
+  "companies": [
+   {
+    "name": "巨人网络",
+    "slug": "giant-network"
+   }
+  ],
+  "person": "巨人网络 AI 实验室团队",
+  "tags": [
+   "组织调整",
+   "AI 游戏",
+   "技术中台"
+  ],
+  "sources": [
+   {
+    "name": "新京报贝壳财经 · 韦英姿",
+    "url": "https://www.bjnews.com.cn/detail/1794797245129603.html"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-16",
+  "review_note": "已读新京报记者韦英姿 2026-11-16 11:18 的原报道全文，记者获悉团队整合并引用公司说明。未把整合等同于裁员或推断研究停止。"
+ },
+ {
+  "id": "axe-compute-20261113-guang-yang",
+  "date": "2026-11-13",
+  "title": "AI 算力公司 Axe Compute 任命 Guang Yang 为独立董事",
+  "summary": "Axe Compute 11 月 13 日公布，Guang Yang 已于 9 日出任独立董事及审计委员会主席。他此前任 BrightSphere 董事长兼 CEO，现任投资机构 FTL Investments 管理合伙人。公司提供 GPU 算力及 AI 数据中心建设服务。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Axe Compute",
+    "slug": "axe-compute"
+   }
+  ],
+  "person": "Guang Yang",
+  "tags": [
+   "AI 基础设施",
+   "董事会"
+  ],
+  "sources": [
+   {
+    "name": "Axe Compute 官方任命公告",
+    "url": "https://investors.axecompute.com/node/16576/pdf"
+   },
+   {
+    "name": "SEC · Axe Compute Form 8-K，Item 5.02",
+    "url": "https://www.sec.gov/Archives/edgar/data/1446159/000117184326007416/f8k_111326.htm"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-16",
+  "review_note": "已直接读取公司 11 月 13 日公告 PDF 和 SEC 文件，任命于 11 月 9 日生效；记录日期采用公开公告日，不将其写为本日入职。"
+ },
+ {
+  "id": "scale-ai-20261113-cesar-yazbeck",
+  "date": "2026-11-13",
+  "title": "Cesar Yazbeck 宣布加入 Scale AI，投入医疗与生命科学业务",
+  "summary": "Cesar Yazbeck 11 月 13 日在 Scale AI 官网撰文宣布加入公司，推动 AI 在医疗与生命科学中的实际应用。他表示自己受过医生训练，过去十年一直与相关机构合作，现将参与把 AI 从试点带入日常工作。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Scale AI",
+    "slug": "scale-ai"
+   }
+  ],
+  "person": "Cesar Yazbeck",
+  "tags": [
+   "医疗 AI",
+   "生命科学",
+   "人才流动"
+  ],
+  "sources": [
+   {
+    "name": "Scale AI · Cesar Yazbeck 本人署名公告",
+    "url": "https://scale.com/blog/why-i-joined-cesar-yazbeck"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-16",
+  "review_note": "已直接阅读本人在 Scale 官网撰写的 Why I Joined Scale: From Promise to Practice，页面明确 2026-11-13。不依据聚合或未读取的 X 原帖补写新职级、前雇主、具体入职日。"
  }
 ]
