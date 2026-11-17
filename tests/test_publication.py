@@ -35,7 +35,7 @@ class PublicationTests(unittest.TestCase):
     def test_generated_local_links(self):
         missing=[]
         for p in ROOT.rglob('*.html'):
-            if '.git' in p.parts:continue
+            if '.git' in p.parts or '.private-inbox' in p.parts:continue
             parser=Links();parser.feed(p.read_text())
             for url in parser.links:
                 u=urlsplit(url)

@@ -6239,5 +6239,196 @@
   "scope": "talent",
   "reviewed_at": "2026-11-16",
   "review_note": "已直接阅读本人在 Scale 官网撰写的 Why I Joined Scale: From Promise to Practice，页面明确 2026-11-13。不依据聚合或未读取的 X 原帖补写新职级、前雇主、具体入职日。"
+ },
+ {
+  "id": "tencent-20261117-sun-xing",
+  "date": "2026-11-17",
+  "title": "雷峰网：腾讯优图实验室研究总监孙星离职",
+  "summary": "雷峰网 11 月 17 日报道，腾讯优图实验室研究总监、专家研究员孙星已离职。他于 2016 年加入优图，近年研究涵盖多模态大模型、Agent 与 RAG。报道未披露实际离任日期及下一站。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "腾讯",
+    "slug": "tencent"
+   }
+  ],
+  "person": "孙星",
+  "tags": [
+   "研究人员",
+   "多模态",
+   "Agent"
+  ],
+  "sources": [
+   {
+    "name": "雷峰网 · 胡敏独家报道",
+    "url": "https://www.leiphone.com/category/CorporateServices/ndF7IsEHBffZkbzy.html"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-17",
+  "review_note": "已直接读取雷峰网完整 HTML 原文，作者胡敏，页面公开时间为 2026-11-17 16:28。web 读取两次失败后通过普通 HTTPS 只读请求成功，未绕过登录。记录日期采用报道日，不推断离职原因或去向。"
+ },
+ {
+  "id": "huling-20261117-liu-yanxiang-garin",
+  "date": "2026-11-17",
+  "title": "刘燕翔与前飞书高管 Garin 创办乎零，开发 AI 戒指",
+  "summary": "新浪科技 11 月 17 日报道，前美团门票度假和交通事业部总经理刘燕翔与前飞书国际化运营负责人 Garin 创办乎灵科技，品牌名为乎零。刘燕翔任 CEO，Garin 负责产品、语音和算法方向，首款产品为 AI 语音戒指。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "乎零（乎灵科技）",
+    "slug": "huling"
+   },
+   {
+    "name": "美团",
+    "slug": "meituan"
+   },
+   {
+    "name": "字节跳动",
+    "slug": "bytedance"
+   }
+  ],
+  "person": "刘燕翔、Garin",
+  "tags": [
+   "创业",
+   "AI 硬件",
+   "可穿戴设备"
+  ],
+  "sources": [
+   {
+    "name": "新浪科技 · 文猛独家报道",
+    "url": "https://finance.sina.com.cn/tob/2026-11-17/doc-iniyyzyi1817770.shtml"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-17",
+  "review_note": "已打开并阅读新浪科技文猛 2026-11-17 08:31 的原始独家全文；报道明确称刘燕翔本人向记者确认离职创业，岗位分工按报道表述。报道日不作为离职或公司成立日，不将未来内测、预售计划视为已经完成。"
+ },
+ {
+  "id": "shlab-20261117-scientific-multimodal-hiring",
+  "date": "2026-11-17",
+  "title": "上海人工智能实验室招募科学多模态大模型研究与算法人才",
+  "summary": "上海人工智能实验室 11 月 17 日发布科学多模态大模型青年研究员／算法工程师岗位，工作地点为上海，属于大模型中心全职岗位。职责包括科学训练数据建设、指令数据合成与评测集成，要求硕士及以上学历；未列招聘人数或截止日。",
+  "type": "hiring",
+  "companies": [
+   {
+    "name": "上海人工智能实验室",
+    "slug": "shlab"
+   }
+  ],
+  "person": "大模型中心科学多模态团队",
+  "tags": [
+   "招聘",
+   "AI for Science",
+   "多模态"
+  ],
+  "sources": [
+   {
+    "name": "上海人工智能实验室 · 官方岗位详情",
+    "url": "https://www.shlab.org.cn/joinus/detail/7678626664427686153?mode=social"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-17",
+  "review_note": "已读官方岗位详情全文，明确日期 2026-11-17、上海、全职、大模型中心及硕士以上要求。该岗位不同于 11 月 13 日已收录的材料及地球科学智能体岗位，不推断团队扩编规模。"
+ },
+ {
+  "id": "amd-20261116-world-labs-team",
+  "date": "2026-11-16",
+  "title": "AMD 完成 World Labs 收购，李飞飞出任首席科学家",
+  "summary": "AMD 11 月 16 日宣布完成收购 World Labs，公司文件显示交易于 13 日交割。李飞飞出任执行副总裁兼首席科学家，直接向苏姿丰汇报；World Labs 团队将继续基础模型研究，并与 AMD 工程师合作开发未来 AI 基础设施。",
+  "type": "reorg",
+  "companies": [
+   {
+    "name": "AMD",
+    "slug": "amd"
+   },
+   {
+    "name": "World Labs",
+    "slug": "world-labs"
+   }
+  ],
+  "person": "李飞飞（Fei-Fei Li）与 World Labs 团队",
+  "tags": [
+   "团队整合",
+   "收购",
+   "AI 研究"
+  ],
+  "sources": [
+   {
+    "name": "AMD 官方交割公告",
+    "url": "https://ir.amd.com/news-events/press-releases/detail/1306/amd-completes-acquisition-of-world-labs"
+   },
+   {
+    "name": "AMD Form 8-K/A · 交割日期",
+    "url": "https://ir.amd.com/financial-information/sec-filings/content/0001193125-26-462340/d105780d8ka.htm"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-17",
+  "review_note": "已直接阅读 AMD 11 月 16 日公告及同日 8-K/A。公告明确李飞飞职衔与汇报线；文件明确 11 月 13 日交割，不把交割日和公告日混同。"
+ },
+ {
+  "id": "fti-consulting-20261116-farid-zahran",
+  "date": "2026-11-16",
+  "title": "Farid Zahran 加入 FTI，负责中东 AI 与数字化转型",
+  "summary": "FTI Consulting 11 月 16 日宣布，Farid Zahran 加入中东转型业务，任高级董事总经理，负责 AI 与数字化转型。他将服务政府及能源、通信、金融等行业客户，推进 AI 战略、运营模式和落地项目；公告未披露实际入职日。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "FTI Consulting",
+    "slug": "fti-consulting"
+   }
+  ],
+  "person": "Farid Zahran",
+  "tags": [
+   "AI 转型",
+   "中东",
+   "高管"
+  ],
+  "sources": [
+   {
+    "name": "FTI Consulting 官方任命公告",
+    "url": "https://www.fticonsulting.com/about/newsroom/press-releases/fti-consulting-appoints-farid-zahran-as-senior-managing-director-to-lead-ai-and-digital-transformati"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-17",
+  "review_note": "已直接打开 FTI 官网并阅读 2026-11-16 Dubai 署名公告全文；昨日投资者关系页受限，本轮公司官网正文可读。不从旧职位泛称推断前雇主。"
+ },
+ {
+  "id": "priori-20261117-rohit-talwar",
+  "date": "2026-11-17",
+  "title": "Priori 任命 Rohit Talwar 为 AI 原生服务副总裁",
+  "summary": "Priori 11 月 17 日任命 Rohit Talwar 为 AI 原生服务副总裁，负责与 LegalQuants 联合推出的律师 AI 培训项目及相关法律服务。他此前任 AI 律所 Eudia Counsel 的合规官及主管律师，具体履新日未披露。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Priori",
+    "slug": "priori"
+   }
+  ],
+  "person": "Rohit Talwar",
+  "tags": [
+   "法律 AI",
+   "高管",
+   "人才培养"
+  ],
+  "sources": [
+   {
+    "name": "Priori 官方公告 · GlobeNewswire",
+    "url": "https://www.globenewswire.com/news-release/2026/11/17/3404692/0/en/priori-expands-its-marketplace-to-become-the-ai-native-flex-legal-talent-company.html"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "source_published_at": "2026-11-17T14:00:00Z",
+  "reviewed_at": "2026-11-17",
+  "review_note": "已直接阅读 Priori 在 GlobeNewswire 发布的公司公告全文。页面标注 2026-11-17 09:00 ET，折合北京时间 22:00，早于本轮核查。未将预计 2027 年初开始的培训误作已开班。"
  }
 ]
