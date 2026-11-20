@@ -4,7 +4,7 @@
 
 ## 位置与定时
 
-项目入口 `/Users/wz/Desktop/超级周报服务器/aiflow-site` 是指向 `/Users/wz/aiflow-site` 的符号链接。后台任务使用后者，避开 macOS 对 Desktop 的后台访问限制。此目录通过 GitHub API 发布，目前没有 `.git`，不要误用旧架构，也不要执行假定存在工作树的 reset/checkout。
+项目入口 `/Users/wz/Desktop/超级周报服务器/aiflow-site` 是指向 `/Users/wz/aiflow-site` 的符号链接。后台任务使用后者，避开 macOS 对 Desktop 的后台访问限制。发布走 `scripts/publish_git.py`（git over SSH，克隆 gh-pages 到 `.private-inbox/publish-work` 再 push），不需要 GitHub token；`scripts/publish.py`（API 方式）保留作备用，需要 gh 已登录。
 
 `~/Library/LaunchAgents/com.aiflow.site.plist` 调用 `scripts/daily.sh` → `scripts/daily.py`。系统日历设置五个工作日 09:30，脚本按 Asia/Shanghai 再检查周末，并持有进程锁。Mac 系统时区应为 Asia/Shanghai；电脑需开机、登录并保持唤醒。X 需要用户已经登录的 Chrome 和允许 Apple 事件 JavaScript。当前试运行不依赖 Codex CLI 登录。
 
@@ -26,6 +26,18 @@
 
 运行 `python3 scripts/build.py`、`python3 -m unittest discover -s tests`、`node --check assets/app.js`、`node --check assets/theme.js`。任何检查失败都停止发布。
 
-发布前核对远端 gh-pages SHA。`scripts/publish.py --expected-head <SHA> --verify` 使用当前远端树，保留其他远端文件，非强制快进；远端变化时停止，先同步。`.private-inbox/published-head` 保存上次发布 SHA，定时任务遇到不一致时停止，避免覆盖他人的更新。私有候选、原帖全文、日志和凭据不得发布。
+发布前先 `git fetch` 同步远端：`scripts/publish_git.py` 会自行 fetch 并 reset 到 `origin/gh-pages`，rsync 时删除远端多余的生成页。若发现远端比本地新（比如别人先发过），**先把远端整棵树同步回本地再叠加新记录**，不要直接覆盖——2026-11-19 就发生过一次，本地差点用旧数据覆盖远端 11-17 的成果。`.private-inbox/published-head` 保存上次发布 SHA，定时任务遇到不一致时停止，避免覆盖他人的更新。私有候选、原帖全文、日志和凭据不得发布。
 
 发布完成需确认 GitHub Pages 构建对应提交成功，并比较线上首页、观察名单与本地内容。人工新增时还需打开新文章核对。只有实际上线的内容才能报告“已更新”。通知用户以有意义的新消息、更正或需要处理的运行失败为主。
+
+## 写法（对齐远端既有规范）
+
+远端 gh-pages 上的记录由编辑逐条手写，格式比脚本生成物更紧。新增记录按下面这套写，`python3 scripts/check_style.py` 可列出不符项（存量历史记录不计）：
+
+- **标题 ≤ 32 字**：动作 + 主体 + 最关键的变化。单一媒体独家可在标题前加「媒体名：」，一般不加。
+- **摘要 60–140 字**：只写原文明确说的内容；数字、时间、金额写清楚；不确定的用「据报」「称」；不补薪酬、职级、离职原因。
+- **tags 2–3 个方向词**：如「研究人员 / 推理 / 数据标注」「收购 / 扩散模型 / 语言模型」。不要拿公司名当标签充数。
+- **person 只写姓名或团队名**：不带「A → B 某某职位」这类拼接串。
+- **sources 命名**：媒体写「媒体 · 记者/栏目」，官方写「机构 · 官方公告」，聚合站写「站点（聚合）」。
+- **review_note 写清三件事**：读了哪些原文（含页面时间）、抓取路径（直读 X 帖 / 官方稿 / 只读 HTTPS 请求）、以及**明确不推断什么**。
+- **monitor.summary 用叙述**：本轮几点核实、新增几条、哪些源不可读、保留了什么缺口，而不是只贴采集器统计。
