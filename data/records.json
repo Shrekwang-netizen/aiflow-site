@@ -6430,5 +6430,266 @@
   "source_published_at": "2026-11-17T14:00:00Z",
   "reviewed_at": "2026-11-17",
   "review_note": "已直接阅读 Priori 在 GlobeNewswire 发布的公司公告全文。页面标注 2026-11-17 09:00 ET，折合北京时间 22:00，早于本轮核查。未将预计 2027 年初开始的培训误作已开班。"
+ },
+ {
+  "id": "nvidia-20261118-huang-return",
+  "date": "2026-11-18",
+  "title": "黄仁勋称愿重返英伟达任 CEO，董事会明确表示不再考虑",
+  "summary": "黄仁勋在辞职后首次公开表态，称如果董事会认为回归符合公司、员工和股东利益，他愿意重新担任英伟达 CEO；但英伟达董事会主席在 11 月 17 日的财报电话会议上表示，董事会一致接受了辞呈、不打算恢复其 CEO 职务。11 月 18 日《纽约时报》DealBook 峰会上，马斯克公开为他辩护（称其无可替代、并称愿意雇用他），奥尔特曼表示对处境同情，Anduril 创始人拉奇称「中国希望他离开，所以我希望他留下」，纳德拉则表示如何处置属于董事会职责，并称「创始人独一无二但不是神」。此前 11 月 14 日有英伟达员工发起联名请愿要求让黄仁勋回归。",
+  "type": "governance",
+  "companies": [
+   {
+    "name": "NVIDIA",
+    "slug": "nvidia"
+   }
+  ],
+  "person": "黄仁勋（Jensen Huang）",
+  "tags": [
+   "CEO更替",
+   "NVIDIA",
+   "治理",
+   "行业反应"
+  ],
+  "sources": [
+   {
+    "name": "IT之家（DealBook 峰会报道）",
+    "url": "https://www.ithome.com/1/029/174.htm"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-19",
+  "review_note": "已读 IT之家 11 月 19 日报道：董事会拒绝回归的说法来自其引述的 11 月 17 日财报电话会议表态，各家高管观点按报道转述并标注说话人；黄仁勋本人表态未见一手原文，摘要写成「称愿意」。"
+ },
+ {
+  "id": "anthropic-20261119-ipo-pricing",
+  "date": "2026-11-19",
+  "title": "Anthropic IPO 定价每股 83 美元，合计募资逾 944 亿美元成全球最大 IPO",
+  "summary": "据彭博社报道，Anthropic 将 IPO 发行价定为每股 83 美元，高于此前 70 至 78 美元的区间，完全稀释估值约 1.5 万亿美元。按原定发行 8.0135 亿股加七位联合创始人出售的 2364.86 万股计算，公开发行约募资 684 亿美元，另加 260 亿美元私募配售，合计超过 944 亿美元，超过 SpaceX 今年 6 月 750 亿美元基础发行（含超额配售 862 亿美元）成为史上最大 IPO。此次认购需求约为发行规模的 7 倍；英伟达计划在私募配售中认购 100 亿美元。高盛与摩根士丹利为主承销商，股票 11 月 19 日在纳斯达克挂牌，代码 ANT。",
+  "type": "ipo",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Anthropic",
+  "tags": [
+   "IPO",
+   "估值",
+   "Anthropic",
+   "纳斯达克"
+  ],
+  "sources": [
+   {
+    "name": "IT之家（引彭博社）",
+    "url": "https://www.ithome.com/1/029/132.htm"
+   },
+   {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-19",
+  "review_note": "已读 IT之家 11 月 19 日报道（引彭博社）与 TechCrunch 同日报道：定价、股数、募资额与估值按媒体转述；合计募资由公开发行与私募配售相加，摘要拆开写明两部分。"
+ },
+ {
+  "id": "mercor-20261118-jason-wei",
+  "date": "2026-11-18",
+  "title": "「思维链」一作 Jason Wei 离开 Meta，出任 Mercor 首席科学家",
+  "summary": "Jason Wei 11 月 18 日在 X 宣布，在 Meta 的 TBD Lab 工作一年后加入数据初创公司 Mercor 担任首席科学家，称「随着越来越多公司训练模型，数据将塑造下一个前沿」。Mercor 联合创始人兼 CEO Brendan Foody 同日发文欢迎，称 Jason 将帮助搭建研究团队、统管数据与评测工作；LoRA 论文第一作者 Edward Hu 负责模型训练。Jason Wei 是 Chain-of-Thought 与 FLAN 的第一作者，曾在 Google Brain、OpenAI 任职，参与 o1 与 Deep Research 等工作。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Mercor",
+    "slug": "mercor"
+   },
+   {
+    "name": "Meta",
+    "slug": "meta"
+   }
+  ],
+  "person": "Jason Wei",
+  "tags": [
+   "研究员",
+   "思维链",
+   "Mercor",
+   "Meta"
+  ],
+  "sources": [
+   {
+    "name": "X · @_jasonwei",
+    "url": "https://x.com/_jasonwei/status/2122826605362127094"
+   },
+   {
+    "name": "量子位",
+    "url": "https://www.qbitai.com/2026/11/510811.html"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-19",
+  "review_note": "已在 X 直读 @_jasonwei 原帖（2026-11-18 06:53 北京时间）确认「加入 Mercor 任首席科学家」为本人表述，并读量子位 11 月 18 日报道补齐 Mercor 分工与其履历；Edward Hu 职责来自量子位转述。"
+ },
+ {
+  "id": "valsai-20261118-alex-peng",
+  "date": "2026-11-18",
+  "title": "xAI 后训练工程师 Alex Peng 加入 ValsAI 做数据与评测",
+  "summary": "Alex Peng 11 月 18 日在 X 表示已加入 ValsAI，帮助公司把数据转化为评测（evals）；他称自己在 xAI 做过合成数据管线与后训练，并分析了「愿意把数据卖给实验室的公司」与「不愿意的公司」两类客户。他未说明具体职级。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "ValsAI",
+    "slug": "valsai"
+   },
+   {
+    "name": "xAI",
+    "slug": "xai"
+   }
+  ],
+  "person": "Alex Peng",
+  "tags": [
+   "加入",
+   "评测",
+   "xAI"
+  ],
+  "sources": [
+   {
+    "name": "X · @alexjpeng",
+    "url": "https://x.com/alexjpeng/status/2123102772681990315"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-19",
+  "review_note": "已在 X 直读 @alexjpeng 原帖（2026-11-18 09:33 北京时间）确认加入 ValsAI 与其在 xAI 的合成数据/后训练经历；职级未披露。"
+ },
+ {
+  "id": "greptile-20261119-rohan-varma",
+  "date": "2026-11-19",
+  "title": "OpenAI Codex 产品负责人 Rohan Varma 加入 Greptile 任产品负责人",
+  "summary": "Rohan Varma 11 月 19 日在 X 表示已加入 Greptile 担任 Head of Product；他此前在 OpenAI 负责 Codex 等产品工作，帖中表示相信「软件创作可以被自动化」，并把下一步方向描述为「软件工作室」（Software Studio）而不是流水线式的软件工厂。他未说明在 Greptile 的具体分工范围。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Greptile",
+    "slug": "greptile"
+   },
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   }
+  ],
+  "person": "Rohan Varma",
+  "tags": [
+   "加入",
+   "产品",
+   "代码智能",
+   "Greptile"
+  ],
+  "sources": [
+   {
+    "name": "X · @TheRohanVarma",
+    "url": "https://x.com/TheRohanVarma/status/2123112987523502279"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-19",
+  "review_note": "已在 X 直读 @TheRohanVarma 原帖（2026-11-19 01:55 北京时间）确认加入 Greptile 任 Head of Product；「此前负责 Codex」取自聚合站与公开履历，原帖未复述，摘要保留但未写具体职级。"
+ },
+ {
+  "id": "microsoft-20261116-veo",
+  "date": "2026-11-16",
+  "title": "微软约 6 万人符合自愿离职计划，纳德拉称不是简单用 AI 换人",
+  "summary": "微软 CEO 纳德拉在 11 月 16 日播出的 The Pragmatic Engineer 播客中，回应了公司面向约 6 万名员工的自愿离职计划：他没有直接承认这是「用 AI 提效再裁员」，而是表示 AI 正在改变软件开发方式，团队规模、流程与岗位职责都会变化，公司希望员工流向增长更快的岗位（如系统工程师、基础设施、AI 训练研究与 FDE）。微软 10 月 26 日公布该计划，面向美国、加拿大、英国和印度部分团队 70 级及以下员工；微软向《财富》确认约 6 万人符合条件，并预计实际接受者不足 5%（约 3000 人以内）。",
+  "type": "layoff",
+  "companies": [
+   {
+    "name": "微软",
+    "slug": "microsoft"
+   }
+  ],
+  "person": "Satya Nadella（微软 CEO）",
+  "tags": [
+   "裁员",
+   "自愿离职",
+   "微软",
+   "AI 转型"
+  ],
+  "sources": [
+   {
+    "name": "IT之家",
+    "url": "https://www.ithome.com/1/029/147.htm"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-19",
+  "review_note": "已读 IT之家 11 月 19 日报道（转述 The Pragmatic Engineer 播客与《财富》）：6 万人为「符合条件人数」而非拟裁人数，摘要明确区分；纳德拉表述按报道转述，不写成公司确认裁员。"
+ },
+ {
+  "id": "anthropic-20261118-kristina-schake",
+  "date": "2026-11-18",
+  "title": "传 Kristina Schake 出任 Anthropic 首席传播官",
+  "summary": "据记者 Reed Albergotti 在 X 上的消息，Kristina Schake 已加入 Anthropic，出任高级执行副总裁兼首席传播官。目前只找到记者转述，未见 Anthropic 官方公告或本人发帖。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Kristina Schake",
+  "tags": [
+   "小道消息",
+   "传播",
+   "Anthropic"
+  ],
+  "sources": [
+   {
+    "name": "X · @ReedAlbergotti（记者）",
+    "url": "https://x.com/ReedAlbergotti/status/2122842989387223151"
+   }
+  ],
+  "status": "lead",
+  "scope": "talent",
+  "reviewed_at": null,
+  "review_note": "仅记者转述，未见官方公告或本人发帖；按未证实线索收录。"
+ },
+ {
+  "id": "anthropic-20261118-ekin-akyurek",
+  "date": "2026-11-18",
+  "title": "传 OpenAI 的 Ekin Akyürek 离职加入 Anthropic",
+  "summary": "匿名爆料账号 @ArfurGrok 称，OpenAI 的成员 Ekin Akyürek 已离开 OpenAI 加入 Anthropic。目前只有该账号的转述，本人时间线未见声明，两家公司也未回应。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   },
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   }
+  ],
+  "person": "Ekin Akyürek",
+  "tags": [
+   "小道消息",
+   "Anthropic",
+   "OpenAI"
+  ],
+  "sources": [
+   {
+    "name": "X · @ArfurGrok（匿名爆料号）",
+    "url": "https://x.com/ArfurGrok/status/2123164438564053116"
+   }
+  ],
+  "status": "lead",
+  "scope": "talent",
+  "reviewed_at": null,
+  "review_note": "仅匿名爆料账号转述，无法核实；按未证实线索收录。"
  }
 ]
