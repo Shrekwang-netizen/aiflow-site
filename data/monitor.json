@@ -1,9 +1,8 @@
 {
- "checked_at": "2026-11-17T23:38:50+08:00",
- "mode": "scheduled-reviewed-scan",
- "coverage": "partial",
- "accounts_checked": [],
- "accounts_failed": [
+ "checked_at": "2026-11-20T10:17:08+08:00",
+ "mode": "daily-scan",
+ "coverage": "visible-window",
+ "accounts_checked": [
   "OpenAI",
   "AnthropicAI",
   "GoogleDeepMind",
@@ -59,10 +58,11 @@
   "alexeheath",
   "ArfurGrok"
  ],
- "posts_read": 0,
- "new_records": 6,
- "reviewed_records": 6,
- "summary": "11 月 17 日核实并新增 6 条人才与组织消息：AMD 完成 World Labs 团队整合及李飞飞任命、腾讯优图孙星离职、刘燕翔与 Garin 创办乎零、上海 AI 实验室科学多模态招聘，以及 FTI 和 Priori 的 AI 业务负责人任命。54 个启用 X 主页仍全部返回 HTTP 403，本轮未读取任何帖子；保留 11 月 15 日逐账号成功读取时间，未声称补齐时间线。10 个主媒体 RSS 可读，扩展 RSS 及一个 Blind 分区存在访问缺口。已回到官方公告或具名原报道核验；匿名与聚合线索未自动发布。",
+ "accounts_failed": [],
+ "posts_read": 127,
+ "new_records": 0,
+ "reviewed_records": 0,
+ "summary": "自动巡检 54 个账号：成功读取 54 个，失败 0 个；共读到 127 条可见帖子（11-15 23:38 至 11-20 10:17，每号最多 40 条），其中 20 条命中人才/组织关键词，已写入本地候选待复核。公开时间线可能只展示部分帖子，不代表完整抓取。",
  "schedule": "周一至周五 09:30 · 北京时间",
  "automation_enabled": true,
  "automation_id": "aiflow",

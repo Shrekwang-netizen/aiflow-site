@@ -6691,5 +6691,191 @@
   "scope": "talent",
   "reviewed_at": null,
   "review_note": "仅匿名爆料账号转述，无法核实；按未证实线索收录。"
+ },
+ {
+  "id": "anthropic-20261119-ipo-debut",
+  "date": "2026-11-20",
+  "title": "Anthropic 上市首日收涨 17%，市值约 1.27 万亿美元",
+  "summary": "Anthropic 当地时间 11 月 19 日在纳斯达克挂牌，开盘报 111.5 美元、较 83 美元发行价高约 34%，盘中一度突破 115 美元，最终收于 97.17 美元、涨 17.07%，市值约 1.27 万亿美元。按 IPO 募资额计，本次公开发行募资 813 亿美元，超过 SpaceX 今年 6 月的 750 亿美元，成为有史以来最大规模 IPO；SpaceX 行使超额配售权后合计 857 亿美元，若把 Anthropic 额外 260 亿美元私募配售计入，其总融资约 1073 亿美元。其每股收益为 -59.62 美元，仍处高投入阶段；截至 10 月底年化营收已突破 810 亿美元。",
+  "type": "ipo",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Anthropic",
+  "tags": [
+   "IPO",
+   "上市首日",
+   "估值",
+   "Anthropic"
+  ],
+  "sources": [
+   {
+    "name": "IT之家",
+    "url": "https://www.ithome.com/1/029/748.htm"
+   },
+   {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-20",
+  "review_note": "已读 IT之家 11 月 20 日报道与 TechCrunch 同日报道：开盘/收盘价、涨幅、市值与募资额按报道转述；「813 亿」为最终公开发行募资额，与本条 11-19 定价时按股数估算的 684 亿不同，以最终披露为准，摘要只写最终数。"
+ },
+ {
+  "id": "nvidia-20261118-allhands",
+  "date": "2026-11-18",
+  "title": "英伟达首次无黄仁勋全员大会：提前加薪发股，员工最关心薪酬与董事会透明度",
+  "summary": "据 WIRED 获得的会议内容，英伟达 11 月 18 日召开黄仁勋离职后首次全员大会，临时 CEO Colette Kress 在会上宣布 12 月提前给员工加薪并增加股权激励，比原定计划提前数月。会前员工共提交约 700 个问题，出现频率最高的不是产品路线而是薪酬，紧随其后的是要求董事会提高透明度。会上还出现外部声音：亚马逊创始人贝索斯提醒董事会不要轻易从外部寻找 CEO，投资人 Bill Ackman 质疑董事会在这次离职事件中的决策程序。英伟达目前有近 4.9 万名员工。",
+  "type": "governance",
+  "companies": [
+   {
+    "name": "NVIDIA",
+    "slug": "nvidia"
+   }
+  ],
+  "person": "Colette Kress（英伟达临时 CEO）",
+  "tags": [
+   "治理",
+   "薪酬",
+   "员工",
+   "NVIDIA"
+  ],
+  "sources": [
+   {
+    "name": "InfoQ 中文（引 WIRED）",
+    "url": "https://www.infoq.cn/article/aYOP1HZW5bbdhSmzSuaP"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-20",
+  "review_note": "已读 InfoQ 11 月 19 日报道（其转述 WIRED 获得的会议发言）：加薪与股权安排、700 个问题、员工关切排序均按报道；贝索斯与 Ackman 的说法来自报道转述，摘要标注说话人，未当作英伟达官方表态。"
+ },
+ {
+  "id": "nvidia-20261119-inception",
+  "date": "2026-11-19",
+  "title": "英伟达据报就收购扩散语言模型公司 Inception 展开深入谈判，金额或超 5 亿美元",
+  "summary": "据 The Information 记者 Stephanie Palazzolo 在 X 上的报道，英伟达正就收购扩散语言模型（diffusion LLM）开发商 Inception 进行深入谈判，金额可能超过 5 亿美元；她称这笔交易显示英伟达的并购节奏在黄仁勋离职后仍在继续。英伟达与 Inception 均未公开确认。",
+  "type": "deal",
+  "companies": [
+   {
+    "name": "NVIDIA",
+    "slug": "nvidia"
+   },
+   {
+    "name": "Inception",
+    "slug": "inception"
+   }
+  ],
+  "person": "Inception 团队",
+  "tags": [
+   "收购",
+   "扩散模型",
+   "NVIDIA"
+  ],
+  "sources": [
+   {
+    "name": "X · @steph_palazzolo（The Information）",
+    "url": "https://x.com/steph_palazzolo/status/2123549936880930945"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-20",
+  "review_note": "已读 The Information 记者在 X 的报道（2026-11-20 06:52 北京时间）：金额与「深入谈判」措辞按原文，双方均未确认，摘要写明「据报」与「未公开确认」。"
+ },
+ {
+  "id": "anthropic-20261119-elena-buchatskaya",
+  "date": "2026-11-19",
+  "title": "传 Google DeepMind 的 Elena Buchatskaya 离职加入 Anthropic",
+  "summary": "匿名爆料账号 @ArfurGrok 称，Google DeepMind 的 Elena Buchatskaya 已离开公司、加入 Anthropic。目前只有该账号的转述，本人时间线未见声明。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   },
+   {
+    "name": "Google DeepMind",
+    "slug": "google-deepmind"
+   }
+  ],
+  "person": "Elena Buchatskaya",
+  "tags": [
+   "小道消息",
+   "Anthropic",
+   "Google DeepMind"
+  ],
+  "sources": [
+   {
+    "name": "X · @ArfurGrok（匿名爆料号）",
+    "url": "https://x.com/ArfurGrok/status/2123535397451878546"
+   }
+  ],
+  "status": "lead",
+  "scope": "talent",
+  "reviewed_at": null,
+  "review_note": "仅匿名爆料账号转述，无法核实；按未证实线索收录。"
+ },
+ {
+  "id": "anthropic-20261119-peter-henderson",
+  "date": "2026-11-19",
+  "title": "传 Peter Henderson 加入 Anthropic",
+  "summary": "匿名爆料账号 @ArfurGrok 称，Peter Henderson 已加入 Anthropic。目前只有该账号的转述，本人时间线未见声明。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Peter Henderson",
+  "tags": [
+   "小道消息",
+   "Anthropic"
+  ],
+  "sources": [
+   {
+    "name": "X · @ArfurGrok（匿名爆料号）",
+    "url": "https://x.com/ArfurGrok/status/2123535235820433465"
+   }
+  ],
+  "status": "lead",
+  "scope": "talent",
+  "reviewed_at": null,
+  "review_note": "仅匿名爆料账号转述，无法核实；按未证实线索收录。"
+ },
+ {
+  "id": "openai-20261119-kath-korevec",
+  "date": "2026-11-19",
+  "title": "传 OpenAI 的 Kath Korevec 已离职",
+  "summary": "匿名爆料账号 @ArfurGrok 称，Kath Korevec（@simpsoka）已离开 OpenAI，未说明去向。目前只有该账号的转述，本人时间线未见声明。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   }
+  ],
+  "person": "Kath Korevec",
+  "tags": [
+   "小道消息",
+   "OpenAI"
+  ],
+  "sources": [
+   {
+    "name": "X · @ArfurGrok（匿名爆料号）",
+    "url": "https://x.com/ArfurGrok/status/2123535862671847594"
+   }
+  ],
+  "status": "lead",
+  "scope": "talent",
+  "reviewed_at": null,
+  "review_note": "仅匿名爆料账号转述，无法核实；按未证实线索收录。"
  }
 ]
