@@ -65,11 +65,25 @@ def summarize_source(name, payload, returncode, warnings):
     return row
 
 
+def remote_head() -> str:
+    """远端 gh-pages 的 SHA：优先走 SSH（不依赖 token），失败再退回 gh api。"""
+    try:
+        proc = subprocess.run(['git', 'ls-remote', 'git@github.com:Shrekwang-netizen/aiflow-site.git',
+                               'refs/heads/gh-pages'], capture_output=True, text=True, timeout=60)
+        if proc.returncode == 0 and proc.stdout.strip():
+            return proc.stdout.split()[0]
+        print(f'! git ls-remote 失败：{(proc.stderr or "").strip()[:120]}', flush=True)
+    except Exception as exc:  # noqa: BLE001
+        print(f'! git ls-remote 异常：{exc}', flush=True)
+    return gh('GET', 'repos/Shrekwang-netizen/aiflow-site/git/ref/heads/gh-pages')['object']['sha']
+
+
 def build_and_publish(head, now):
+    # 发布走 git over SSH：gh token 会过期，SSH key 不会
     for command in ([sys.executable, 'scripts/build.py'],
                     [sys.executable, '-m', 'unittest', 'discover', '-s', 'tests'],
                     ['node', '--check', 'assets/app.js'], ['node', '--check', 'assets/theme.js'],
-                    [sys.executable, 'scripts/publish.py', '--expected-head', head,
+                    [sys.executable, 'scripts/publish_git.py',
                      '--message', f'daily: 多源巡检 {now:%Y-%m-%d}（候选待核）', '--verify']):
         subprocess.run(command, cwd=ROOT, check=True)
 
@@ -98,7 +112,7 @@ def main():
         except BlockingIOError:
             print('已有扫描在运行，跳过重复启动。')
             return 0
-        head = gh('GET', 'repos/Shrekwang-netizen/aiflow-site/git/ref/heads/gh-pages')['object']['sha']
+        head = remote_head()
         published = PRIVATE / 'published-head'
         if published.exists() and published.read_text().strip() != head:
             raise RuntimeError('远端有其他更新，需先同步本地文件后再发布。')

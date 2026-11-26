@@ -6872,5 +6872,336 @@
   "scope": "talent",
   "reviewed_at": null,
   "review_note": "仅匿名爆料账号转述，无法核实；按未证实线索收录。"
+ },
+ {
+  "id": "nvidia-20261123-huang-reinstated",
+  "date": "2026-11-23",
+  "title": "英伟达董事会一致通过黄仁勋复职",
+  "summary": "11 月 23 日英伟达董事会一致通过黄仁勋恢复总裁、CEO 与董事职务，即刻生效；董事会称经多次讨论认为符合公司最佳利益。此前「Stand with Jensen」请愿逾 20 万人联署。当日股价涨 31.48%，市值约 3.98 万亿美元。",
+  "type": "governance",
+  "companies": [
+   {
+    "name": "NVIDIA",
+    "slug": "nvidia"
+   }
+  ],
+  "person": "黄仁勋（Jensen Huang）",
+  "tags": [
+   "治理",
+   "CEO更替",
+   "股价"
+  ],
+  "sources": [
+   {
+    "name": "极客公园 · 引网易科技",
+    "url": "https://www.geekpark.net/news/374375"
+   },
+   {
+    "name": "Fox News · 11-23 实时报道",
+    "url": "https://www.foxnews.com/live-news/ai-news-tech-markets-nvidia-11-23-26"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-26",
+  "review_note": "已读极客公园 11 月 24 日汇编（标注来源网易科技）与 Fox News 11 月 23 日实时报道：复职决议、董事会表述、请愿规模与股价涨幅两处一致。英伟达官方新闻稿页面被 Cloudflare 拦截，未能直读原文，摘要按上述两处转述，不补写董事会讨论细节。"
+ },
+ {
+  "id": "nvidia-20261124-huang-allhands",
+  "date": "2026-11-24",
+  "title": "黄仁勋复职后首次全员大会：道歉、称在接受治疗",
+  "summary": "复职次日（11 月 24 日）黄仁勋召开全员大会，称「我伤害了你们所有人」，承认违反自己参与制定的公司行为准则，并表示正在接受心理治疗；他感谢美国政府提供情报、让董事会判断复职的国家安全风险较低，同时否认特朗普直接促成其回归。他将在 12 月 3 日出席参议院银行委员会公开听证。",
+  "type": "governance",
+  "companies": [
+   {
+    "name": "NVIDIA",
+    "slug": "nvidia"
+   }
+  ],
+  "person": "黄仁勋（Jensen Huang）",
+  "tags": [
+   "治理",
+   "员工",
+   "听证"
+  ],
+  "sources": [
+   {
+    "name": "TechCrunch · 综合 CNBC/WSJ/WIRED",
+    "url": "https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy/"
+   },
+   {
+    "name": "The Verge",
+    "url": "https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-26",
+  "review_note": "已读 TechCrunch 11 月 24 日报道（综合 CNBC、WSJ、WIRED 的会议内容）与 The Verge 同日报道：道歉原话、接受治疗、行为准则与否认特朗普促成均按报道；12 月 3 日听证取自 TechCrunch 引述的参议院银行委员会安排。未获得会议逐字稿。"
+ },
+ {
+  "id": "nvidia-20261122-dismissal-candor",
+  "date": "2026-11-22",
+  "title": "英伟达罢免黄仁勋主因：缺乏坦诚",
+  "summary": "据《连线》引述两名知情人士，促使英伟达董事会罢免的主要原因是黄仁勋在婚外情相关问题上「缺乏坦诚」、存在撒谎行为，时间从 2025 年 10 月延续到近期事件；11 月 8 日他承认婚外情后又有更多传闻浮出，其中涉及一名直接下属。",
+  "type": "governance",
+  "companies": [
+   {
+    "name": "NVIDIA",
+    "slug": "nvidia"
+   }
+  ],
+  "person": "黄仁勋（Jensen Huang）",
+  "tags": [
+   "治理",
+   "董事会",
+   "罢免"
+  ],
+  "sources": [
+   {
+    "name": "极客公园 · 引《连线》",
+    "url": "https://www.geekpark.net/news/374300"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-26",
+  "review_note": "已读极客公园 11 月 22 日汇编（标注来源《连线》）：未直接读取《连线》原文，摘要按转述写「据引述」，不补写董事会未公开的讨论内容。"
+ },
+ {
+  "id": "nvidia-20261125-sp-downgrade",
+  "date": "2026-11-25",
+  "title": "标普考虑下调英伟达评级，指治理与关键人风险",
+  "summary": "标普全球评级 11 月 25 日表示正考虑将英伟达评级从 AA 下调至 AA-，理由是黄仁勋被罢免又复职暴露出「高管监督薄弱、缺乏继任计划」与「关键人风险」，审查预计 90 天内完成。下调会抬高其借贷成本，也可能影响其为 AI 基础设施提供的贷款担保。",
+  "type": "governance",
+  "companies": [
+   {
+    "name": "NVIDIA",
+    "slug": "nvidia"
+   }
+  ],
+  "person": "NVIDIA",
+  "tags": [
+   "治理",
+   "评级",
+   "继任计划"
+  ],
+  "sources": [
+   {
+    "name": "TechCrunch · 引标普声明",
+    "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-26",
+  "review_note": "已读 TechCrunch 11 月 25 日报道（引标普声明与彭博社）：评级区间、两项理由与 90 天审查期按报道；未直读标普原文，摘要不写成已下调。"
+ },
+ {
+  "id": "anthropic-20261124-below-ipo",
+  "date": "2026-11-24",
+  "title": "Anthropic 股价跌破发行价",
+  "summary": "11 月 24 日 Anthropic 股价一度跌至 76 美元、较前一日收盘跌近 12%，跌破 83 美元发行价；同日英伟达也跌逾 7%，回吐复职当日的部分涨幅。市场把 Anthropic 的走势视为 AI 板块估值风向标，持续走低可能压低未上市 AI 公司的估值。",
+  "type": "ipo",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Anthropic",
+  "tags": [
+   "IPO",
+   "股价",
+   "估值"
+  ],
+  "sources": [
+   {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups/"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-26",
+  "review_note": "已读 TechCrunch 11 月 24 日报道：76 美元低点、近 12% 跌幅与英伟达逾 7% 跌幅均按原文；「压低未上市公司估值」是报道引述的投资者看法，摘要标注为市场观点。"
+ },
+ {
+  "id": "pragmatik-20261121-funding",
+  "date": "2026-11-21",
+  "title": "林俊旸新公司估值翻倍至 50 亿美元",
+  "summary": "据彭博社报道，前阿里巴巴 AI 负责人林俊旸创办的语用科技（Pragmatik Labs）完成新一轮融资，募资数千万美元、估值达 50 亿美元，较 8 月首轮的 20 亿美元翻倍多；新投资方包括华业天成资本、鼎晖投资与吉利汽车，公司总部在上海。",
+  "type": "funding",
+  "companies": [
+   {
+    "name": "语用科技（Pragmatik Labs）",
+    "slug": "pragmatik"
+   }
+  ],
+  "person": "林俊旸",
+  "tags": [
+   "融资",
+   "创业",
+   "智能体"
+  ],
+  "sources": [
+   {
+    "name": "极客公园 · 引凤凰网科技/彭博社",
+    "url": "https://www.geekpark.net/news/374299"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-26",
+  "review_note": "已读极客公园 11 月 21 日汇编（标注来源凤凰网科技、彭博社）：估值、募资额与投资方按转述；未读彭博社原文，不推断产品与团队规模。"
+ },
+ {
+  "id": "deepseek-20261120-funding",
+  "date": "2026-11-20",
+  "title": "DeepSeek 完成千亿级融资，梁文锋仍绝对控股",
+  "summary": "11 月 20 日工商变更显示，DeepSeek 运营主体新增股东杭州程砚，注册资本增约 21.1%。据证券时报引知情人士，本轮募资 1000 亿至 1055 亿元、投后估值约 6155 亿元；梁文锋直接与间接持股合计约 67.42%，控制权未变。",
+  "type": "funding",
+  "companies": [
+   {
+    "name": "DeepSeek",
+    "slug": "deepseek"
+   }
+  ],
+  "person": "梁文锋",
+  "tags": [
+   "融资",
+   "估值",
+   "控制权"
+  ],
+  "sources": [
+   {
+    "name": "凤凰网科技 · 引 IT之家/证券时报",
+    "url": "https://tech.ifeng.com/c/8yDAlfyoRlD"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-26",
+  "review_note": "已读凤凰网科技 11 月 20 日报道（标注来源 IT之家、证券时报）：募资区间、投后估值与持股比例为转述口径；工商变更部分系页面所述公示系统查询结果，未自行核验工商档案。"
+ },
+ {
+  "id": "openai-20261124-thariq-shihipar",
+  "date": "2026-11-24",
+  "title": "传 Thariq Shihipar 加入 OpenAI",
+  "summary": "匿名爆料号 @ArfurGrok 称，10 月离开 Anthropic 的 Claude Code 工程师 Thariq Shihipar 已加入 OpenAI。他此前表示会先休息一段时间，本人时间线未见新的去向声明。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   },
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Thariq Shihipar",
+  "tags": [
+   "小道消息",
+   "Claude Code",
+   "加入"
+  ],
+  "sources": [
+   {
+    "name": "X · @ArfurGrok（匿名爆料号）",
+    "url": "https://x.com/ArfurGrok/status/2125341934071787696"
+   }
+  ],
+  "status": "lead",
+  "scope": "talent",
+  "reviewed_at": null,
+  "review_note": "仅匿名爆料账号转述，未见本人声明或媒体报道；按未证实线索收录。"
+ },
+ {
+  "id": "anthropic-20261124-tom-blomfield",
+  "date": "2026-11-24",
+  "title": "传 Tom Blomfield 离开 Anthropic",
+  "summary": "匿名爆料号 @ArfurGrok 称，Tom Blomfield 已离开 Anthropic，未说明去向。本人时间线未见声明。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   }
+  ],
+  "person": "Tom Blomfield",
+  "tags": [
+   "小道消息",
+   "离职",
+   "Anthropic"
+  ],
+  "sources": [
+   {
+    "name": "X · @ArfurGrok（匿名爆料号）",
+    "url": "https://x.com/ArfurGrok/status/2125102411106959788"
+   }
+  ],
+  "status": "lead",
+  "scope": "talent",
+  "reviewed_at": null,
+  "review_note": "仅匿名爆料账号转述，无法核实；按未证实线索收录。"
+ },
+ {
+  "id": "meta-20261121-ethan-weber",
+  "date": "2026-11-21",
+  "title": "传 Ethan Weber 离开 Meta",
+  "summary": "匿名爆料号 @ArfurGrok 称，Ethan Weber 已离开 Meta，未说明去向。本人时间线未见声明。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "Meta",
+    "slug": "meta"
+   }
+  ],
+  "person": "Ethan Weber",
+  "tags": [
+   "小道消息",
+   "离职",
+   "Meta"
+  ],
+  "sources": [
+   {
+    "name": "X · @ArfurGrok（匿名爆料号）",
+    "url": "https://x.com/ArfurGrok/status/2124195367659184253"
+   }
+  ],
+  "status": "lead",
+  "scope": "talent",
+  "reviewed_at": null,
+  "review_note": "仅匿名爆料账号转述，无法核实；按未证实线索收录。"
+ },
+ {
+  "id": "openai-20261121-beichen-li",
+  "date": "2026-11-21",
+  "title": "传 Beichen Li 离开 OpenAI",
+  "summary": "匿名爆料号 @ArfurGrok 称，Beichen Li 已离开 OpenAI，未说明去向。本人时间线未见声明。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "OpenAI",
+    "slug": "openai"
+   }
+  ],
+  "person": "Beichen Li",
+  "tags": [
+   "小道消息",
+   "离职",
+   "OpenAI"
+  ],
+  "sources": [
+   {
+    "name": "X · @ArfurGrok（匿名爆料号）",
+    "url": "https://x.com/ArfurGrok/status/2124195031171101091"
+   }
+  ],
+  "status": "lead",
+  "scope": "talent",
+  "reviewed_at": null,
+  "review_note": "仅匿名爆料账号转述，无法核实；按未证实线索收录。"
  }
 ]
