@@ -1,6 +1,6 @@
 {
- "checked_at": "2026-11-26T12:11:43+08:00",
- "mode": "daily-scan",
+ "checked_at": "2026-11-27T09:30:04+08:00",
+ "mode": "scheduled-scan",
  "coverage": "visible-window",
  "accounts_checked": [
   "OpenAI",
@@ -59,40 +59,36 @@
   "ArfurGrok"
  ],
  "accounts_failed": [],
- "posts_read": 155,
+ "posts_read": 80,
  "new_records": 0,
  "reviewed_records": 0,
- "summary": "11 月 26 日补跑 6 天窗口巡检：54 个启用账号全部读取成功（11-19 12:11 至 11-26 12:11，155 条可见帖子，22 条命中人事关键词）。本轮以人工检索补充主线：11-23 黄仁勋复职、11-24 复职后全员大会、11-25 标普考虑下调评级、11-24 Anthropic 跌破发行价，以及语用科技、DeepSeek 两笔融资。媒体 RSS 10 个源全部可读；DINQ 与 Blind 存在个别失败项，缺口留在 run-history。匿名爆料线索未自动升级。",
+ "summary": "已依次运行 X、媒体、手动链接、DINQ/RSSHub/HN/Blind 等采集，共 49 条候选（跨源未去重），待人工核查；本轮未新增新闻。有限窗口或访问缺口：x, legacy。来源读取成功不代表完整覆盖。",
  "schedule": "周一至周五 09:30 · 北京时间",
  "automation_enabled": true,
  "automation_id": "aiflow",
- "editorial_mode": "source-reviewed",
- "review_status": "reviewed-with-coverage-gaps",
+ "editorial_mode": "manual",
+ "review_status": "pending",
  "source_coverage": [
   {
    "source": "x",
-   "status": "failed",
-   "checked_at": "2026-11-17T15:34:38.453Z",
-   "accounts_attempted": 54,
-   "accounts_read": 0,
-   "posts_read": 0,
-   "candidates": 0,
-   "warnings": [
-    "所有启用主页请求均为 HTTP 403；0 条帖子读到。额外候选的具体 X 原帖同样受限，未将索引摘要当作原文。"
-   ]
+   "status": "partial",
+   "exit_code": 0,
+   "warnings": [],
+   "candidates": 8,
+   "accounts_read": 54,
+   "failures": []
   },
   {
    "source": "news",
    "status": "read",
-   "checked_at": "2026-11-17T23:34:07+08:00",
-   "feeds_attempted": 10,
-   "feeds_read": 10,
-   "candidates": 26,
+   "exit_code": 0,
+   "warnings": [],
+   "candidates": 14,
    "failures": [],
    "details": [
     {
      "source": "OpenAI 官方",
-     "read": 1401,
+     "read": 1430,
      "count": 0,
      "error": null
     },
@@ -105,25 +101,25 @@
     {
      "source": "雷峰网",
      "read": 20,
-     "count": 5,
+     "count": 2,
      "error": null
     },
     {
      "source": "IT之家",
      "read": 60,
-     "count": 7,
+     "count": 3,
      "error": null
     },
     {
      "source": "钛媒体",
-     "read": 15,
-     "count": 1,
+     "read": 17,
+     "count": 2,
      "error": null
     },
     {
      "source": "极客公园",
      "read": 30,
-     "count": 1,
+     "count": 2,
      "error": null
     },
     {
@@ -135,7 +131,7 @@
     {
      "source": "TechCrunch AI",
      "read": 20,
-     "count": 9,
+     "count": 4,
      "error": null
     },
     {
@@ -147,95 +143,81 @@
     {
      "source": "The Verge AI",
      "read": 10,
-     "count": 3,
+     "count": 1,
      "error": null
     }
-   ],
-   "warnings": [
-    "当前 RSS 样本不是完整新闻或历史覆盖。"
    ]
   },
   {
    "source": "links",
-   "status": "empty",
-   "checked_at": "2026-11-17T23:38:50+08:00",
-   "candidates": 0
+   "status": "read",
+   "exit_code": 0,
+   "warnings": [],
+   "candidates": 1,
+   "failures": [],
+   "details": []
   },
   {
    "source": "legacy",
    "status": "partial",
-   "checked_at": "2026-11-17T23:36:59+08:00",
-   "candidates": 20,
+   "exit_code": 0,
+   "warnings": [
+    "! VentureBeat AI 拉取失败：HTTP Error 308: Permanent Redirect",
+    "! Semafor Tech 拉取失败：<urlopen error timed out>",
+    "! The Register AI 拉取失败：not well-formed (invalid token): line 7, column 22",
+    "! 华尔街见闻快讯 @ https://rsshub.rssforever.com 失败：HTTP Error 503: Service Unavailable"
+   ],
+   "candidates": 26,
+   "failures": [],
    "details": [
     {
      "source": "dinq",
-     "count": 8,
+     "count": 12,
      "error": null,
-     "seconds": 2.8
+     "seconds": 3.7
     },
     {
      "source": "rss",
-     "count": 12,
+     "count": 13,
      "error": null,
-     "seconds": 16.9
+     "seconds": 46.5
     },
     {
      "source": "rsshub",
      "count": 0,
      "error": null,
-     "seconds": 2.7
+     "seconds": 8.0
     },
     {
      "source": "latepost",
-     "count": 2,
+     "count": 1,
+     "error": null,
+     "seconds": 0.5
+    },
+    {
+     "source": "zhihu",
+     "count": 0,
      "error": null,
      "seconds": 0.4
     },
     {
-     "source": "zhihu",
-     "count": 1,
-     "error": null,
-     "seconds": 0.3
-    },
-    {
      "source": "hn",
-     "count": 1,
+     "count": 2,
      "error": null,
-     "seconds": 12.1
+     "seconds": 14.0
     },
     {
      "source": "blind",
-     "count": 6,
+     "count": 10,
      "error": null,
-     "seconds": 53.5
+     "seconds": 65.5
     },
     {
      "source": "buzz",
-     "count": 13,
+     "count": 12,
      "error": null,
-     "seconds": 16.7
+     "seconds": 14.7
     }
-   ],
-   "warnings": [
-    "扩展 RSS 的 Semafor Tech、The Register AI 返回 404；Blind layoffs 分区连接出现 SSL 错误。外层脚本完成不代表这些子源读取成功。",
-    "一条聚合候选仅给出未来事件日期，未核实公开日期；团队重复条目已作为同一线索处理，均未自动发布。"
-   ]
-  },
-  {
-   "source": "原始公告与具名报道核查",
-   "status": "read",
-   "checked_at": "2026-11-17T23:38:50+08:00",
-   "candidates": 6,
-   "new_record_ids": [
-    "tencent-20261117-sun-xing",
-    "huling-20261117-liu-yanxiang-garin",
-    "shlab-20261117-scientific-multimodal-hiring",
-    "amd-20261116-world-labs-team",
-    "fti-consulting-20261116-farid-zahran",
-    "priori-20261117-rohit-talwar"
-   ],
-   "warnings": [
-    "仅将本轮实际读到的具体原文计为核实；无法打开的网页、聚合信息和搜索摘要仍留在私有候选。"
    ]
   }
  ],
