@@ -7203,5 +7203,357 @@
   "scope": "talent",
   "reviewed_at": null,
   "review_note": "仅匿名爆料账号转述，无法核实；按未证实线索收录。"
+ },
+ {
+  "id": "alibaba-qwen-20261126-north-america-hiring",
+  "date": "2026-11-26",
+  "title": "阿里加码 Qwen 北美招聘",
+  "summary": "封面新闻 11 月 26 日报道，Qwen 北美团队开放模型研究、训练与推理、多模态、Agent 和数据等岗位。消息人士称，今年全球已有数百人加入 Qwen；包含该团队的 Token Foundry 在相关岗位取消传统层级，推行更扁平的组织模式。",
+  "type": "hiring",
+  "companies": [
+   {
+    "name": "阿里通义",
+    "slug": "alibaba-qwen"
+   }
+  ],
+  "person": "Qwen 北美团队",
+  "tags": [
+   "招聘",
+   "研究人员",
+   "组织转型"
+  ],
+  "sources": [
+   {
+    "name": "封面新闻 · 欧阳宏宇（新浪转载）",
+    "url": "https://finance.sina.com.cn/roll/2026-11-26/doc-inkaapny8162781.shtml"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "source_published_at": "2026-11-26T21:52:00+08:00",
+  "reviewed_at": "2026-11-28",
+  "review_note": "已通过公开网页直读封面新闻记者欧阳宏宇署名报道，新浪页标注 2026-11-26 21:52；并对照川观同稿 21:29。招聘方向与组织模式按原文，数百人入职保留消息人士归属；未推断新增名额、薪酬或全部岗位均取消职级。"
+ },
+ {
+  "id": "xpeng-20261124-chen-jie",
+  "date": "2026-11-24",
+  "title": "职场Bonus：小鹏机器人陈杰于10月底离职",
+  "summary": "职场Bonus 11 月 24 日报道，小鹏机器人中心原强化学习负责人陈杰已于 10 月底离职，履职约 15 个月。他曾任字节 Seed 强化学习负责人，2025 年 7 月加入小鹏。截至报道发出，小鹏未置评，陈杰未回复问询，下一步去向不明。",
+  "type": "departure",
+  "companies": [
+   {
+    "name": "小鹏",
+    "slug": "xpeng"
+   }
+  ],
+  "person": "陈杰",
+  "tags": [
+   "离职",
+   "强化学习",
+   "具身智能"
+  ],
+  "sources": [
+   {
+    "name": "职场Bonus · 房庭玉（36氪授权发布）",
+    "url": "https://www.36kr.com/p/4083682848827778"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "source_published_at": "2026-11-24T20:06:00+08:00",
+  "reviewed_at": "2026-11-28",
+  "review_note": "已通过公开网页直读职场Bonus房庭玉署名原报道在 36氪的授权全文，页面时间 2026-11-24 20:06；原公众号链接访问失败。报道日与 10 月底离职区分，保留公司和本人未回应状态；未推断离职原因、接任者、汇报线或去向，不采用正文相互冲突的学历转述。"
+ },
+ {
+  "id": "tencent-20261123-xiaowei-agent-hiring",
+  "date": "2026-11-23",
+  "title": "微信小微招聘个人智能体推荐算法工程师",
+  "summary": "腾讯招聘官网 11 月 23 日更新微信小微推荐算法岗位，隶属 WXG，面向微信 AI 助手。职责包括搭建用户画像、世界知识和个性化推荐等 Personal Agent 系统，以及 LLM 后训练和持续学习；要求计算机相关硕士或博士及一年以上经验。",
+  "type": "hiring",
+  "companies": [
+   {
+    "name": "腾讯",
+    "slug": "tencent"
+   }
+  ],
+  "person": "微信小微团队",
+  "tags": [
+   "招聘",
+   "个人智能体",
+   "推荐算法"
+  ],
+  "sources": [
+   {
+    "name": "腾讯 · 官方招聘岗位",
+    "url": "https://careers.tencent.com/jobdesc.html?postId=2091724429636841472"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-28",
+  "review_note": "官方岗位网页为动态页面，已用只读 HTTPS 请求直接读取腾讯公开 ByPostId 接口（postId=2091724429636841472），返回 Code=200 与完整职责、要求、WXG 和 LastUpdateTime=2026年11月23日；以更新日记载，未推断首次发布日或招聘人数。标题写广州、结构化地点写北京，摘要不推断地点。"
+ },
+ {
+  "id": "alibaba-qwen-20261127-zhou-hao-denial",
+  "date": "2026-11-27",
+  "title": "千问否认后训练负责人周昊离职",
+  "summary": "千问 11 月 27 日回应自媒体关于 Qwen 后训练负责人离职的文章，称内容失实，且将当事人周昊姓名错写为“周浩”，并表示将起诉追责。澎湃新闻和第一财经均获公司回应；声明还称，近期针对 Qwen 团队的不实信息将依法追责。",
+  "type": "governance",
+  "companies": [
+   {
+    "name": "阿里通义",
+    "slug": "alibaba-qwen"
+   }
+  ],
+  "person": "周昊",
+  "tags": [
+   "人事澄清",
+   "后训练"
+  ],
+  "sources": [
+   {
+    "name": "澎湃新闻 · 胡含嫣",
+    "url": "https://www.thepaper.cn/newsDetail_forward_34573977"
+   },
+   {
+    "name": "第一财经 · 陈杨园",
+    "url": "https://www.yicai.com/brief/103457595.html"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "source_published_at": "2026-11-27T17:34:00+08:00",
+  "reviewed_at": "2026-11-28",
+  "review_note": "已直读澎湃新闻 2026-11-27 17:34 胡含嫣署名稿与第一财经同日 14:34 陈杨园署名快讯，均引公司回应。未直接读取官方微博或公众号，故用 reported；记录否认与拟起诉，不把离职传言写成事实，也不将拟起诉写成已立案。"
+ },
+ {
+  "id": "anthropic-20261121-aahana-dhar",
+  "date": "2026-11-21",
+  "title": "Aahana Dhar 负责 Anthropic 印度传播",
+  "summary": "据 Indian Television 11 月 21 日报道，Aahana Dhar 本月加入 Anthropic，负责印度传播工作。她此前任 Airbnb 印度及东南亚传播负责人，也曾在可口可乐、Tinder 和 Uber 从事传播工作；具体履新日未披露。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Anthropic",
+    "slug": "anthropic"
+   },
+   {
+    "name": "Airbnb",
+    "slug": "airbnb"
+   }
+  ],
+  "person": "Aahana Dhar",
+  "tags": [
+   "传播",
+   "印度",
+   "高管"
+  ],
+  "sources": [
+   {
+    "name": "Indian Television · 编辑部",
+    "url": "https://indiantelevision.com/mam/aahana-dhar-joins-anthropic-as-communications-lead-for-india/"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-28",
+  "review_note": "已通过公开网页阅读 Indian Television 编辑部 2026-11-21 原报道，正文明确 11 月加入及前职；补录遗漏消息，日期沿用原报道，不把巡检日作入职日，不推断模型研发职责。"
+ },
+ {
+  "id": "peptone-20261124-deepak-sampath",
+  "date": "2026-11-24",
+  "title": "Peptone 任命新首席科学家",
+  "summary": "Peptone 11 月 24 日宣布任命 Deepak Sampath 为首席科学家，他此前任 Ultragenyx 高级副总裁兼研究负责人。公司结合 AI 与实验生物物理学开发药物，任命同时公布首个候选药的临床前推进计划，实际入职日未明确。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Peptone",
+    "slug": "peptone"
+   },
+   {
+    "name": "Ultragenyx",
+    "slug": "ultragenyx"
+   }
+  ],
+  "person": "Deepak Sampath",
+  "tags": [
+   "AI 制药",
+   "科学负责人",
+   "任命"
+  ],
+  "sources": [
+   {
+    "name": "Peptone · 官方公告",
+    "url": "https://www.prnewswire.com/news-releases/peptone-appoints-deepak-sampath-phd-as-chief-scientific-officer-and-advances-pep-5089-a-first-in-class-ai--and-biophysics-developed-drug-candidate-for-prostate-cancer-into-ind-enabling-development-302948180.html"
+   },
+   {
+    "name": "Peptone · 公司新闻",
+    "url": "https://www.peptone.io/news/peptone-appoints-deepak-sampath-cso-and-advances-pep-5089/"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "source_published_at": "2026-11-24T17:00:00Z",
+  "reviewed_at": "2026-11-28",
+  "review_note": "已直读公司在 PR Newswire 发布的 2026-11-24 12:00 ET 公告及官网 11-25 同题正文；日期采用首次公司公告。猎头索引称 8 月已安置但原页不可读，不将 11-24 当作实际入职日，不把临床前计划写成已开展人体试验。"
+ },
+ {
+  "id": "nutanix-20261124-ceo-succession",
+  "date": "2026-11-24",
+  "title": "Nutanix 启动 CEO 接班人遴选",
+  "summary": "Nutanix 11 月 24 日宣布启动 CEO 继任安排，董事会已聘请猎头协助寻找 Rajiv Ramaswami 的接班人。Ramaswami 在过渡期继续履职，之后计划担任高级顾问；公司希望新负责人推进混合云及企业 AI 平台业务，尚未公布人选。",
+  "type": "reorg",
+  "companies": [
+   {
+    "name": "Nutanix",
+    "slug": "nutanix"
+   }
+  ],
+  "person": "Rajiv Ramaswami",
+  "tags": [
+   "CEO 继任",
+   "AI 基础设施",
+   "组织调整"
+  ],
+  "sources": [
+   {
+    "name": "Nutanix · 官方公告",
+    "url": "https://ir.nutanix.com/news-releases/news-release-details/nutanix-announces-ceo-succession-plan-0"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "source_published_at": "2026-11-24T21:01:00Z",
+  "reviewed_at": "2026-11-28",
+  "review_note": "已直读 Nutanix IR 官网 2026-11-24 任命过渡公告及公司 GlobeNewswire 16:01 ET 同题稿；确认正在遴选而非已完成 CEO 更替。未直读 8-K 全文，因此不引述其索引中的离职最晚期限或薪酬安排。"
+ },
+ {
+  "id": "characterai-20261124-chat-auction-objection",
+  "date": "2026-11-24",
+  "title": "美国多州反对 Character.AI 拍卖用户聊天",
+  "summary": "加州与康涅狄格州总检察长 11 月 24 日要求破产法院拒绝 Character.AI 出售平台及聊天数据的方案，称涉及逾 2100 万美国账户，其中逾 210 万属于未成年人。公告称拍卖拟于 12 月 1 日举行，现有方案缺少对用户删除及拒售请求的保障。",
+  "type": "governance",
+  "companies": [
+   {
+    "name": "Character.AI",
+    "slug": "character-ai"
+   }
+  ],
+  "person": "Character.AI",
+  "tags": [
+   "破产出售",
+   "数据隐私",
+   "监管"
+  ],
+  "sources": [
+   {
+    "name": "加州司法部 · 官方公告",
+    "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-opposes-asset-sale-characterai-amid-child-safety-concerns"
+   },
+   {
+    "name": "康涅狄格州总检察长 · 官方公告",
+    "url": "https://portal.ct.gov/ag/press-releases/2026-press-releases/attorney-general-tong-challenges-plan-to-auction-off-character-ai-private-chats"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-28",
+  "review_note": "已直读两州官网标注 2026-11-24 的具体公告。数据规模与交易风险均为总检察长主张，不当作法院认定；只确认提出反对，不写成法院已经阻止出售。加州公告的联盟人数前后不一致，摘要不写具体总人数。"
+ },
+ {
+  "id": "un-ai-panel-20261124-cochairs",
+  "date": "2026-11-24",
+  "title": "联合国 AI 科学小组更换共同主席",
+  "summary": "据 Engineering News 11 月 24 日报道，Vukosi Marivate 与 Martha Palmer 接任联合国 AI 科学小组共同主席。前任 Yoshua Bengio 与 Maria Ressa 继续担任成员；小组正准备 2027 年年度总结。",
+  "type": "reorg",
+  "companies": [
+   {
+    "name": "联合国 AI 科学小组",
+    "slug": "un-ai-panel"
+   }
+  ],
+  "person": "Vukosi Marivate、Martha Palmer",
+  "tags": [
+   "AI 治理",
+   "科研组织",
+   "领导层"
+  ],
+  "sources": [
+   {
+    "name": "Engineering News · 科技报道",
+    "url": "https://www.engineeringnews.co.za/article/un-panel-on-ai-has-elected-a-university-of-pretoria-professor-as-its-co-chair-2026-11-24"
+   }
+  ],
+  "status": "reported",
+  "scope": "talent",
+  "reviewed_at": "2026-11-28",
+  "review_note": "已通过公开网页阅读 Rebecca Campbell 署名 2026-11-24 原报道，并对读 TechFinancials 11-24 同日报道。联合国 FAQ 原页返回 403，不能标记官方已读；不将前任卸下主席职责写成退出小组，不推断监管权限或具体投票日。"
+ },
+ {
+  "id": "amazon-20261123-decart-team",
+  "date": "2026-11-23",
+  "title": "亚马逊拟收购 Decart 技术并引入创始团队",
+  "summary": "亚马逊 11 月 23 日宣布签约购买 Decart 的 AI 优化技术，并拟引入 Dean Leitersdorf、Moshe Shalev、Orian Leitersdorf 三位联创及研发团队，推进芯片与模型优化。交易仍待监管批准等交割条件满足。",
+  "type": "reorg",
+  "companies": [
+   {
+    "name": "Amazon",
+    "slug": "amazon"
+   },
+   {
+    "name": "Decart",
+    "slug": "decart"
+   }
+  ],
+  "person": "Decart 创始与研发团队",
+  "tags": [
+   "团队整合",
+   "收购",
+   "AI 基础设施"
+  ],
+  "sources": [
+   {
+    "name": "Amazon · 官方公告",
+    "url": "https://www.aboutamazon.com/news/company-news/amazon-decart-ai-optimization"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "reviewed_at": "2026-11-28",
+  "review_note": "直读 Amazon Staff 署名的 2026-11-23 官方公告，确认已签购买 DOS 技术协议及三位联创、研发团队的拟加入安排；不把签约写成交割完成，不推断人数、金额或新职衔。"
+ },
+ {
+  "id": "epochal-20261124-founding-team",
+  "date": "2026-11-24",
+  "title": "三位 xAI 创始团队成员组建 Epochal",
+  "summary": "Epochal 11 月 24 日公布团队，包括 xAI 创始团队成员 Guodong Zhang、Zihang Dai、Manuel Kroiss，以及 Alex Bocharoff、Frank Luan。公司聚焦预测能力训练，并开放招聘。",
+  "type": "join",
+  "companies": [
+   {
+    "name": "Epochal",
+    "slug": "epochal"
+   },
+   {
+    "name": "xAI",
+    "slug": "xai"
+   }
+  ],
+  "person": "Epochal 创始团队",
+  "tags": [
+   "创业",
+   "研究团队",
+   "预测模型"
+  ],
+  "sources": [
+   {
+    "name": "Epochal · 官方创业公告",
+    "url": "https://epochal.com/blog/introducing-epochal"
+   }
+  ],
+  "status": "primary",
+  "scope": "talent",
+  "source_published_at": "2026-11-24T16:00:00Z",
+  "reviewed_at": "2026-11-28",
+  "review_note": "只读 HTTPS 获取官方文章 HTML 及其直接引用的公开前端脚本，读到 Introducing Epochal 完整正文与团队名单；HTML JSON-LD 标注 2026-11-24 08:00 PST，脚本文内日期同为 11-24。未执行脚本，不从聚合条目推断离职日、职衔或融资额。"
  }
 ]

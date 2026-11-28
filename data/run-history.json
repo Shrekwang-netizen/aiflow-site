@@ -1,5 +1,318 @@
 [
  {
+  "checked_at": "2026-11-28T16:32:16+08:00",
+  "mode": "manual-reviewed-scan",
+  "coverage": "partial",
+  "accounts_checked": [],
+  "accounts_failed": [
+   "OpenAI",
+   "AnthropicAI",
+   "GoogleDeepMind",
+   "deepseek_ai",
+   "MistralAI",
+   "cohere",
+   "cursor_ai",
+   "MiniMax_AI",
+   "Kimi_Moonshot",
+   "Zai_org",
+   "Alibaba_Qwen",
+   "TencentHunyuan",
+   "StepFun_ai",
+   "SpaceXSI",
+   "tianyi",
+   "sama",
+   "gdb",
+   "demishassabis",
+   "karpathy",
+   "jackclarkSF",
+   "ylecun",
+   "DarioAmodei",
+   "mustafasuleyman",
+   "AravSrinivas",
+   "mntruell",
+   "soumithchintala",
+   "Thom_Wolf",
+   "ClementDelangue",
+   "miramurati",
+   "JeffDean",
+   "sundarpichai",
+   "satyanadella",
+   "elonmusk",
+   "DrJimFan",
+   "_akhaliq",
+   "_jasonwei",
+   "arankomatsuzaki",
+   "giffmana",
+   "goodside",
+   "AndrewYNg",
+   "jiayq",
+   "badlogicgames",
+   "rowancheung",
+   "dotey",
+   "op7418",
+   "huybery",
+   "karminski3",
+   "teortaxesTex",
+   "amir",
+   "steph_palazzolo",
+   "kyliebytes",
+   "shiringhaffary",
+   "alexeheath",
+   "ArfurGrok"
+  ],
+  "posts_read": 0,
+  "new_records": 11,
+  "reviewed_records": 11,
+  "summary": "11 月 28 日核实并新增 11 条记录，涵盖千问招聘与人事澄清、小鹏机器人人员变动、微信小微招聘、Decart 与 Epochal 团队动向，以及负责人任命和治理消息。日期沿用原始公告或报道，补录消息未改成今日事件。54 个 X 主页本轮均返回 HTTP 403，未读到帖子；保留 11 月 27 日成功巡检依据，48 小时重叠回看仍存在缺口。10 个主媒体 RSS 可读，扩展 RSS 两个来源失败；未核实的聚合与匿名线索继续留在私有收件箱。",
+  "schedule": "周一至周五 09:30 · 北京时间",
+  "automation_enabled": true,
+  "automation_id": "aiflow",
+  "editorial_mode": "source-reviewed",
+  "review_status": "reviewed-with-coverage-gaps",
+  "source_coverage": [
+   {
+    "source": "x",
+    "status": "failed",
+    "checked_at": "2026-11-28T08:27:10+00:00",
+    "accounts_attempted": 54,
+    "accounts_read": 0,
+    "posts_read": 0,
+    "candidates": 0,
+    "warnings": [
+     "54 个启用主页逐一请求均返回 HTTP 403，本轮未读到帖子。回看目标从 11 月 27 日成功巡检前 48 小时起算；该次仅有整轮时间，未伪造逐账号时间或完整覆盖。",
+     "额外尝试的 12 条具体 X 原帖同样未能读到，未用搜索摘要或镜像替代原文。"
+    ]
+   },
+   {
+    "source": "news",
+    "status": "read",
+    "checked_at": "2026-11-28T16:27:08+08:00",
+    "feeds_attempted": 10,
+    "feeds_read": 10,
+    "candidates": 21,
+    "days_requested": 5,
+    "details": [
+     {
+      "source": "OpenAI 官方",
+      "read": 1430,
+      "count": 0,
+      "error": null
+     },
+     {
+      "source": "量子位",
+      "read": 10,
+      "count": 1,
+      "error": null
+     },
+     {
+      "source": "雷峰网",
+      "read": 20,
+      "count": 6,
+      "error": null
+     },
+     {
+      "source": "IT之家",
+      "read": 60,
+      "count": 5,
+      "error": null
+     },
+     {
+      "source": "钛媒体",
+      "read": 18,
+      "count": 1,
+      "error": null
+     },
+     {
+      "source": "极客公园",
+      "read": 30,
+      "count": 2,
+      "error": null
+     },
+     {
+      "source": "InfoQ 中文",
+      "read": 20,
+      "count": 1,
+      "error": null
+     },
+     {
+      "source": "TechCrunch AI",
+      "read": 20,
+      "count": 4,
+      "error": null
+     },
+     {
+      "source": "TechCrunch Layoffs",
+      "read": 20,
+      "count": 0,
+      "error": null
+     },
+     {
+      "source": "The Verge AI",
+      "read": 10,
+      "count": 1,
+      "error": null
+     }
+    ],
+    "failures": [],
+    "warnings": [
+     "仅扫描各源当前 RSS 条目；请求回看五天，不代表完整历史覆盖。纯产品、常规小额融资及已有记录已排除。"
+    ]
+   },
+   {
+    "source": "links",
+    "status": "empty",
+    "checked_at": "2026-11-28T16:32:16+08:00",
+    "candidates": 0
+   },
+   {
+    "source": "legacy",
+    "status": "partial",
+    "checked_at": "2026-11-28T16:28:37+08:00",
+    "candidates": 25,
+    "days_requested": 5,
+    "details": [
+     {
+      "source": "dinq",
+      "count": 12,
+      "error": null,
+      "seconds": 1.4
+     },
+     {
+      "source": "rss",
+      "count": 10,
+      "error": null,
+      "seconds": 8.1
+     },
+     {
+      "source": "rsshub",
+      "count": 2,
+      "error": null,
+      "seconds": 36.2
+     },
+     {
+      "source": "latepost",
+      "count": 1,
+      "error": null,
+      "seconds": 0.3
+     },
+     {
+      "source": "zhihu",
+      "count": 0,
+      "error": null,
+      "seconds": 0.3
+     },
+     {
+      "source": "hn",
+      "count": 2,
+      "error": null,
+      "seconds": 10.3
+     },
+     {
+      "source": "blind",
+      "count": 11,
+      "error": null,
+      "seconds": 29.8
+     },
+     {
+      "source": "buzz",
+      "count": 12,
+      "error": null,
+      "seconds": 14.8
+     }
+    ],
+    "warnings": [
+     "扩展 RSS 的 Semafor Tech、The Register AI 返回 404；华尔街见闻首个 RSSHub 实例返回 503 后，备用实例成功读到条目。",
+     "DINQ、首页、HN、Blind 与搜索索引仅作线索发现，日期和时间线可能不完整。未来日期、匿名传闻及缺少具体原文的候选未自动发布。"
+    ]
+   },
+   {
+    "source": "原始公告与具名报道核查",
+    "status": "read",
+    "checked_at": "2026-11-28T16:32:16+08:00",
+    "candidates": 11,
+    "new_record_ids": [
+     "alibaba-qwen-20261126-north-america-hiring",
+     "xpeng-20261124-chen-jie",
+     "tencent-20261123-xiaowei-agent-hiring",
+     "alibaba-qwen-20261127-zhou-hao-denial",
+     "anthropic-20261121-aahana-dhar",
+     "peptone-20261124-deepak-sampath",
+     "nutanix-20261124-ceo-succession",
+     "characterai-20261124-chat-auction-objection",
+     "un-ai-panel-20261124-cochairs",
+     "amazon-20261123-decart-team",
+     "epochal-20261124-founding-team"
+    ],
+    "warnings": [
+     "按原公告或报道日期归档，另补录 11 月 21 日传播负责人履新及 11 月 23 日岗位、团队消息；未把巡检日作为事件日。签约、拟任与当事方声明分别保留原有状态。"
+    ]
+   }
+  ],
+  "reviewed_at": "2026-11-28T16:32:16+08:00",
+  "window_start": "2026-11-25T09:30:04+08:00",
+  "window_end": "2026-11-28T16:32:16+08:00",
+  "accounts_attempted": [
+   "OpenAI",
+   "AnthropicAI",
+   "GoogleDeepMind",
+   "deepseek_ai",
+   "MistralAI",
+   "cohere",
+   "cursor_ai",
+   "MiniMax_AI",
+   "Kimi_Moonshot",
+   "Zai_org",
+   "Alibaba_Qwen",
+   "TencentHunyuan",
+   "StepFun_ai",
+   "SpaceXSI",
+   "tianyi",
+   "sama",
+   "gdb",
+   "demishassabis",
+   "karpathy",
+   "jackclarkSF",
+   "ylecun",
+   "DarioAmodei",
+   "mustafasuleyman",
+   "AravSrinivas",
+   "mntruell",
+   "soumithchintala",
+   "Thom_Wolf",
+   "ClementDelangue",
+   "miramurati",
+   "JeffDean",
+   "sundarpichai",
+   "satyanadella",
+   "elonmusk",
+   "DrJimFan",
+   "_akhaliq",
+   "_jasonwei",
+   "arankomatsuzaki",
+   "giffmana",
+   "goodside",
+   "AndrewYNg",
+   "jiayq",
+   "badlogicgames",
+   "rowancheung",
+   "dotey",
+   "op7418",
+   "huybery",
+   "karminski3",
+   "teortaxesTex",
+   "amir",
+   "steph_palazzolo",
+   "kyliebytes",
+   "shiringhaffary",
+   "alexeheath",
+   "ArfurGrok"
+  ],
+  "partial_accounts": 0,
+  "full_window_accounts": 0,
+  "last_successful_x_check": "2026-11-27T09:30:04+08:00",
+  "last_successful_x_timestamp_precision": "persisted successful run timestamp; individual profile times unavailable"
+ },
+ {
   "checked_at": "2026-11-27T09:30:04+08:00",
   "mode": "scheduled-scan",
   "coverage": "visible-window",
